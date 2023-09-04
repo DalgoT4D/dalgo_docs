@@ -19,7 +19,7 @@ const config = {
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: "DevDataPlatform", // Usually your GitHub org/user name.
+    organizationName: "DalgoT4G", // Usually your GitHub org/user name.
     projectName: "dalgo_docs", // Usually your repo name.
 
     onBrokenLinks: "ignore",
@@ -83,7 +83,7 @@ const config = {
                         position: "left",
                     },
                     {
-                        href: "https://github.com/DevDataPlatform",
+                        href: "https://github.com/DalgoT4G",
                         label: "GitHub",
                         position: "right",
                     },
@@ -119,7 +119,7 @@ const config = {
                             },
                             {
                                 label: "GitHub",
-                                href: "https://github.com/DevDataPlatform",
+                                href: "https://github.com/DalgoT4G",
                             },
                         ],
                     },
