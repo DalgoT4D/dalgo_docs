@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Welcome to Dalgo
 
 ## Leverage Dalgo to manage your Data. So that you can Learn from it.
