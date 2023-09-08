@@ -6,15 +6,15 @@
 
 This ensures that you spend no time on repetitive manual data crunching and can direct your efforts towards the use of data to monitor and evaluate your impact. Learning, iterating and communicating your impact internally and externally.
 
-Visit [dalgo.in](dalgo.in) to learn more about the product and pricing, or contact us at support@dalgo.in
+Visit [dalgo.in](https://dalgo.in/) to learn more about the product and pricing, or contact us at support@dalgo.in
 
 Our team is always available to provide you with support via Discord. [Join our server](https://discord.gg/C7BKvYPufp) and chat with us on Dalgo Support.
 
 ## Platform Overview
-[dashboard.dalgo.in](dashboard.dalgo.in) is the interface for your M&E team, data analysts/engineers, or IT team. 
-It enables you to setup and monitor your automated data pipelines through the following sections:
+[dashboard.dalgo.in](https://dashboard.dalgo.in/) is the interface for your M&E team, data analysts/engineers, or IT team. 
+It enables you to set up and monitor your automated data pipelines through the following sections:
 
-1. **Ingest:** Setup your data warehouse>Connect to your sources of data>Connect your sources to your data warehouse.
+1. **Ingest:** Set up your data warehouse>Connect to your sources of data>Connect your sources to your data warehouse.
 2. **Transform:** Connect to your DBT repository which contains the SQL code for your data transformation (cleaning/merging/computation).
 3. **Orchestrate:** Schedule your data ingestion and/or transformation.
 4. **Pipeline Overview:** Monitor the health of your pipeline with a view of all your past runs.
@@ -48,13 +48,13 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 
 **Your warehouse is the single location where data from various sources is stored.**
 1. Click on Ingest from the left menu pane and then select the ‘Your Warehouse’ tab.
-2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already setup.
+2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already set up.
 3. If you wish to edit your Warehouse name then click on the green edit button at the bottom of the window.
 
 <img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f" />
 
-4. If you wish to use a different warehouse from what is currently setup then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’. 
-5. To setup a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
+4. If you wish to use a different warehouse from what is currently set up then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’. 
+5. To set up a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
 
 <img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b" />
 ___
@@ -112,11 +112,11 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 <img width="1470" alt="3 1) Select Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/ca2afe55-e8ab-4523-b86c-51271a03663b" />
 
-2. To setup your transformations click "connect and setup repo".
+2. To set up your transformations click "connect and set up repo".
 3. Paste your github repo URL (where the code for your data transformations lies)
 4. Specify the target schema. (Generally ‘prod’ or ‘dev’, this depends on your dbt developer’s naming convention)
 
-<img width="574" alt="3 4) Setup Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c15b5823-4e0f-4537-93e1-85e41e9c83cd" />
+<img width="574" alt="3 4) Set up Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c15b5823-4e0f-4537-93e1-85e41e9c83cd" />
 
 5. Click save
 6. To check your setup, select a function and click execute.
@@ -137,7 +137,7 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 <img width="1470" alt="N4 2 SlctOrch" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e966b8e9-8186-4c84-a316-1ecceae3a9b4" />
 
 3. Give your pipeline a name.
-4. Select one or more of the connections you have setup.
+4. Select one or more of the connections you have set up.
 5. Toggle ‘Transform data?’ as per your needs.
 6. Set the schedule for your pipeline and click Save.
 
@@ -157,7 +157,7 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 **This section is intended to help you monitor the health of your data pipelines and provide you with a way to investigate further.**
 
-1. Once you have setup at least one pipeline in the orchestration section you will see it in the overview section. Each pipeline will be represented separately.
+1. Once you have set up at least one pipeline in the orchestration section you will see it in the overview section. Each pipeline will be represented separately.
 
 <img width="1465" alt="N5 1 ovrvwsect" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c56e2733-09a4-42dc-8c8b-d6d187ab55f0" />
 
@@ -192,7 +192,7 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 1. Click on User Management in the left menu pane.
 2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles. Dalgo currently has two roles; Account Manager and Pipeline Manager.
-- An Account Manager is likely to be the person who has setup your account. They can invite or delete any user and have the power to transfer their role to a Pipeline Manager.
+- An Account Manager is likely to be the person who has set up your account. They can invite or delete any user and have the power to transfer their role to a Pipeline Manager.
 - Pipeline Managers are the team members who monitor the health of the pipelines and manage changes to them. They can also invite and delete users of the same role.
 
 <img width="1470" alt="N8) user management" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/f4be1e48-1763-4947-8bdf-9b14d7d8138b" />
