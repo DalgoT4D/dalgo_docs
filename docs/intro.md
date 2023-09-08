@@ -30,12 +30,12 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 ## 1. Logging in as a first time user
 1. You will receive an invitation to the platform from notifications@dalgo.in.
 
-<img width="1308" alt="1) Invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/d53e3893-c44b-403a-ab0e-c0f25b69f0b5">
+<img width="1308" alt="1) Invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/d53e3893-c44b-403a-ab0e-c0f25b69f0b5" />
 
 2. Clicking on the link will take you to the Dalgo platform.
 3. Accept the invitation and set up your password.
 
-<img width="735" alt="1 2)Accept invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/06696041-9b80-433d-a320-e4c73e3542fb">
+<img width="735" alt="1 2)Accept invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/06696041-9b80-433d-a320-e4c73e3542fb" />
 
 4. You are now logged into the platform. 
 >Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.in or to the partner who is helping you with setup.
@@ -51,14 +51,14 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already setup.
 3. If you wish to edit your Warehouse name then click on the green edit button at the bottom of the window.
 
-<img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f">
+<img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f" />
 
 4. If you wish to use a different warehouse from what is currently setup then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’. 
 5. To setup a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
 
-<img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b">
+<img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b" />
 ___
-<img width="606" alt="2 152) Add WH Details" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/8ea11da5-05c1-4f5e-be3a-22fffa820638">
+<img width="606" alt="2 152) Add WH Details" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/8ea11da5-05c1-4f5e-be3a-22fffa820638" />
 
 >Note : Please seek advice from your internal tech team, your tech partner, or the Dalgo team (support@dalgo.in) if you need guidance on this.
 
@@ -69,12 +69,12 @@ ___
 1. Click on the “Sources” tab in the Ingest section
 2. To add a source, click on “+ New Source”
 
-<img width="1469" alt="2 2 2) Add source" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/b649b580-8769-435c-b0d7-420092978bda">
+<img width="1469" alt="2 2 2) Add source" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/b649b580-8769-435c-b0d7-420092978bda" />
 
 3. Give your source a unique name 
 4. Select the type of source you want to add, and the required credentials for this source will appear.
 
-<img width="562" alt="2 2 4) Add source credentials" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fd10e1d8-f597-4c09-a1d8-77d8a55d259a">
+<img width="562" alt="2 2 4) Add source credentials" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fd10e1d8-f597-4c09-a1d8-77d8a55d259a" />
 
 5. Fill in the required credentials.
 6. Click ‘save changes and test’. 
@@ -91,18 +91,18 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 1. Click on the ‘connections’ tab in the Ingest section
 2. To add a new connection select “+New connection”
 
-<img width="1470" alt="2 3 2) Select connections" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fb81addc-d29e-477f-bb5b-3c05b0c21854">
+<img width="1470" alt="2 3 2) Select connections" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fb81addc-d29e-477f-bb5b-3c05b0c21854" />
 
 3. Give your connection a name and select the source for which you want to build the connection. You will see all the source tables that you added appear in the streams column.
 
-<img width="561" alt="2 3 3) Ad connection" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/48604c29-caf2-499d-b0e2-d26899000fc2">
+<img width="561" alt="2 3 3) Ad connection" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/48604c29-caf2-499d-b0e2-d26899000fc2" />
 
 4. Select whether you want the data to be [normalised](https://docs.airbyte.com/understanding-airbyte/basic-normalization).
 5. Select the relevant streams (tables) from your data source that you wish to connect by toggling the sync button.
 6. Then select how you would like this data to be synced and click ‘Connect’.
 7. To test your configuration, select the ‘Sync’ button on the right side of the connections bar. The sync will begin to run and logs will populate in the section below.
 
-<img width="1470" alt="N2 3 7) Manual sync- Blur" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/00d705da-6ae1-4dfa-9f6b-39915e3370d8">
+<img width="1470" alt="N2 3 7) Manual sync- Blur" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/00d705da-6ae1-4dfa-9f6b-39915e3370d8" />
 
 ## 3. Transform
 
@@ -110,22 +110,22 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 1. Select Transform on the left menu panel.
 
-<img width="1470" alt="3 1) Select Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/ca2afe55-e8ab-4523-b86c-51271a03663b">
+<img width="1470" alt="3 1) Select Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/ca2afe55-e8ab-4523-b86c-51271a03663b" />
 
 2. To setup your transformations click "connect and setup repo".
 3. Paste your github repo URL (where the code for your data transformations lies)
 4. Specify the target schema. (Generally ‘prod’ or ‘dev’, this depends on your dbt developer’s naming convention)
 
-<img width="574" alt="3 4) Setup Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c15b5823-4e0f-4537-93e1-85e41e9c83cd">
+<img width="574" alt="3 4) Setup Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c15b5823-4e0f-4537-93e1-85e41e9c83cd" />
 
 5. Click save
 6. To check your setup, select a function and click execute.
 
-<img width="1470" alt="N3 6) Select Function (blur)" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/22beda74-4c73-412b-b8b5-543c44905b54">
+<img width="1470" alt="N3 6) Select Function (blur)" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/22beda74-4c73-412b-b8b5-543c44905b54" />
 
 7. The function will be executed and the logs displayed below.
 
-<img width="1469" alt="N3 7) Logs generated (blur)" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/031480a0-f03b-40a5-b5c5-7d58f3179cf7">
+<img width="1469" alt="N3 7) Logs generated (blur)" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/031480a0-f03b-40a5-b5c5-7d58f3179cf7" />
 
 ## 4. Orchestrate
 
@@ -134,22 +134,22 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 1. Select orchestrate on the left menu panel.
 2. Select “+ New Pipeline” -This will take you to the “Create a new Pipeline” screen
 
-<img width="1470" alt="N4 2 SlctOrch" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e966b8e9-8186-4c84-a316-1ecceae3a9b4">
+<img width="1470" alt="N4 2 SlctOrch" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e966b8e9-8186-4c84-a316-1ecceae3a9b4" />
 
 3. Give your pipeline a name.
 4. Select one or more of the connections you have setup.
 5. Toggle ‘Transform data?’ as per your needs.
 6. Set the schedule for your pipeline and click Save.
 
-<img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/46854fb0-f203-4c34-97f1-6dcc852837ae">
+<img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/46854fb0-f203-4c34-97f1-6dcc852837ae" />
 
 7. You can test your pipeline by clicking 'Run'.
 
-<img width="1467" alt="N4 8  orch manual run" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/65adb73d-e227-4aa0-8807-95529fd1992e">
+<img width="1467" alt="N4 8  orch manual run" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/65adb73d-e227-4aa0-8807-95529fd1992e" />
 
 8. You can view logs of your past runs by selecting ‘last logs’. Click ‘show more’ to see the details.
 
-<img width="613" alt="N4 9  Orch logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/72e90987-3754-41f5-a461-9c4926a9c9ff">
+<img width="613" alt="N4 9  Orch logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/72e90987-3754-41f5-a461-9c4926a9c9ff" />
 
 # Monitoring your data pipelines
 
@@ -159,12 +159,12 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 1. Once you have setup at least one pipeline in the orchestration section you will see it in the overview section. Each pipeline will be represented separately.
 
-<img width="1465" alt="N5 1 ovrvwsect" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c56e2733-09a4-42dc-8c8b-d6d187ab55f0">
+<img width="1465" alt="N5 1 ovrvwsect" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c56e2733-09a4-42dc-8c8b-d6d187ab55f0" />
 
 2. Each vertical bar represents a pipeline run. A green bar represents success. A yellow bar represents a successful run, but a failure in ancillary functions, for example in a ‘DBT test’. A red line indicates that the pipeline run has failed.
 3. To investigate further, hover over the bar, note the start time, and click on check logs.
 
-<img width="1470" alt="N5 3) Overview+logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e09f3d8f-7f3c-47e1-bc5b-04dc4bea3410">
+<img width="1470" alt="N5 3) Overview+logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e09f3d8f-7f3c-47e1-bc5b-04dc4bea3410" />
 
 4. This will take you to the orchestrate section, where you would need to select logs and check for logs corresponding to the start time of the relevant run. (ref. Step 8 in the orchestrate section above)
 
@@ -175,16 +175,16 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 1. If you have not subscribed to Superset you will see a message to this effect. Kindly contact support@dalgo.in If you wish to add Superset to your subscription.
 2. If you have subscribed to Superset you will see a button for Google sign-in, click on it.
 
-<img width="1464" alt="N6 2) DSS sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/afe2d22c-14de-47f8-8acd-8417643b6220">
+<img width="1464" alt="N6 2) DSS sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/afe2d22c-14de-47f8-8acd-8417643b6220" />
 
 3. A pop-up window will appear. Select Sign In with Google.
 
-<img width="1470" alt="NN6 3 gogle sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/69b470be-5cbc-4f98-84f7-94e7f29431b2">
+<img width="1470" alt="NN6 3 gogle sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/69b470be-5cbc-4f98-84f7-94e7f29431b2" />
 
 4. If your Superset admin has granted access to your email ID, you will be successfully logged in. Else contact your Superset admin.
 5. Once successfully logged in, close the pop-up window. You will now be able to access Superset via Dalgo to build your charts and monitor if visualisations are being populated as expected.
 
-<img width="1464" alt="N6 5 ss" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/0e767faf-a140-4ab9-983d-4b803f0f5aab">
+<img width="1464" alt="N6 5 ss" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/0e767faf-a140-4ab9-983d-4b803f0f5aab" />
 
 # User Management
 
@@ -195,36 +195,13 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 - An Account Manager is likely to be the person who has setup your account. They can invite or delete any user and have the power to transfer their role to a Pipeline Manager.
 - Pipeline Managers are the team members who monitor the health of the pipelines and manage changes to them. They can also invite and delete users of the same role.
 
-<img width="1470" alt="N8) user management" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/f4be1e48-1763-4947-8bdf-9b14d7d8138b">
+<img width="1470" alt="N8) user management" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/f4be1e48-1763-4947-8bdf-9b14d7d8138b" />
 
 3. To invite a user, select invite user, enter their email, and select send invitation.
 
-<img width="597" alt="9)user invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/09a79781-b6ab-414c-a334-92669ce27b49">
+<img width="597" alt="9)user invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/09a79781-b6ab-414c-a334-92669ce27b49" />
 
 4. Once a user is invited you will see their name in the Pending invitations tab. You can choose to delete the invite or resend it using the three dots to the right.
 5. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
 
-<img width="1468" alt="10)pendinginvite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2f4aa20e-13e7-4ddf-bb9f-d9dc07c1dce1">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="1468" alt="10)pendinginvite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2f4aa20e-13e7-4ddf-bb9f-d9dc07c1dce1" />
