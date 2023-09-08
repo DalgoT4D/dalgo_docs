@@ -25,20 +25,20 @@ It enables you to setup and monitor your automated data pipelines through the fo
 
 
 # Managing up your data pipeline
-As a user of Version 1 of Dalgo your data pipelines will likely already setup for you by us or one of our partners. The steps below are intended to help you make changes to your pipeline as you use it over time.
+As a user of Version 1 of Dalgo your data pipelines will likely already be set up for you by us or by one of our partners. The steps below are intended to help you make changes to your pipeline as you use it over time.
 
 ## 1. Logging in as a first time user
-1. You will receive an invitation to the platform from notifications@dalgo.in .
+1. You will receive an invitation to the platform from notifications@dalgo.in.
 
 <img width="1308" alt="1) Invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/d53e3893-c44b-403a-ab0e-c0f25b69f0b5">
 
-2. Click on the link, it will take you to the Dalgo platform.
-3.  Accept the invitation and setup your password
+2. Clicking on the link will take you to the Dalgo platform.
+3. Accept the invitation and set up your password.
 
 <img width="735" alt="1 2)Accept invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/06696041-9b80-433d-a320-e4c73e3542fb">
 
 4. You are now logged into the platform. 
->Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.in or the partner that is helping you with setup.
+>Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.in or to the partner who is helping you with setup.
 
 ## 2. Ingest
 
@@ -48,13 +48,13 @@ As a user of Version 1 of Dalgo your data pipelines will likely already setup fo
 
 **Your warehouse is the single location where data from various sources is stored.**
 1. Click on Ingest from the left menu pane and then select the ‘Your Warehouse’ tab.
-2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already setup
+2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already setup.
 3. If you wish to edit your Warehouse name then click on the green edit button at the bottom of the window.
 
 <img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f">
 
-4. If you wish to use a different warehouse from what is currently setup then select delete warehouse and confirm. Then select ‘add a new warehouse’. 
-5. To setup a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, then click ‘save changes and test’.
+4. If you wish to use a different warehouse from what is currently setup then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’. 
+5. To setup a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
 
 <img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b">
 ___
@@ -64,7 +64,7 @@ ___
 
 ### 2.2. Managing your Data Sources
 
-**Your data Sources are the different places where data lies. This could be Google Sheets, KoboToolbox, Avni, or CommCare to name a few. Dalgo can connect to over 300 data sources. _We also develop connectors for new sources to meet your needs_.**
+**Your data Sources are the different places where data lies. These could be Google Sheets, KoboToolbox, Avni, or CommCare to name a few. Dalgo can connect to over 300 data sources. _We also develop connectors for new sources to meet your needs_.**
 
 1. Click on the “Sources” tab in the Ingest section
 2. To add a source, click on “+ New Source”
@@ -72,21 +72,21 @@ ___
 <img width="1469" alt="2 2 2) Add source" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/b649b580-8769-435c-b0d7-420092978bda">
 
 3. Give your source a unique name 
-4. Select the type of source you want to add and the required credentials for this source will appear.
+4. Select the type of source you want to add, and the required credentials for this source will appear.
 
 <img width="562" alt="2 2 4) Add source credentials" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fd10e1d8-f597-4c09-a1d8-77d8a55d259a">
 
-5. Fill in the required credentials
+5. Fill in the required credentials.
 6. Click ‘save changes and test’. 
 7. If you have entered the correct credentials the source will be added. 
 >Note: If you do not have the required credentials for your selected source then contact the relevant person on your team who would have them. Else simply google it and you will find instructions on where and how to find these source credentials.
-8. To edit a source, click the 3 dots on the right of the source bar and select edit.Then click 'save changes and test'.
-Note: You cannot change source type. Instead add a new source of the new type.
+8. To edit a source, click the 3 dots on the right of the source bar and select edit. Then click 'save changes and test'.
+Note: You cannot change the source type. Instead add a new source of the new type.
 9. To delete a source, click the 3 dots on the right of the source bar and select delete, then confirm.
 
 ### 2.3 Managing your Connections
 
-**This is the section where you direct the data coming in from your data sources to your warehouse and specify which tables from this source you want to sync, and how you wish to sync them.**
+**This is the section where you direct the data coming in from your data sources into your warehouse and specify which tables from this source you want to sync and how you wish to sync them.**
 
 1. Click on the ‘connections’ tab in the Ingest section
 2. To add a new connection select “+New connection”
@@ -106,13 +106,13 @@ Note: You cannot change source type. Instead add a new source of the new type.
 
 ## 3. Transform
 
-**Dalgo runs data transformations(data cleaning, joining, computation) using [DBT(Data build Tool)](https://docs.getdbt.com/docs/introduction) .**
+**Dalgo runs data transformations (data cleaning, joining, computation) using [dbt (data build tool)](https://docs.getdbt.com/docs/introduction) .**
 
-1. Select Transform on the left menu panel
+1. Select Transform on the left menu panel.
 
 <img width="1470" alt="3 1) Select Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/ca2afe55-e8ab-4523-b86c-51271a03663b">
 
-2. To setup your transformations click connect and setup repo.
+2. To setup your transformations click "connect and setup repo".
 3. Paste your github repo URL (where the code for your data transformations lies)
 4. Specify the target schema. (Generally ‘prod’ or ‘dev’, this depends on your dbt developer’s naming convention)
 
@@ -123,7 +123,7 @@ Note: You cannot change source type. Instead add a new source of the new type.
 
 <img width="1470" alt="N3 6) Select Function (blur)" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/22beda74-4c73-412b-b8b5-543c44905b54">
 
-7. The function will be executed and logs will be generated below.
+7. The function will be executed and the logs displayed below.
 
 <img width="1469" alt="N3 7) Logs generated (blur)" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/031480a0-f03b-40a5-b5c5-7d58f3179cf7">
 
@@ -137,10 +137,9 @@ Note: You cannot change source type. Instead add a new source of the new type.
 <img width="1470" alt="N4 2 SlctOrch" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e966b8e9-8186-4c84-a316-1ecceae3a9b4">
 
 3. Give your pipeline a name.
-4. Select one or more of the connections you have setup
+4. Select one or more of the connections you have setup.
 5. Toggle ‘Transform data?’ as per your needs.
-Set the schedule for your pipeline.
-6. Click save
+6. Set the schedule for your pipeline and click Save.
 
 <img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/46854fb0-f203-4c34-97f1-6dcc852837ae">
 
@@ -162,7 +161,7 @@ Set the schedule for your pipeline.
 
 <img width="1465" alt="N5 1 ovrvwsect" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c56e2733-09a4-42dc-8c8b-d6d187ab55f0">
 
-2. Each vertical bar represents a pipeline run. A green bar represents success. A yellow bar represents a successful run, but a failure in ancillary functions, for example ‘DBT test’. A red line indicates that the pipeline run has failed.
+2. Each vertical bar represents a pipeline run. A green bar represents success. A yellow bar represents a successful run, but a failure in ancillary functions, for example in a ‘DBT test’. A red line indicates that the pipeline run has failed.
 3. To investigate further, hover over the bar, note the start time, and click on check logs.
 
 <img width="1470" alt="N5 3) Overview+logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e09f3d8f-7f3c-47e1-bc5b-04dc4bea3410">
@@ -174,16 +173,16 @@ Set the schedule for your pipeline.
 **Dalgo runs and offers a hosted version of Superset for visualisation. Subscription to superset is optional.**
 
 1. If you have not subscribed to Superset you will see a message to this effect. Kindly contact support@dalgo.in If you wish to add Superset to your subscription.
-2. If you have subscribed to superset you will see a button for Google sign-in, click on it.
+2. If you have subscribed to Superset you will see a button for Google sign-in, click on it.
 
 <img width="1464" alt="N6 2) DSS sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/afe2d22c-14de-47f8-8acd-8417643b6220">
 
-3. A pop-up window will emerge. Select sign in with google.
+3. A pop-up window will appear. Select Sign In with Google.
 
 <img width="1470" alt="NN6 3 gogle sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/69b470be-5cbc-4f98-84f7-94e7f29431b2">
 
-4. If your superset admin has granted your email ID access you will be successfully logged in. Else contact your superset admin.
-5. Once successfully logged in, close the pop-up window. You will now be able to access superset via Dalgo to build your charts and monitor if visualisations are being populated as expected.
+4. If your Superset admin has granted access to your email ID, you will be successfully logged in. Else contact your Superset admin.
+5. Once successfully logged in, close the pop-up window. You will now be able to access Superset via Dalgo to build your charts and monitor if visualisations are being populated as expected.
 
 <img width="1464" alt="N6 5 ss" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/0e767faf-a140-4ab9-983d-4b803f0f5aab">
 
@@ -192,9 +191,9 @@ Set the schedule for your pipeline.
 **User management enables you to collaborate with relevant team members while using Dalgo**
 
 1. Click on User Management in the left menu pane.
-2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles. Dalgo currently has two roles; Account manager and pipeline manager.
-- An account manager is likely to be the person who has setup your account. They can invite or delete any user and have the power to transfer their role to a pipeline manager.
-- Pipeline managers are the team members who monitor the health of the pipeline and manage changes to it. They can also invite and delete users of the same role.
+2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles. Dalgo currently has two roles; Account Manager and Pipeline Manager.
+- An Account Manager is likely to be the person who has setup your account. They can invite or delete any user and have the power to transfer their role to a Pipeline Manager.
+- Pipeline Managers are the team members who monitor the health of the pipelines and manage changes to them. They can also invite and delete users of the same role.
 
 <img width="1470" alt="N8) user management" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/f4be1e48-1763-4947-8bdf-9b14d7d8138b">
 
