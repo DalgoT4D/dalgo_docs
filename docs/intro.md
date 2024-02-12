@@ -205,3 +205,16 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 5. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
 
 <img width="1468" alt="10)pendinginvite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2f4aa20e-13e7-4ddf-bb9f-d9dc07c1dce1" />
+
+## 7. Usage Dashboard
+
+**Dalgo offers a usage analytics dashboard for users who have subscribed for the superset visualization. The usage tab under Analysis will have this dashboard embedded**
+
+Usage dashboard gives you an overview of how well the visulizations have been adopted by the users in your organization. The first tab shows the following metrics
+1) Active Users - This bar graph tells you the total number of active and inactive users in your org. A user is defined as active if they have atleast one visit to a dashboard.
+2) List of users -  This table shows all the users in your org with their total visits to dashboard(s) assigned to them. In superset, you can map dashboards to a particular set of user(s) who are suppose to see it. 
+3) List of dashboards - This table shows all the dashboards created under your org along with the total number of visits made to them.
+
+The dashboard also offers insightful trends under the second tab. 
+4) No of users accessing the dashboard
+
