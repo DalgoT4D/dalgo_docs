@@ -210,11 +210,14 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 **Dalgo offers a usage analytics dashboard for users who have subscribed for the superset visualization. The usage tab under Analysis will have this dashboard embedded**
 
-Usage dashboard gives you an overview of how well the visulizations have been adopted by the users in your organization. The first tab shows the following metrics
+Usage dashboard gives you an overview of how well the visualizations have been adopted by the users in your organization. 
+
+Metrics tab
 1) Active Users - This bar graph tells you the total number of active and inactive users in your org. A user is defined as active if they have atleast one visit to a dashboard.
 2) List of users -  This table shows all the users in your org with their total visits to dashboard(s) assigned to them. In superset, you can map dashboards to a particular set of user(s) who are suppose to see it. 
 3) List of dashboards - This table shows all the dashboards created under your org along with the total number of visits made to them.
 
-The dashboard also offers insightful trends under the second tab. 
-4) No of users accessing the dashboard
+Trends tab
+1) No of users accessing the dashboard - This number card with trendline chart shows a montly trend of total number of users accessing the dashboard(s). The number itself shows the no of users accessing the dashboard in the current running month and whereas the percentage shows the change in the number compared to the previous month.
+2) No of visits per user - This number card with trendline chart depicts the trend of average number of visits per user for the dashboard(s). The number is the average number of visits per user for the current month while the percentage shows the change from previous month to the current month.
 
