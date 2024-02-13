@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdalgo_docs=self.webpackChunkdalgo_docs||[]).push([[552],{9396:(e,o,c)=>{c.r(o),c.d(o,{default:()=>t});var d=c(1504),s=c(5592);function t(){return d.createElement(s.YJ,{to:"/dalgo_docs/docs/intro"})}}}]);
