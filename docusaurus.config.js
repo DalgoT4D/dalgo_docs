@@ -9,7 +9,7 @@ const config = {
     title: "Dalgo",
     tagline:
         "Dalgo is an open-source data platform for social impact organisations.",
-    favicon: "img/favicon.ico",
+    favicon: "img/favicon_new.svg",
 
     // Set the production url of your site here
     url: "https://dalgo.github.io",
