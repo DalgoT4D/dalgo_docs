@@ -121,20 +121,20 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 5. Click save
 6. To check your setup, select a function and click execute.
 
-<img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/68d29623-f080-465f-b896-5caf05560612">
+<img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/68d29623-f080-465f-b896-5caf05560612" />
 
 
 7. The function will be executed and the logs displayed below.
 
-<img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/d33ea3df-5803-4085-b01d-c68d83d0e645">
+<img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/d33ea3df-5803-4085-b01d-c68d83d0e645" />
 
 8. You can add a custom task
 
-<img width="561" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/8affb19c-77e0-4da4-a819-fb5d63590182">
+<img width="561" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/8affb19c-77e0-4da4-a819-fb5d63590182" />
 
 which will appear at the bottom of your list
 
-<img width="1041" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/efe36719-829c-460d-9644-a54e4c01dcbe">
+<img width="1041" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/efe36719-829c-460d-9644-a54e4c01dcbe" />
 
 
 ## 4. Orchestrate
