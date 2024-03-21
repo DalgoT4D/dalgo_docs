@@ -11,7 +11,8 @@ Visit [dalgo.in](https://dalgo.in/) to learn more about the product and pricing,
 Our team is always available to provide you with support via Discord. [Join our server](https://discord.gg/C7BKvYPufp) and chat with us on Dalgo Support.
 
 ## Platform Overview
-[dashboard.dalgo.in](https://dashboard.dalgo.in/) is the interface for your M&E team, data analysts/engineers, or IT team. 
+
+[dashboard.dalgo.in](https://dashboard.dalgo.in/) is the interface for your M&E team, data analysts/engineers, or IT team.
 It enables you to set up and monitor your automated data pipelines through the following sections:
 
 1. **Ingest:** Set up your data warehouse>Connect to your sources of data>Connect your sources to your data warehouse.
@@ -20,14 +21,14 @@ It enables you to set up and monitor your automated data pipelines through the f
 4. **Pipeline Overview:** Monitor the health of your pipeline with a view of all your past runs.
 5. **Analysis:** View your data on your Superset dashboards within the platform and ensure that it is being populated as per your expectations.
 6. **User Management**: Add relevant team members to your organisation and collaborate.
->Note : *Superset will only be made available to you if you have subscribed to Dalgo with Superset.*
-
-
+   > Note : _Superset will only be made available to you if you have subscribed to Dalgo with Superset._
 
 # Managing up your data pipeline
+
 As a user of Version 1 of Dalgo your data pipelines will likely already be set up for you by us or by one of our partners. The steps below are intended to help you make changes to your pipeline as you use it over time.
 
 ## 1. Logging in as a first time user
+
 1. You will receive an invitation to the platform from notifications@dalgo.in.
 
 <img width="1308" alt="1) Invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/d53e3893-c44b-403a-ab0e-c0f25b69f0b5" />
@@ -37,8 +38,8 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 
 <img width="735" alt="1 2)Accept invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/06696041-9b80-433d-a320-e4c73e3542fb" />
 
-4. You are now logged into the platform. 
->Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.in or to the partner who is helping you with setup.
+4. You are now logged into the platform.
+   > Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.in or to the partner who is helping you with setup.
 
 ## 2. Ingest
 
@@ -47,41 +48,67 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 ### 2.1. Managing your Warehouse
 
 **Your warehouse is the single location where data from various sources is stored.**
+
 1. Click on Ingest from the left menu pane and then select the ‘Your Warehouse’ tab.
 2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already set up.
 3. If you wish to edit your Warehouse name then click on the green edit button at the bottom of the window.
 
 <img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f" />
 
-4. If you wish to use a different warehouse from what is currently set up then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’. 
+4. If you wish to use a different warehouse from what is currently set up then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’.
 5. To set up a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
 
 <img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b" />
 ___
 <img width="606" alt="2 152) Add WH Details" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/8ea11da5-05c1-4f5e-be3a-22fffa820638" />
 
->Note : Please seek advice from your internal tech team, your tech partner, or the Dalgo team (support@dalgo.in) if you need guidance on this.
+> Note : Please seek advice from your internal tech team, your tech partner, or the Dalgo team (support@dalgo.in) if you need guidance on this.
 
 ### 2.2. Managing your Data Sources
 
 **Your data Sources are the different places where data lies. These could be Google Sheets, KoboToolbox, Avni, or CommCare to name a few. Dalgo can connect to over 300 data sources. _We also develop connectors for new sources to meet your needs_.**
+
+**Set up the service account key**
+
+**Create a service account**
+
+1. Open the Service Accounts page in your Google Cloud console.
+2. Select an existing project, or create a new project.
+3. At the top of the page, click + Create service account.
+4. Enter a name and description for the service account, then click Create and Continue.
+5. Under Service account permissions, select the roles to grant to the service account, then click Continue. We recommend the Viewer role.
+
+**Generate a key**
+
+1. Go to the API Console/Credentials page and click on the email address of the service account you just created.
+2. In the Keys tab, click + Add key, then click Create new key.
+3. Select JSON as the Key type. This will generate and download the JSON key file that you'll use for authentication. Click Continue.
+
+**Enable the Google Sheets API**
+
+1. Go to the API Console/Library page.
+2. Make sure you have selected the correct project from the top.
+3. Find and select the Google Sheets API.
+4. Click ENABLE.
+
+If your spreadsheet is viewable by anyone with its link, no further action is needed. If not, give your Service account access to your spreadsheet.
 
 1. Click on the “Sources” tab in the Ingest section
 2. To add a source, click on “+ New Source”
 
 <img width="1469" alt="2 2 2) Add source" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/b649b580-8769-435c-b0d7-420092978bda" />
 
-3. Give your source a unique name 
+3. Give your source a unique name
 4. Select the type of source you want to add, and the required credentials for this source will appear.
 
 <img width="562" alt="2 2 4) Add source credentials" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fd10e1d8-f597-4c09-a1d8-77d8a55d259a" />
 
 5. Fill in the required credentials.
-6. Click ‘save changes and test’. 
-7. If you have entered the correct credentials the source will be added. 
->Note: If you do not have the required credentials for your selected source then contact the relevant person on your team who would have them. Else simply google it and you will find instructions on where and how to find these source credentials.
+6. Click ‘save changes and test’.
+7. If you have entered the correct credentials the source will be added.
+   > Note: If you do not have the required credentials for your selected source then contact the relevant person on your team who would have them. Else simply google it and you will find instructions on where and how to find these source credentials.
 8. To edit a source, click the 3 dots on the right of the source bar and select edit. Then click 'save changes and test'.
-Note: You cannot change the source type. Instead add a new source of the new type.
+   Note: You cannot change the source type. Instead add a new source of the new type.
 9. To delete a source, click the 3 dots on the right of the source bar and select delete, then confirm.
 
 ### 2.3 Managing your Connections
@@ -123,7 +150,6 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 
 <img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/68d29623-f080-465f-b896-5caf05560612" />
 
-
 7. The function will be executed and the logs displayed below.
 
 <img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/d33ea3df-5803-4085-b01d-c68d83d0e645" />
@@ -135,7 +161,6 @@ Note: You cannot change the source type. Instead add a new source of the new typ
 which will appear at the bottom of your list
 
 <img width="1041" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/efe36719-829c-460d-9644-a54e4c01dcbe" />
-
 
 ## 4. Orchestrate
 
@@ -202,6 +227,7 @@ which will appear at the bottom of your list
 
 1. Click on User Management in the left menu pane.
 2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles. Dalgo currently has two roles; Account Manager and Pipeline Manager.
+
 - An Account Manager is likely to be the person who has set up your account. They can invite or delete any user and have the power to transfer their role to a Pipeline Manager.
 - Pipeline Managers are the team members who monitor the health of the pipelines and manage changes to them. They can also invite and delete users of the same role.
 
@@ -221,24 +247,20 @@ which will appear at the bottom of your list
 **Dalgo offers a usage analytics dashboard for organizations who have subscribed to Superset Visualization. This dashboard gives you an overview of how well the visualizations have been adopted by the users in your organization. Insights drawn from here can be used to optimize dashboard utilization and decision making throughout your organization**
 
 **Metrics tab**
+
 1. Active Users - This bar graph tells you the total number of active and inactive users in your org. A user is defined as active if they have at least one visit to a dashboard.
-2. List of users -  This table shows all the users in your org with their total visits to dashboard(s) assigned to them. You can map dashboards in Superset to a particular set of user(s) who are supposed to see them. 
+2. List of users - This table shows all the users in your org with their total visits to dashboard(s) assigned to them. You can map dashboards in Superset to a particular set of user(s) who are supposed to see them.
 3. List of dashboards - This table shows all the dashboards created under your org along with the total number of visits made to them.
 
 Filters present at the top allow you to view your metrics across various dimensions of time (month), role and dashboard.
 
 ![usage1](https://github.com/DalgoT4D/dalgo_docs/assets/39583356/1fb325b2-8b1c-4e10-8a16-7913d680789e)
 
-
-
 **Trends tab**
+
 1. No of users accessing the dashboard - This number card with trendline chart shows a monthly trend of total number of users accessing the dashboard(s). The number itself shows the number of users accessing the dashboard in the current month and the percentage shows the change in the number compared to the previous month.
 2. No of visits per user - This number card with trendline chart depicts the trend of average number of visits per user for the dashboard(s). This number is the average number of visits per user for the current month while the percentage shows the change from the previous month.
 
 Top level filters allow you to look at the trend(s) across various slices of role and dashboard in your organization.
 
 ![usage2](https://github.com/DalgoT4D/dalgo_docs/assets/39583356/0110b364-a216-40d9-ba1b-c1a8bc3c8d6c)
-
-
-
-
