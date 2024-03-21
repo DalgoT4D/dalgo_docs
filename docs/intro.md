@@ -72,7 +72,7 @@ ___
 
 **Create a service account**
 
-1. Open the Service Accounts page in your Google Cloud console.
+1. Open the [Service Accounts Page](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts) in your Google Cloud console.
 2. Select an existing project, or create a new project.
 3. At the top of the page, click + Create service account.
 4. Enter a name and description for the service account, then click Create and Continue.
@@ -80,18 +80,18 @@ ___
 
 **Generate a key**
 
-1. Go to the API Console/Credentials page and click on the email address of the service account you just created.
+1. Go to the [API Console/Credentials](https://console.cloud.google.com/apis/credentials) page and click on the email address of the service account you just created.
 2. In the Keys tab, click + Add key, then click Create new key.
 3. Select JSON as the Key type. This will generate and download the JSON key file that you'll use for authentication. Click Continue.
 
 **Enable the Google Sheets API**
 
-1. Go to the API Console/Library page.
+1. Go to the [API Console/Library](https://console.cloud.google.com/apis/library) page.
 2. Make sure you have selected the correct project from the top.
 3. Find and select the Google Sheets API.
 4. Click ENABLE.
 
-If your spreadsheet is viewable by anyone with its link, no further action is needed. If not, give your Service account access to your spreadsheet.
+If your spreadsheet is viewable by anyone with its link, no further action is needed. If not, [give your Service account access to your spreadsheet](https://youtu.be/GyomEw5a2NQ%22).
 
 1. Click on the “Sources” tab in the Ingest section
 2. To add a source, click on “+ New Source”
