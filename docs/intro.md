@@ -229,7 +229,7 @@ which will appear at the bottom of your list
 2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles.
 3. To invite a user, select invite user, enter their email and the role you want to give them, and select send invitation.
 
-<img width="560" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/c0a228e8-7f90-4f20-ac6b-20de2976a08e">
+<img width="560" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/c0a228e8-7f90-4f20-ac6b-20de2976a08e" />
 
 4. Once a user is invited you will see their name in the Pending invitations tab. You can choose to delete the invite or resend it using the three dots to the right.
 5. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
