@@ -223,24 +223,29 @@ which will appear at the bottom of your list
 
 # User Management
 
-**User management enables you to collaborate with relevant team members while using Dalgo**
+**User management enables you to collaborate with relevant team members while using Dalgo. It llows you to add different users to the platform and assign them a role that grants the added user relevant 'view' or 'update' permissions**
 
 1. Click on User Management in the left menu pane.
-2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles. Dalgo currently has two roles; Account Manager and Pipeline Manager.
+2. In the ‘Users’ tab you will be able to see all your current users of Dalgo and their roles.
+3. To invite a user, select invite user, enter their email and the role you want to give them, and select send invitation.
 
-- An Account Manager is likely to be the person who has set up your account. They can invite or delete any user and have the power to transfer their role to a Pipeline Manager.
-- Pipeline Managers are the team members who monitor the health of the pipelines and manage changes to them. They can also invite and delete users of the same role.
-
-<img width="1470" alt="N8) user management" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/f4be1e48-1763-4947-8bdf-9b14d7d8138b" />
-
-3. To invite a user, select invite user, enter their email, and select send invitation.
-
-<img width="597" alt="9)user invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/09a79781-b6ab-414c-a334-92669ce27b49" />
+<img width="560" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/c0a228e8-7f90-4f20-ac6b-20de2976a08e">
 
 4. Once a user is invited you will see their name in the Pending invitations tab. You can choose to delete the invite or resend it using the three dots to the right.
 5. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
 
 <img width="1468" alt="10)pendinginvite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2f4aa20e-13e7-4ddf-bb9f-d9dc07c1dce1" />
+
+6. These are the available roles in Dalgo with their associated permissions:
+
+| Role | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Superset Usage dashboard |
+| ---- | --------------- | --------- | ------- | ----------- | ------- | ------- | -------- |
+| Account Manager | Update  | Update  | Update  | Update  | Update  | Update  | View |
+| Pipeline Manager | View  | View  | Update  | Update  | Update  | Update  | View |
+| Analyst | View  | View  | View  | View  | Update  | View  | View |
+| Guest | View  | View  | View  | View  | View  | View  | View |
+
+
 
 ## 7. Usage Dashboard
 
@@ -264,3 +269,4 @@ Filters present at the top allow you to view your metrics across various dimensi
 Top level filters allow you to look at the trend(s) across various slices of role and dashboard in your organization.
 
 ![usage2](https://github.com/DalgoT4D/dalgo_docs/assets/39583356/0110b364-a216-40d9-ba1b-c1a8bc3c8d6c)
+
