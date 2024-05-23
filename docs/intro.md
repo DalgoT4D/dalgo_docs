@@ -244,7 +244,7 @@ Top level filters allow you to look at the trend(s) across various slices of rol
 
 ![usage2](https://github.com/DalgoT4D/dalgo_docs/assets/39583356/0110b364-a216-40d9-ba1b-c1a8bc3c8d6c)
 
-# User Management
+## User Management
 
 **User management enables you to collaborate with relevant team members while using Dalgo. It llows you to add different users to the platform and assign them a role that grants the added user relevant 'view' or 'update' permissions**
 
