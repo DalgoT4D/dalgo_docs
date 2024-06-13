@@ -261,11 +261,35 @@ Top level filters allow you to look at the trend(s) across various slices of rol
 
 6. These are the available roles in Dalgo with their associated permissions:
 
-| Role | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Superset Usage dashboard |
-| ---- | --------------- | --------- | ------- | ----------- | ------- | ------- | -------- |
-| Account Manager | Update  | Update  | Update  | Update  | Update  | Update  | View |
-| Pipeline Manager | View  | View  | Update  | Update  | Update  | Update  | View |
-| Analyst | View  | View  | View  | View  | Update  | View  | View |
-| Guest | View  | View  | View  | View  | View  | View  | View |
+| Role             | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Superset Usage dashboard |
+| ---------------- | --------------- | --------- | ------- | ----------- | --------- | ----------- | ------------------------ |
+| Account Manager  | Update          | Update    | Update  | Update      | Update    | Update      | View                     |
+| Pipeline Manager | View            | View      | Update  | Update      | Update    | Update      | View                     |
+| Analyst          | View            | View      | View    | View        | Update    | View        | View                     |
+| Guest            | View            | View      | View    | View        | View      | View        | View                     |
 
+## 5 Writing Schema Changes
 
+When you need to make changes to your data schema, Dalgo provides a streamlined process to ensure your transformations are updated accordingly.
+
+1. **Detecting Changes**: Dalgo automatically detects any changes you make to your data schema. This includes additions, deletions, or modifications of columns in your tables.
+2. **Notification System**: Once a schema change is detected, you will receive an email notification, keeping you informed about the changes.
+
+<img width="1469" alt="5 1 1) Your DBT Models" src="/static/img/schema-notification.png" />
+
+3. **Pending Changes Section**: On the ingest page, you’ll find a "Pending Changes" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
+   <img width="1469" alt="5 1 2) Pending actions" src="/static/img/pending-actions.png" />
+
+4. **Viewing Details**: By clicking the "View" button next to each connection in the "Pending Changes" section, you can see detailed information about the changes, such as which columns have been added or removed.
+
+<img width="898" alt="5 1 3) Catalog data" src="/static/img/catalog.png" />
+
+5. **Approving or Ignoring Changes**: You have the flexibility to either approve or ignore these changes based on your needs. Approving the changes will automatically sync your data with the updated schema. Once approved the pending actions tab will disappear.
+
+6. **Handling Breaking Changes**: If a change involves the removal of a critical field, such as a cursor field, it will be identified as a breaking change. These changes cannot be approved through Dalgo. Instead, you will need to resolve the issue at the source to ensure your connections remain operational.
+
+7. **Seamless Syncing**: Once the schema changes are approved, Dalgo will seamlessly sync the data with the updated schema, ensuring consistency and accuracy across your data transformations.
+
+> Note: It's important to ensure that your schema changes are compatible with your data sources and downstream applications. Consult with your data team or reach out to Dalgo support (support@dalgo.in) for assistance.
+
+By following these steps, you can effectively manage schema changes within your Dalgo data pipeline, ensuring that your data transformations remain accurate and up-to-date[^2^][2].
