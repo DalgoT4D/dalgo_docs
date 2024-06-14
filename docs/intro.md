@@ -277,7 +277,6 @@ When you need to make changes to your data schema, Dalgo provides a streamlined 
 <img width="601" alt="schema-notification" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/17712e87-b1cb-4671-80bd-f2f814ab04d6">
 
 3. **Pending Changes Section**: On the ingest page, you’ll find a "Pending Changes" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
-   <img width="1469" alt="5 1 2) Pending actions" src="/static/img/pending-actions.png" />
 <img width="1420" alt="pending-actions" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/2aeba855-8a5a-4ac0-91d3-ab2cdcf54977">
 
 4. **Viewing Details**: By clicking the "View" button next to each connection in the "Pending Changes" section, you can see detailed information about the changes, such as which columns have been added or removed.
