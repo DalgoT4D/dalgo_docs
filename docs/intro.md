@@ -268,7 +268,7 @@ Top level filters allow you to look at the trend(s) across various slices of rol
 | Analyst          | View            | View      | View    | View        | Update    | View        | View                     |
 | Guest            | View            | View      | View    | View        | View      | View        | View                     |
 
-## 5 Writing Schema Changes
+## Writing Schema Changes
 
 When you need to make changes to your data schema, Dalgo provides a streamlined process to ensure your transformations are updated accordingly.
 
