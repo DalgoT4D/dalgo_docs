@@ -274,17 +274,17 @@ When you need to make changes to your data schema, Dalgo provides a streamlined 
 
 1. **Detecting Changes**: Dalgo automatically detects any changes you make to your data schema. This includes additions, deletions, or modifications of columns in your tables.
 2. **Notification System**: Once a schema change is detected, you will receive an email notification, keeping you informed about the changes.
-
-<img width="1469" alt="5 1 1) Your DBT Models" src="/static/img/schema-notification.png" />
+<img width="601" alt="schema-notification" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/17712e87-b1cb-4671-80bd-f2f814ab04d6">
 
 3. **Pending Changes Section**: On the ingest page, you’ll find a "Pending Changes" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
    <img width="1469" alt="5 1 2) Pending actions" src="/static/img/pending-actions.png" />
+<img width="1420" alt="pending-actions" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/2aeba855-8a5a-4ac0-91d3-ab2cdcf54977">
 
 4. **Viewing Details**: By clicking the "View" button next to each connection in the "Pending Changes" section, you can see detailed information about the changes, such as which columns have been added or removed.
 
-<img width="898" alt="5 1 3) Catalog data" src="/static/img/catalog.png" />
-
 5. **Approving or Ignoring Changes**: You have the flexibility to either approve or ignore these changes based on your needs. Approving the changes will automatically sync your data with the updated schema. Once approved the pending actions tab will disappear.
+
+<img width="595" alt="catalog" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/130b7a27-8e1e-4836-80bf-b585059baa24">
 
 6. **Handling Breaking Changes**: If a change involves the removal of a critical field, such as a cursor field, it will be identified as a breaking change. These changes cannot be approved through Dalgo. Instead, you will need to resolve the issue at the source to ensure your connections remain operational.
 
@@ -292,4 +292,4 @@ When you need to make changes to your data schema, Dalgo provides a streamlined 
 
 > Note: It's important to ensure that your schema changes are compatible with your data sources and downstream applications. Consult with your data team or reach out to Dalgo support (support@dalgo.in) for assistance.
 
-By following these steps, you can effectively manage schema changes within your Dalgo data pipeline, ensuring that your data transformations remain accurate and up-to-date[^2^][2].
+By following these steps, you can effectively manage schema changes within your Dalgo data pipeline, ensuring that your data transformations remain accurate and up-to-date.
