@@ -283,7 +283,7 @@ When you need to make changes to your data schema, Dalgo provides a streamlined 
 
 5. **Approving or Ignoring Changes**: You have the flexibility to either approve or ignore these changes based on your needs. Approving the changes will automatically sync your data with the updated schema. Once approved the pending actions tab will disappear.
 
-<img width="595" alt="catalog" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/130b7a27-8e1e-4836-80bf-b585059baa24">
+<img width="444" alt="catalog" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/bdc10b90-03e8-4b90-ba7a-396229769ee2">
 
 6. **Handling Breaking Changes**: If a change involves the removal of a critical field, such as a cursor field, it will be identified as a breaking change. These changes cannot be approved through Dalgo. Instead, you will need to resolve the issue at the source to ensure your connections remain operational.
 
