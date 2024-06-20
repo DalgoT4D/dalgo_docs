@@ -270,24 +270,22 @@ Top level filters allow you to look at the trend(s) across various slices of rol
 
 ## Writing Schema Changes
 
-When you need to make changes to your data schema, Dalgo provides a streamlined process to ensure your transformations are updated accordingly.
+When you need to make changes to your source data schema, Dalgo provides a streamlined process to ensure your sync pipelines are updated accordingly.
 
-1. **Detecting Changes**: Dalgo automatically detects any changes you make to your data schema. This includes additions, deletions, or modifications of columns in your tables.
-2. **Notification System**: Once a schema change is detected, you will receive an email notification, keeping you informed about the changes.
-<img width="601" alt="schema-notification" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/17712e87-b1cb-4671-80bd-f2f814ab04d6">
+1. **Detecting Changes**: Dalgo automatically detects any changes you make to your source data schema. This includes additions, deletions, or modifications of columns in your tables.
 
-3. **Pending Changes Section**: On the ingest page, you’ll find a "Pending Changes" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
+2. **Pending Changes Section**: On the ingest page, you’ll find a "Pending Changes" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
 <img width="1420" alt="pending-actions" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/2aeba855-8a5a-4ac0-91d3-ab2cdcf54977">
 
-4. **Viewing Details**: By clicking the "View" button next to each connection in the "Pending Changes" section, you can see detailed information about the changes, such as which columns have been added or removed.
+3. **Viewing Details**: By clicking the "View" button next to each connection in the "Pending Changes" section, you can see detailed information about the changes, such as which columns have been added or removed.
 
-5. **Approving or Ignoring Changes**: You have the flexibility to either approve or ignore these changes based on your needs. Approving the changes will automatically sync your data with the updated schema. Once approved the pending actions tab will disappear.
+4. **Approving or Ignoring Changes**: You have the flexibility to either approve or ignore these changes based on your needs. Approving the changes will automatically sync your data with the updated schema. Once approved the pending actions tab will disappear.
 
 <img width="444" alt="catalog" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/bdc10b90-03e8-4b90-ba7a-396229769ee2">
 
-6. **Handling Breaking Changes**: If a change involves the removal of a critical field, such as a cursor field, it will be identified as a breaking change. These changes cannot be approved through Dalgo. Instead, you will need to resolve the issue at the source to ensure your connections remain operational.
+5. **Handling Breaking Changes**: If a change involves the removal of a critical field, such as a cursor field, it will be identified as a breaking change. These changes cannot be approved through Dalgo. Instead, you will need to resolve the issue at the source to ensure your connections remain operational.
 
-7. **Seamless Syncing**: Once the schema changes are approved, Dalgo will seamlessly sync the data with the updated schema, ensuring consistency and accuracy across your data transformations.
+6. **Seamless Syncing**: Once the schema changes are approved, Dalgo will seamlessly sync the data with the updated schema, ensuring consistency and accuracy across your data transformations.
 
 > Note: It's important to ensure that your schema changes are compatible with your data sources and downstream applications. Consult with your data team or reach out to Dalgo support (support@dalgo.in) for assistance.
 
