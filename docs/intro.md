@@ -167,20 +167,21 @@ which will appear at the bottom of your list
 **Through this step Dalgo enables you to automate your data pipeline by setting up scheduled ingestion and transformation.**
 
 1. Select orchestrate on the left menu panel.
-2. Select “+ New Pipeline” -This will take you to the “Create a new Pipeline” screen
+2. Select “+ New Pipeline”.
 
-<img width="1470" alt="N4 2 SlctOrch" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e966b8e9-8186-4c84-a316-1ecceae3a9b4" />
-
+<img width="1470" alt="Orchestration Screen" src="https://github.com/user-attachments/assets/fd411d49-722d-4c60-ab35-c38a19c5ddba" />
+3. This will take you to the “Create a new Pipeline” screen. 
 3. Give your pipeline a name.
 4. Select one or more of the connections you have set up.
-5. Toggle ‘Transform data?’ as per your needs.
+5. Under Transform tasks, you will have the option to create 'Simple' pipelines or 'Advanced Pipelines'.
+<img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/user-attachments/assets/1f4765e0-f109-4db0-95a0-54f67fb5122d" />
+
+<img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/user-attachments/assets/68f06e4f-6ec3-40d1-a91e-07ee1eb9f59f" />
+
 6. Set the schedule for your pipeline and click Save.
-
-<img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/46854fb0-f203-4c34-97f1-6dcc852837ae" />
-
 7. You can test your pipeline by clicking 'Run'.
 
-<img width="1467" alt="N4 8  orch manual run" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/65adb73d-e227-4aa0-8807-95529fd1992e" />
+<img width="1467" alt="N4 8  orch manual run" src="https://github.com/user-attachments/assets/dc0f1dd3-4f9a-4489-9c3c-9b52f40ec595" />
 
 8. You can view logs of your past runs by selecting ‘last logs’. Click ‘show more’ to see the details.
 
@@ -193,31 +194,34 @@ which will appear at the bottom of your list
 **This section is intended to help you monitor the health of your data pipelines and provide you with a way to investigate further.**
 
 1. Once you have set up at least one pipeline in the orchestration section you will see it in the overview section. Each pipeline will be represented separately.
-
-<img width="1465" alt="N5 1 ovrvwsect" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c56e2733-09a4-42dc-8c8b-d6d187ab55f0" />
+<img width="1465" alt="Pipeline Overview" src="https://github.com/user-attachments/assets/23860d87-a872-4593-8b35-e6bd45248acd" />
 
 2. Each vertical bar represents a pipeline run. A green bar represents success. A yellow bar represents a successful run, but a failure in ancillary functions, for example in a ‘DBT test’. A red line indicates that the pipeline run has failed.
-3. To investigate further, hover over the bar, note the start time, and click on check logs.
 
-<img width="1470" alt="N5 3) Overview+logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e09f3d8f-7f3c-47e1-bc5b-04dc4bea3410" />
+4. To investigate further, hover over the bar, note the start time, and click on check logs.
 
-4. This will take you to the orchestrate section, where you would need to select logs and check for logs corresponding to the start time of the relevant run. (ref. Step 8 in the orchestrate section above)
+<img width="1470" alt="Pipeline Overview ->check logs" src="https://github.com/user-attachments/assets/a3fc6675-affa-40b7-bf01-fbb886c6500d" />
+
+4. You can then scroll down on the Pipeline Overview Page to the logs section, where you can check the logs for any pertinent error messages or information.
+
+<img width="1470" alt="Pipeline Overview -> View logs" src="https://github.com/user-attachments/assets/5862dccb-531d-4ac5-813e-aaec9506fb25" />
+
 
 # Analysis
 
 **Dalgo runs and offers a hosted version of Superset for visualisation. Subscription to superset is optional.**
 
 1. If you have not subscribed to Superset you will see a message to this effect. Kindly contact support@dalgo.in If you wish to add Superset to your subscription.
-2. If you have subscribed to Superset you will see a button for Google sign-in, click on it.
 
-<img width="1464" alt="N6 2) DSS sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/afe2d22c-14de-47f8-8acd-8417643b6220" />
+<img width="1437" alt="No_Superset" src="https://github.com/user-attachments/assets/e242c7b3-8bd1-4592-8c02-9827640dc291">
 
-3. A pop-up window will appear. Select Sign In with Google.
+3. If you have subscribed to Superset you will see a log-in page where you should enter your Superset credentials.
 
-<img width="1470" alt="NN6 3 gogle sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/69b470be-5cbc-4f98-84f7-94e7f29431b2" />
+<img width="1464" alt="N6 2) DSS sign in" src="https://github.com/user-attachments/assets/25be348d-40da-44d9-ad79-f144e52ab649" />
 
 4. If your Superset admin has granted access to your email ID, you will be successfully logged in. Else contact your Superset admin.
-5. Once successfully logged in, close the pop-up window. You will now be able to access Superset via Dalgo to build your charts and monitor if visualisations are being populated as expected.
+
+6. Once successfully logged in, close the pop-up window. You will now be able to access Superset via Dalgo to build your charts and monitor if visualisations are being populated as expected.
 
 <img width="1464" alt="N6 5 ss" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/0e767faf-a140-4ab9-983d-4b803f0f5aab" />
 
@@ -255,9 +259,12 @@ Top level filters allow you to look at the trend(s) across various slices of rol
 <img width="560" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/c0a228e8-7f90-4f20-ac6b-20de2976a08e" />
 
 4. Once a user is invited you will see their name in the Pending invitations tab. You can choose to delete the invite or resend it using the three dots to the right.
-5. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
 
 <img width="1468" alt="10)pendinginvite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2f4aa20e-13e7-4ddf-bb9f-d9dc07c1dce1" />
+
+6. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
+
+<img width="1468" alt="10)pendinginvite" src="https://github.com/user-attachments/assets/1f1d70cc-c81e-4f0a-a289-cd3c6b1a37ae" />
 
 6. These are the available roles in Dalgo with their associated permissions:
 
@@ -274,8 +281,8 @@ When you need to make changes to your source data schema, Dalgo provides a strea
 
 1. **Detecting Changes**: Dalgo automatically detects any changes you make to your source data schema. This includes additions, deletions, or modifications of columns in your tables.
 
-2. **Pending Changes Section**: On the ingest page, you’ll find a "Pending Changes" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
-<img width="1420" alt="pending-actions" src="https://github.com/DalgoT4D/dalgo_docs/assets/35729337/2aeba855-8a5a-4ac0-91d3-ab2cdcf54977">
+2. **Pending Actions Section**: On the ingest page, you’ll find a "Pending Actions" section only if there is a schema change in any of the connections. This section lists all connections with detected schema changes, making it easy to manage them.
+<img width="1420" alt="pending-actions" src="https://github.com/user-attachments/assets/baacf699-a48b-4f1d-bfaf-03b96c722c96">
 
 3. **Viewing Details**: By clicking the "View" button next to each connection in the "Pending Changes" section, you can see detailed information about the changes, such as which columns have been added or removed.
 
