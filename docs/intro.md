@@ -53,10 +53,14 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already set up.
 3. If you wish to edit your Warehouse name then click on the green edit button at the bottom of the window.
 
-<img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f" />
+<img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/user-attachments/assets/4e9a9dbb-6da3-4068-9056-523d420efa61" />
+
 
 4. If you wish to use a different warehouse from what is currently set up then select ‘delete warehouse’ and confirm. Then select ‘add a new warehouse’.
-5. To set up a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
+<img width="1467" alt="2 1 3  Delete Warehouse" src="https://github.com/user-attachments/assets/01b10cae-9077-4e2c-a590-02ff7928cf36" />
+
+
+6. To set up a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click ‘save changes and test’.
 
 <img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b" />
 ___
@@ -96,7 +100,8 @@ If your spreadsheet is viewable by anyone with its link, no further action is ne
 1. Click on the “Sources” tab in the Ingest section
 2. To add a source, click on “+ New Source”
 
-<img width="1469" alt="2 2 2) Add source" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/b649b580-8769-435c-b0d7-420092978bda" />
+<img width="1469" alt="2 2 2) Add source" src="https://github.com/user-attachments/assets/61c363c2-6ac0-46ac-a952-11379e827f7e" />
+
 
 3. Give your source a unique name
 4. Select the type of source you want to add, and the required credentials for this source will appear.
@@ -118,7 +123,8 @@ If your spreadsheet is viewable by anyone with its link, no further action is ne
 1. Click on the ‘connections’ tab in the Ingest section
 2. To add a new connection select “+New connection”
 
-<img width="1470" alt="2 3 2) Select connections" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fb81addc-d29e-477f-bb5b-3c05b0c21854" />
+<img width="1470" alt="New Connection connections" src="https://github.com/user-attachments/assets/63451b8b-6977-4488-84d5-b0d9ad898f4e" />
+
 
 3. Give your connection a name and select the source for which you want to build the connection. You will see all the source tables that you added appear in the streams column.
 
@@ -169,23 +175,43 @@ which will appear at the bottom of your list
 1. Select orchestrate on the left menu panel.
 2. Select “+ New Pipeline”.
 
-<img width="1470" alt="Orchestration Screen" src="https://github.com/user-attachments/assets/fd411d49-722d-4c60-ab35-c38a19c5ddba" />
+<img width="1470" alt="Orchestration Screen" src="https://github.com/user-attachments/assets/46505ef3-da64-4e0d-bdc3-2f39ae9ae3f6" />
+
+
 3. This will take you to the “Create a new Pipeline” screen. 
-3. Give your pipeline a name.
-4. Select one or more of the connections you have set up.
-5. Under Transform tasks, you will have the option to create 'Simple' pipelines or 'Advanced Pipelines'.
+
+4. Give your pipeline a name.
+
+5. Select one or more of the connections you have set up.
+
+6. Under Transform tasks, you will have the option to create 'Simple' pipelines or 'Advanced Pipelines'.
 <img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/user-attachments/assets/1f4765e0-f109-4db0-95a0-54f67fb5122d" />
 
 <img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/user-attachments/assets/68f06e4f-6ec3-40d1-a91e-07ee1eb9f59f" />
 
-6. Set the schedule for your pipeline and click Save.
-7. You can test your pipeline by clicking 'Run'.
+7. Set the schedule for your pipeline and click Save.
+
+8. You can test your pipeline by clicking 'Run'.
 
 <img width="1467" alt="N4 8  orch manual run" src="https://github.com/user-attachments/assets/dc0f1dd3-4f9a-4489-9c3c-9b52f40ec595" />
 
-8. You can view logs of your past runs by selecting ‘last logs’. Click ‘show more’ to see the details.
+9. You will have to wait aa few minutes for it to complete running.
+<img width="1467" alt="N4 8  orch manual run" src="https://github.com/user-attachments/assets/51798040-e20f-40dc-80c7-18f8520b309f" />
 
-<img width="613" alt="N4 9  Orch logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/72e90987-3754-41f5-a461-9c4926a9c9ff" />
+10. You can view logs of both successful and failed runs by selecting ‘last logs’. 
+
+<img width="613" alt="N4 9  Orch logs" src="https://github.com/user-attachments/assets/1e0810ef-58ac-46b6-b2e9-26cbda4ca523" />
+
+11. In the Log History, failed runs (highlighted in red) will provide you with the option to view an AI summary of the logs to better help you identify what went wrong with the run.
+<img width="613" alt="N4 9  Orch logs" src="https://github.com/user-attachments/assets/975ee511-7f2d-4d11-8c79-71c7f52a77b1" />
+
+12. You can hit the 'AI Summary' button to view the Analysis.
+
+<img width="613" alt="AI summary running" src="https://github.com/user-attachments/assets/57e83299-6a24-4920-93e3-6c933d5de655" />
+
+
+<img width="613" alt="AI summary loaded" src="https://github.com/user-attachments/assets/9d51fc99-1c99-4cdd-82d3-ca1c3ca3260a" />
+
 
 # Monitoring your data pipelines
 
