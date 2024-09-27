@@ -290,3 +290,35 @@ When you need to make changes to your source data schema, Dalgo provides a strea
 > Note: It's important to ensure that your schema changes are compatible with your data sources and downstream applications. Consult with your data team or reach out to Dalgo support (support@dalgo.in) for assistance.
 
 By following these steps, you can effectively manage schema changes within your Dalgo data pipeline, ensuring that your data transformations remain accurate and up-to-date.
+
+## AI Data Analysis v0.1
+
+**Dalgo's AI Data Analaysis allows you to leverage AI and ask Dalgo questions about data that's stored in your warehouse. Explore a range of possibilities from, generate quick insights on your data, learn more about the data quality of your dataset, or even summarise qualitative data!**
+
+Prerequisite: You have to have your warehouse setup on Dalgo and the warehouse must contain some data.
+
+https://github.com/user-attachments/assets/0b5cc6b9-ad73-4914-981c-86db35ed9ab0
+
+### Steps to use the feature
+1. Navigate to AI Data Analysis in the left pane
+2. Enter an SQL query to select the table that you want to a analyse
+3. Select the summarise prpmpt and build on it or enter a custom proompt.
+4. Press submit and wait for the response to be generated.
+5. If the response is unsatisfactory press the 'thumbs down' icon at the bottom right of the winodow and share your feedback with us.
+6. Else iterate on your prompt or query to imporve the ourput of your prompt.
+7. Once you are satisfied with the output you can click on 'save as' to save the session so that you can access it again for future analyses.
+8. Click on saved sessions to access previously saved sessions
+9. You could also press the copy symbol to copy the response and paste it into a deck
+10. You may choose to download your SQL query, prompt, and response as a csv by clicking on the download button.
+
+### Troubleshooting and FAQs
+1. If the response is not to your satisfaction then iterate on your prompt.
+2. If the page is taking too long to generate a response then reload it and try a different prompt.
+3. The output will not be representative of your entire dataset if your dataset is over 500 rows. This feature is currently limited to 500 rows of analysis. 
+
+### Tips and Best Practices
+1. Give context on the data to the extent that you can
+2. If your column names are not representative of the data in the column then you should mention the column name in your prompt. For example: If my column is named 'xyz' and the data in this column is the number of covid deaths per country. Then In my prompt I should mention to caclulate total covid deaths from column 'xyz'
+3. Mention if you want the data to be numbered, in bullets, or in a table and how many points or words you want the data in. This will help format and limit your response.
+
+
