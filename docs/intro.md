@@ -297,7 +297,7 @@ By following these steps, you can effectively manage schema changes within your 
 
 Prerequisite: You have to have your warehouse setup on Dalgo and the warehouse must contain some data.
 
-https://github.com/user-attachments/assets/0b5cc6b9-ad73-4914-981c-86db35ed9ab0
+[Video](https://github.com/user-attachments/assets/0b5cc6b9-ad73-4914-981c-86db35ed9ab0)
 
 ### Steps to use the feature
 1. Navigate to AI Data Analysis in the left pane
