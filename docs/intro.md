@@ -293,11 +293,11 @@ By following these steps, you can effectively manage schema changes within your 
 
 ## AI Data Analysis v0.1
 
-**Dalgo's AI Data Analaysis allows you to leverage AI and ask Dalgo questions about data that's stored in your warehouse. Explore a range of possibilities from, generate quick insights on your data, learn more about the data quality of your dataset, or even summarise qualitative data!**
+**Dalgo's AI Data Analaysis allows you to leverage AI and ask Dalgo questions about data that's stored in your warehouse. Explore a range of possibilities; generate quick insights on your data, learn more about the data quality of your dataset, or even summarise qualitative data!**
 
 Prerequisite: You have to have your warehouse setup on Dalgo and the warehouse must contain some data.
 
-https://github.com/user-attachments/assets/0b5cc6b9-ad73-4914-981c-86db35ed9ab0
+[Video](https://github.com/user-attachments/assets/0b5cc6b9-ad73-4914-981c-86db35ed9ab0)
 
 ### Steps to use the feature
 1. Navigate to AI Data Analysis in the left pane
