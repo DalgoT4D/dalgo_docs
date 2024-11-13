@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdalgo_docs=self.webpackChunkdalgo_docs||[]).push([[583],{6866:(d,o,s)=>{s.r(o),s.d(o,{default:()=>e});s(6540);var c=s(6347),a=s(4848);function e(){return(0,a.jsx)(c.rd,{to:"/dalgo_docs/docs/intro"})}}}]);
