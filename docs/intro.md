@@ -304,29 +304,29 @@ Prerequisite: You have to have your warehouse setup on Dalgo and the warehouse m
 2. Enter an SQL query to select the table that you want to a analyse
 3. Select the 'Summarise' prompt and build on it or enter a custom proompt.
 
-<img width="1470" alt="Screenshot 2024-11-13 at 2 51 08 PM" src="https://github.com/user-attachments/assets/c3a5af64-f020-494d-922e-9b4e93f97801">
+<img width="1470" alt="Screenshot 2024-11-13 at 2 51 08 PM" src="https://github.com/user-attachments/assets/c3a5af64-f020-494d-922e-9b4e93f97801" />
 
 4. Press submit and wait for the response to be generated.
 
-<img width="1470" alt="Screenshot 2024-11-13 at 2 56 49 PM" src="https://github.com/user-attachments/assets/76892f33-6e2b-41da-994d-2074d15932ea">
+<img width="1470" alt="Screenshot 2024-11-13 at 2 56 49 PM" src="https://github.com/user-attachments/assets/76892f33-6e2b-41da-994d-2074d15932ea" />
 
 5. Iterate on your prompt or query to improve the ourput of your prompt.
 
-<img width="1470" alt="Screenshot 2024-11-13 at 2 56 02 PM" src="https://github.com/user-attachments/assets/7584ea30-5238-4aa5-b773-7ed2b416a2c8">
+<img width="1470" alt="Screenshot 2024-11-13 at 2 56 02 PM" src="https://github.com/user-attachments/assets/7584ea30-5238-4aa5-b773-7ed2b416a2c8" />
 
 6. When you are satisfied with the output you can click on 'save as' to save the session so that you can access it again for future analyses.
 7. Click on saved sessions to access previously saved sessions
 
-<img width="1470" alt="Screenshot 2024-11-13 at 3 01 52 PM" src="https://github.com/user-attachments/assets/11305868-48e9-4748-8560-ebf30d0f2f19">
+<img width="1470" alt="Screenshot 2024-11-13 at 3 01 52 PM" src="https://github.com/user-attachments/assets/11305868-48e9-4748-8560-ebf30d0f2f19" />
 
 8. You could also press the copy symbol to copy the response and paste it into a deck
 
-<img width="1470" alt="Screenshot 2024-11-13 at 2 58 57 PM" src="https://github.com/user-attachments/assets/e99981d2-01a3-45f5-bb61-5b1d420ae5a4">
+<img width="1470" alt="Screenshot 2024-11-13 at 2 58 57 PM" src="https://github.com/user-attachments/assets/e99981d2-01a3-45f5-bb61-5b1d420ae5a4" />
 
 9. You may choose to download your SQL query, prompt, and response as a csv by clicking on the download button.
 10. If the response is unsatisfactory press the 'thumbs down' icon at the bottom right of the winodow and share your feedback with us.
 
-<img width="1470" alt="Screenshot 2024-11-13 at 2 58 00 PM" src="https://github.com/user-attachments/assets/089169a5-0c94-4344-85a8-09039e0bdd22">
+<img width="1470" alt="Screenshot 2024-11-13 at 2 58 00 PM" src="https://github.com/user-attachments/assets/089169a5-0c94-4344-85a8-09039e0bdd22" />
 
 
 ### Troubleshooting and FAQs
