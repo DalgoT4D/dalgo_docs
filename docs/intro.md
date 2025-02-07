@@ -45,6 +45,10 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 
 **Through this step Dalgo connects your different data sources to a single warehouse.**
 
+_You may need to whitelist these IP addresses in your firewall:_ 
+- `13.202.128.47`
+- `65.2.173.97`
+
 ### 2.1. Managing your Warehouse
 
 **Your warehouse is the single location where data from various sources is stored.**
