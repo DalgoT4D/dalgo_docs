@@ -6,13 +6,13 @@
 
 This ensures that you spend no time on repetitive manual data crunching and can direct your efforts towards the use of data to monitor and evaluate your impact. Learning, iterating and communicating your impact internally and externally.
 
-Visit [dalgo.in](https://dalgo.in/) to learn more about the product and pricing, or contact us at support@dalgo.in
+Visit [dalgo.org](https://dalgo.org/) to learn more about the product and pricing, or contact us at support@dalgo.org
 
 Our team is always available to provide you with support via Discord. [Join our server](https://discord.gg/C7BKvYPufp) and chat with us on Dalgo Support.
 
 ## Platform Overview
 
-[dashboard.dalgo.in](https://dashboard.dalgo.in/) is the interface for your M&E team, data analysts/engineers, or IT team.
+[dashboard.dalgo.org](https://dashboard.dalgo.org/) is the interface for your M&E team, data analysts/engineers, or IT team.
 It enables you to set up and monitor your automated data pipelines through the following sections:
 
 1. **Ingest:** Set up your data warehouse>Connect to your sources of data>Connect your sources to your data warehouse.
@@ -29,7 +29,7 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 
 ## 1. Logging in as a first time user
 
-1. You will receive an invitation to the platform from notifications@dalgo.in.
+1. You will receive an invitation to the platform from notifications@dalgo.org.
 
 <img width="1308" alt="1) Invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/d53e3893-c44b-403a-ab0e-c0f25b69f0b5" />
 
@@ -39,7 +39,7 @@ As a user of Version 1 of Dalgo your data pipelines will likely already be set u
 <img width="735" alt="1 2)Accept invite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/06696041-9b80-433d-a320-e4c73e3542fb" />
 
 4. You are now logged into the platform.
-   > Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.in or to the partner who is helping you with setup.
+   > Note : If the pipeline overview page says “No pipelines available. Please create one” then reach out to support@dalgo.org or to the partner who is helping you with setup.
 
 ## 2. Ingest
 
@@ -66,7 +66,7 @@ _You may need to whitelist these IP addresses in your firewall:_
 ___
 <img width="606" alt="2 152) Add WH Details" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/8ea11da5-05c1-4f5e-be3a-22fffa820638" />
 
-> Note : Please seek advice from your internal tech team, your tech partner, or the Dalgo team (support@dalgo.in) if you need guidance on this.
+> Note : Please seek advice from your internal tech team, your tech partner, or the Dalgo team (support@dalgo.org) if you need guidance on this.
 
 ### 2.2. Managing your Data Sources
 
@@ -211,7 +211,7 @@ which will appear at the bottom of your list
 
 **Dalgo runs and offers a hosted version of Superset for visualisation. Subscription to superset is optional.**
 
-1. If you have not subscribed to Superset you will see a message to this effect. Kindly contact support@dalgo.in If you wish to add Superset to your subscription.
+1. If you have not subscribed to Superset you will see a message to this effect. Kindly contact support@dalgo.org If you wish to add Superset to your subscription.
 2. If you have subscribed to Superset you will see a button for Google sign-in, click on it.
 
 <img width="1464" alt="N6 2) DSS sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/afe2d22c-14de-47f8-8acd-8417643b6220" />
@@ -291,7 +291,7 @@ When you need to make changes to your source data schema, Dalgo provides a strea
 
 6. **Seamless Syncing**: Once the schema changes are approved, Dalgo will seamlessly sync the data with the updated schema, ensuring consistency and accuracy across your data transformations.
 
-> Note: It's important to ensure that your schema changes are compatible with your data sources and downstream applications. Consult with your data team or reach out to Dalgo support (support@dalgo.in) for assistance.
+> Note: It's important to ensure that your schema changes are compatible with your data sources and downstream applications. Consult with your data team or reach out to Dalgo support (support@dalgo.org) for assistance.
 
 By following these steps, you can effectively manage schema changes within your Dalgo data pipeline, ensuring that your data transformations remain accurate and up-to-date.
 
