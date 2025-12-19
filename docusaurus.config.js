@@ -121,10 +121,14 @@ const config = {
                                 label: "GitHub",
                                 href: "https://github.com/DalgoT4D",
                             },
+                            {
+                                label: "License",
+                                to: "/docs/license",
+                            },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus. Licensed under CC BY 4.0.`,
             },
             prism: {
                 theme: lightCodeTheme,
