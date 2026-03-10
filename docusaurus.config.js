@@ -33,6 +33,9 @@ const config = {
         defaultLocale: "en",
         locales: ["en"],
     },
+    customFields: {
+        homeRedirectPath: "/docs/Getting%20Started/",
+    },
 
     presets: [
         [
@@ -59,6 +62,27 @@ const config = {
             }),
         ],
     ],
+    plugins: [
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "academy",
+                path: "academy",
+                routeBasePath: "academy",
+                sidebarPath: require.resolve("./academySidebars.js"),
+                editUrl:
+                    "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            },
+        ],
+        function chunkLoadRecoveryPlugin() {
+            return {
+                name: "chunk-load-recovery-plugin",
+                getClientModules() {
+                    return [require.resolve("./src/chunkLoadRecovery.js")];
+                },
+            };
+        },
+    ],
 
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -73,19 +97,42 @@ const config = {
                 items: [
                     {
                         type: "doc",
-                        docId: "intro",
+                        docId: "Getting Started/index",
                         position: "left",
                         label: "Documentation",
                     },
                     {
-                        to: "https://projecttech4dev.org/tag/data-platform/",
-                        label: "Blog",
+                        to: "/academy/",
                         position: "left",
+                        label: "Dalgo Academy",
+                    },
+                    {
+                        href: "https://projecttech4dev.org/tag/data-platform/",
+                        label: "Blog",
+                        position: "right",
+                        className: "header-icon-link header-blog-link",
+                        "aria-label": "Blog",
+                    },
+                    {
+                        href: "https://dalgo.org/",
+                        label: "Website",
+                        position: "right",
+                        className: "header-icon-link header-website-link",
+                        "aria-label": "Website",
+                    },
+                    {
+                        href: "https://discord.gg/xfM6CVK2Nc",
+                        label: "Discord",
+                        position: "right",
+                        className: "header-icon-link header-discord-link",
+                        "aria-label": "Discord",
                     },
                     {
                         href: "https://github.com/DalgoT4D",
-                        label: "GitHub",
+                        label: "GitHub Repository",
                         position: "right",
+                        className: "header-icon-link header-github-link",
+                        "aria-label": "GitHub Repository",
                     },
                 ],
             },
@@ -128,7 +175,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus. Licensed under CC BY 4.0.`,
+                copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus. Licensed under CC BY 4.0.`,
             },
             prism: {
                 theme: lightCodeTheme,

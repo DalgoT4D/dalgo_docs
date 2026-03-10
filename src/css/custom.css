@@ -28,3 +28,53 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@media (min-width: 997px) {
+  .header-icon-link > .navbar__link {
+    font-size: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-icon-link > .navbar__link::before {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    background-color: var(--ifm-navbar-link-color);
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+
+  .header-icon-link:hover > .navbar__link::before {
+    background-color: var(--ifm-navbar-link-hover-color);
+  }
+
+  .header-blog-link > .navbar__link::before {
+    -webkit-mask-image: url("../../static/img/icons/blog.svg");
+    mask-image: url("../../static/img/icons/blog.svg");
+  }
+
+  .header-website-link > .navbar__link::before {
+    -webkit-mask-image: url("../../static/img/icons/website.svg");
+    mask-image: url("../../static/img/icons/website.svg");
+  }
+
+  .header-discord-link > .navbar__link::before {
+    -webkit-mask-image: url("../../static/img/icons/discord.svg");
+    mask-image: url("../../static/img/icons/discord.svg");
+  }
+
+  .header-github-link > .navbar__link::before {
+    -webkit-mask-image: url("../../static/img/icons/github.svg");
+    mask-image: url("../../static/img/icons/github.svg");
+  }
+}
