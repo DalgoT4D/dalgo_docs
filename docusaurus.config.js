@@ -22,7 +22,7 @@ const config = {
     organizationName: "DalgoT4D", // Usually your GitHub org/user name.
     projectName: "dalgo_docs", // Usually your repo name.
 
-    onBrokenLinks: "ignore",
+    onBrokenLinks: "warn",
     onBrokenMarkdownLinks: "warn",
     deploymentBranch: "gh-pages",
 
@@ -33,9 +33,6 @@ const config = {
         defaultLocale: "en",
         locales: ["en"],
     },
-    customFields: {
-        homeRedirectPath: "/docs/Getting%20Started/",
-    },
 
     presets: [
         [
@@ -44,17 +41,13 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve("./sidebars.js"),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
-                        "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                        "https://github.com/DalgoT4D/dalgo_docs/tree/main/",
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
-                        "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                        "https://github.com/DalgoT4D/dalgo_docs/tree/main/",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
@@ -62,77 +55,43 @@ const config = {
             }),
         ],
     ],
-    plugins: [
+
+    themes: [
         [
-            "@docusaurus/plugin-content-docs",
+            require.resolve("@easyops-cn/docusaurus-search-local"),
             {
-                id: "academy",
-                path: "academy",
-                routeBasePath: "academy",
-                sidebarPath: require.resolve("./academySidebars.js"),
-                editUrl:
-                    "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                hashed: true,
+                indexBlog: false,
             },
         ],
-        function chunkLoadRecoveryPlugin() {
-            return {
-                name: "chunk-load-recovery-plugin",
-                getClientModules() {
-                    return [require.resolve("./src/chunkLoadRecovery.js")];
-                },
-            };
-        },
     ],
 
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
-            image: "img/docusaurus-social-card.jpg",
+            image: "img/dalgo.png",
             navbar: {
                 logo: {
-                    alt: "My Site Logo",
+                    alt: "Dalgo Logo",
                     src: "/img/dalgo.png",
                 },
                 items: [
                     {
                         type: "doc",
-                        docId: "Getting Started/index",
+                        docId: "intro",
                         position: "left",
                         label: "Documentation",
                     },
                     {
-                        to: "/academy/",
-                        position: "left",
-                        label: "Dalgo Academy",
-                    },
-                    {
-                        href: "https://projecttech4dev.org/tag/data-platform/",
+                        to: "https://projecttech4dev.org/tag/data-platform/",
                         label: "Blog",
-                        position: "right",
-                        className: "header-icon-link header-blog-link",
-                        "aria-label": "Blog",
-                    },
-                    {
-                        href: "https://dalgo.org/",
-                        label: "Website",
-                        position: "right",
-                        className: "header-icon-link header-website-link",
-                        "aria-label": "Website",
-                    },
-                    {
-                        href: "https://discord.gg/xfM6CVK2Nc",
-                        label: "Discord",
-                        position: "right",
-                        className: "header-icon-link header-discord-link",
-                        "aria-label": "Discord",
+                        position: "left",
                     },
                     {
                         href: "https://github.com/DalgoT4D",
-                        label: "GitHub Repository",
+                        label: "GitHub",
                         position: "right",
-                        className: "header-icon-link header-github-link",
-                        "aria-label": "GitHub Repository",
                     },
                 ],
             },
@@ -170,12 +129,12 @@ const config = {
                             },
                             {
                                 label: "License",
-                                to: "/docs/license",
+                                href: "https://github.com/DalgoT4D/dalgo_docs/blob/main/LICENSE",
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus. Licensed under CC BY 4.0.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Dalgo. Built with Docusaurus. Licensed under CC BY 4.0.`,
             },
             prism: {
                 theme: lightCodeTheme,
