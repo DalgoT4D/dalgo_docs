@@ -56,12 +56,28 @@ const config = {
         ],
     ],
 
+    plugins: [
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "self-serve",
+                path: "self-serve-docs",
+                routeBasePath: "self-serve-documentation",
+                sidebarPath: require.resolve("./sidebarsSelfServe.js"),
+                editUrl: "https://github.com/DalgoT4D/dalgo_docs/tree/main/",
+            },
+        ],
+    ],
+
     themes: [
         [
             require.resolve("@easyops-cn/docusaurus-search-local"),
             {
                 hashed: true,
                 indexBlog: false,
+                docsDir: ["docs", "self-serve-docs"],
+                docsRouteBasePath: ["/docs", "/self-serve-documentation"],
+                docsPluginIdForPreferredVersion: "default",
             },
         ],
     ],
@@ -78,10 +94,17 @@ const config = {
                 },
                 items: [
                     {
-                        type: "doc",
-                        docId: "intro",
+                        type: "docSidebar",
+                        sidebarId: "tutorialSidebar",
                         position: "left",
                         label: "Documentation",
+                    },
+                    {
+                        type: "docSidebar",
+                        sidebarId: "selfServeSidebar",
+                        docsPluginId: "self-serve",
+                        position: "left",
+                        label: "Resources",
                     },
                     {
                         to: "https://projecttech4dev.org/tag/data-platform/",
