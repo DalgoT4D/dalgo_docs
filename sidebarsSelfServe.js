@@ -6,6 +6,11 @@ const sidebarsSelfServe = {
     'intro',
     {
       type: 'category',
+      label: 'Data Sources',
+      items: ['data-sources/adding-a-data-source'],
+    },
+    {
+      type: 'category',
       label: 'Warehouse',
       items: ['warehouse/aws-rds-setup'],
     },
