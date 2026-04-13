@@ -1,21 +1,27 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
-# Analysis
+# Dashboards
 
-**Dalgo runs and offers a hosted version of Superset for visualisation. Subscription to superset is optional.**
+**Dalgo supports visualization through native dashboards and, optionally, a hosted Superset instance for dashboarding.**
 
-1. If you have not subscribed to Superset you will see a message to this effect. Kindly contact support@dalgo.org If you wish to add Superset to your subscription.
-2. If you have subscribed to Superset you will see a button for Google sign-in, click on it.
+## Visualization options
 
-<img width="1464" alt="N6 2) DSS sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/afe2d22c-14de-47f8-8acd-8417643b6220" />
+Within your Dalgo SaaS subscription, you get access to:
 
-3. A pop-up window will appear. Select Sign In with Google.
+- **Dalgo native dashboards**: built-in dashboarding available out of the box
+- **Apache Superset**: a hosted Superset instance for customizable and role-based control on visualizations.
 
-<img width="1470" alt="NN6 3 gogle sign in" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/69b470be-5cbc-4f98-84f7-94e7f29431b2" />
+## Connect your own BI tool
 
-4. If your Superset admin has granted access to your email ID, you will be successfully logged in. Else contact your Superset admin.
-5. Once successfully logged in, close the pop-up window. You will now be able to access Superset via Dalgo to build your charts and monitor if visualisations are being populated as expected.
+Dalgo also works seamlessly with any external BI or dashboarding tool of your choice. Simply connect your data warehouse to your preferred tool and start building.
 
-<img width="1464" alt="N6 5 ss" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/0e767faf-a140-4ab9-983d-4b803f0f5aab" />
+<div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap', margin: '1.5rem 0' }}>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau" height="30" />
+  <img src="https://www.calltrackingmetrics.com/wp-content/uploads/2022/08/Looker_02.svg" alt="Looker" height="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" height="30" />
+  <img src="https://images.icon-icons.com/2699/PNG/512/metabase_logo_icon_168103.png" alt="Metabase" height="30" />
+</div>
+
+> **Note:** Dalgo does not manage or host external BI tools. You bring your own license or account, and connect it to the data warehouse that Dalgo pipelines into.
