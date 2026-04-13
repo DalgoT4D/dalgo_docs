@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.6.1">
 <title data-rh="true">Transform | Dalgo</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" name="twitter:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" property="og:url" content="https://dalgo.github.io/dalgo_docs/docs/transform"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Transform | Dalgo"><meta data-rh="true" name="description" content="Dalgo runs data transformations (data cleaning, joining, computation) using dbt (data build tool)."><meta data-rh="true" property="og:description" content="Dalgo runs data transformations (data cleaning, joining, computation) using dbt (data build tool)."><link data-rh="true" rel="icon" href="/dalgo_docs/img/favicon_new.svg"><link data-rh="true" rel="canonical" href="https://dalgo.github.io/dalgo_docs/docs/transform"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/docs/transform" hreflang="en"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/docs/transform" hreflang="x-default"><link rel="stylesheet" href="/dalgo_docs/assets/css/styles.1502ef0a.css">
-<script src="/dalgo_docs/assets/js/runtime~main.38643753.js" defer="defer"></script>
+<script src="/dalgo_docs/assets/js/runtime~main.2c85afb8.js" defer="defer"></script>
 <script src="/dalgo_docs/assets/js/main.16de409f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -25,6 +25,7 @@
 <p>Once the workspace is ready, you will see two tabs: <strong>UI Transform</strong> and <strong>DBT Transform</strong>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="ui-transform">UI Transform<a href="#ui-transform" class="hash-link" aria-label="Direct link to UI Transform" title="Direct link to UI Transform">​</a></h2>
 <p>The UI Transform tab provides a visual canvas for building dbt models without writing SQL directly.</p>
+<p><img decoding="async" loading="lazy" alt="UI Transform tab" src="/dalgo_docs/assets/images/transform_landing_UI_tab-5c9258ad539406881a27cb0cd88ee493.png" width="2896" height="1710" class="img_ev3q"></p>
 <ul>
 <li><strong>Workflow Canvas</strong>: A visual editor where you can create and connect dbt models by dragging and dropping operations</li>
 <li><strong>Edit Workflow</strong>: Click the &quot;Edit Workflow&quot; button to open the full canvas editor</li>
@@ -32,6 +33,7 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="dbt-transform">DBT Transform<a href="#dbt-transform" class="hash-link" aria-label="Direct link to DBT Transform" title="Direct link to DBT Transform">​</a></h2>
 <p>The DBT Transform tab is for users who work directly with dbt commands.</p>
+<p><img decoding="async" loading="lazy" alt="DBT Transform tab" src="/dalgo_docs/assets/images/transform_landing_DBT_tab-46f93afda58054aa1f8f1b944afce5cc.png" width="2896" height="1710" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="repository-card">Repository Card<a href="#repository-card" class="hash-link" aria-label="Direct link to Repository Card" title="Direct link to Repository Card">​</a></h3>
 <p>At the top of both tabs you will see the <strong>DBT Repository</strong> card, which shows:</p>
 <ul>
@@ -39,6 +41,7 @@
 <li>The default schema (e.g., <code>intermediate</code>)</li>
 <li>An info icon (for managed repos) indicating the repository is created and managed by Dalgo</li>
 </ul>
+<p><img decoding="async" loading="lazy" alt="Managed repository tooltip" src="/dalgo_docs/assets/images/transform_managed_repo_tooltip-6cb71425879b562292bb7140f77ddc82.png" width="2890" height="1214" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="running-tasks">Running Tasks<a href="#running-tasks" class="hash-link" aria-label="Direct link to Running Tasks" title="Direct link to Running Tasks">​</a></h3>
 <p>The task list shows all available dbt tasks:</p>
 <ul>
@@ -56,6 +59,7 @@
 <li>Review the command preview</li>
 <li>Click <strong>Create</strong> to add the task</li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="Create custom task dialog" src="/dalgo_docs/assets/images/transform_custom_dbt_task_filled-5d825cf2d3824595cded133706ce924d.png" width="1766" height="1482" class="img_ev3q"></p>
 <p>Custom tasks will appear in your task list and can be deleted when no longer needed.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="switching-to-your-own-github-repository">Switching to Your Own GitHub Repository<a href="#switching-to-your-own-github-repository" class="hash-link" aria-label="Direct link to Switching to Your Own GitHub Repository" title="Direct link to Switching to Your Own GitHub Repository">​</a></h2>
 <p>By default, Dalgo manages the Git repository for you. If you want to use your own GitHub repository instead:</p>
@@ -71,6 +75,7 @@
 <li>Set the <strong>default schema</strong> for your dbt project</li>
 <li>Click <strong>Save &amp; Update</strong></li>
 </ol>
+<p><img decoding="async" loading="lazy" alt="Edit repository dialog" src="/dalgo_docs/assets/images/transform_edit_repo-128996d9e665bd0f109d50f7a94ae591.png" width="1766" height="1482" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-happens-when-you-switch">What happens when you switch<a href="#what-happens-when-you-switch" class="hash-link" aria-label="Direct link to What happens when you switch" title="Direct link to What happens when you switch">​</a></h3>
 <ul>
 <li>
