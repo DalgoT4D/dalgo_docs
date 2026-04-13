@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-self-serve docs-version-current docs-doc-page docs-doc-id-local-dev-setup/ai-coding-assistants" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.1">
+<title data-rh="true">AI coding assistants | Dalgo</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" name="twitter:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" property="og:url" content="https://dalgo.github.io/dalgo_docs/self-serve-documentation/local-dev-setup/ai-coding-assistants"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-self-serve-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-self-serve-current"><meta data-rh="true" property="og:title" content="AI coding assistants | Dalgo"><meta data-rh="true" name="description" content="This page explains the most common AI coding tools you may see in Dalgo setup guides, what the different terms mean, how these tools differ, and how to set them up for dbt development. It is written for people who may be new to AI coding tools, command lines, and development environments."><meta data-rh="true" property="og:description" content="This page explains the most common AI coding tools you may see in Dalgo setup guides, what the different terms mean, how these tools differ, and how to set them up for dbt development. It is written for people who may be new to AI coding tools, command lines, and development environments."><link data-rh="true" rel="icon" href="/dalgo_docs/img/favicon_new.svg"><link data-rh="true" rel="canonical" href="https://dalgo.github.io/dalgo_docs/self-serve-documentation/local-dev-setup/ai-coding-assistants"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/self-serve-documentation/local-dev-setup/ai-coding-assistants" hreflang="en"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/self-serve-documentation/local-dev-setup/ai-coding-assistants" hreflang="x-default"><link rel="stylesheet" href="/dalgo_docs/assets/css/styles.1502ef0a.css">
+<script src="/dalgo_docs/assets/js/runtime~main.55990289.js" defer="defer"></script>
+<script src="/dalgo_docs/assets/js/main.16de409f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/dalgo_docs/"><div class="navbar__logo"><img src="/dalgo_docs/img/dalgo.png" alt="Dalgo Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/dalgo_docs/img/dalgo.png" alt="Dalgo Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div></a><a class="navbar__item navbar__link" href="/dalgo_docs/docs/intro">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/dalgo_docs/self-serve-documentation/intro">Resources</a><a href="https://projecttech4dev.org/tag/data-platform/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/DalgoT4D" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/dalgo_docs/self-serve-documentation/intro">Resources</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dalgo_docs/self-serve-documentation/data-sources/adding-a-data-source">Data Sources</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dalgo_docs/self-serve-documentation/warehouse/aws-rds-setup">Warehouse</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dalgo_docs/self-serve-documentation/superset/row-level-security">Superset</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/dalgo_docs/self-serve-documentation/local-dev-setup/">Local Development Setup</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/">Local development setup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/dalgo-login">Dalgo login</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/warehouse-access">Warehouse access</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/github-setup">GitHub setup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/python-and-ide">Python and IDE setup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/ssh-access">SSH access</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/dbt-setup">dbt setup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/dbt-profiles">dbt profiles</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/vaultwarden">Vaultwarden</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/dalgo_docs/self-serve-documentation/local-dev-setup/ai-coding-assistants">AI coding assistants</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/dalgo_docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Local Development Setup</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">AI coding assistants</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>AI coding assistants</h1></header><p>This page explains the most common AI coding tools you may see in Dalgo setup guides, what the different terms mean, how these tools differ, and how to set them up for dbt development. It is written for people who may be new to AI coding tools, command lines, and development environments.</p>
+<p>For dbt work, these tools are most useful for understanding an unfamiliar repository, explaining model logic, drafting SQL and YAML, writing documentation, debugging errors, reviewing changes, and helping you move faster inside an existing project. They do <strong>not</strong> replace normal development discipline: you should still review changes carefully, run dbt commands locally, validate data in the warehouse, and confirm business logic before committing anything.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-basic-terms"><strong>1) Basic terms</strong><a href="#1-basic-terms" class="hash-link" aria-label="Direct link to 1-basic-terms" title="Direct link to 1-basic-terms">​</a></h2>
+<p>A <strong>coding assistant</strong> is an AI tool that helps you write, explain, refactor, or review code.</p>
+<p>A <strong>coding agent</strong> goes a step further. Instead of only answering in chat, it can often inspect your repository, read files, edit files, run terminal commands, and use additional tools as part of the task. Codex is OpenAI’s coding agent, and Claude Code is Anthropic’s agentic coding tool. Cursor and Windsurf package similar agent-style workflows directly into their editors.</p>
+<p>A <strong>CLI</strong> means a command-line interface. You use it from a terminal window by typing commands. A CLI version of a coding agent is usually preferred by developers who are comfortable working in the terminal.</p>
+<p>An <strong>IDE</strong> is an integrated development environment, meaning the editor you use to work on code. Cursor and Windsurf are full AI-oriented editors/IDEs. An <strong>IDE extension</strong> is an add-on that brings AI features into an existing editor like VS Code, Cursor, or Windsurf. Windsurf offers plugins for multiple editors, Claude Code has a VS Code integration, and the Codex IDE extension works in VS Code-compatible editors including Cursor and Windsurf.</p>
+<p>An <strong>API</strong> is what you use when you want to programmatically call a model from your own scripts or applications. This is different from just signing into a desktop app or paying for a chat subscription.</p>
+<p>An <strong>API key</strong> is the secret credential that authenticates API requests. It should be treated like a password. OpenAI explicitly says API keys are secrets, should not be shared, should not be exposed in client-side apps, and should ideally be unique per team member; OpenAI also supports key permission levels such as All, Restricted, and Read Only.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-chatgpt-vs-codex"><strong>2) ChatGPT vs Codex</strong><a href="#2-chatgpt-vs-codex" class="hash-link" aria-label="Direct link to 2-chatgpt-vs-codex" title="Direct link to 2-chatgpt-vs-codex">​</a></h2>
+<p><strong>ChatGPT</strong> is a general-purpose assistant that can be useful for explanation, brainstorming, and one-off coding help.</p>
+<p><strong>Codex</strong> is OpenAI’s dedicated coding agent workflow for software development and repo-native work. Check the current OpenAI documentation for the interfaces and capabilities available in your environment.</p>
+<p>In practical terms: ChatGPT is a strong general assistant and a good companion tool, while Codex is the more purpose-built OpenAI option when you want an actual coding agent living in your repo and development workflow. That is why ChatGPT and Codex should not be treated as the same thing.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-claude-app-vs-claude-code"><strong>3) Claude app vs Claude Code</strong><a href="#3-claude-app-vs-claude-code" class="hash-link" aria-label="Direct link to 3-claude-app-vs-claude-code" title="Direct link to 3-claude-app-vs-claude-code">​</a></h2>
+<p>The normal <strong>Claude</strong> app/web experience is a general assistant, similar in spirit to ChatGPT.</p>
+<p><strong>Claude Code</strong> is Anthropic’s coding tool for working directly with a codebase through terminal or IDE-oriented workflows. Check Anthropic’s official documentation for the currently supported interfaces, permissions model, and plan details.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-cursor-and-windsurf-vs-cli-tools-vs-extensions"><strong>4) Cursor and Windsurf vs CLI tools vs extensions</strong><a href="#4-cursor-and-windsurf-vs-cli-tools-vs-extensions" class="hash-link" aria-label="Direct link to 4-cursor-and-windsurf-vs-cli-tools-vs-extensions" title="Direct link to 4-cursor-and-windsurf-vs-cli-tools-vs-extensions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cursor-and-windsurf"><strong>Cursor and Windsurf</strong><a href="#cursor-and-windsurf" class="hash-link" aria-label="Direct link to cursor-and-windsurf" title="Direct link to cursor-and-windsurf">​</a></h3>
+<p>Cursor and Windsurf are the most “all-in-one” options for beginners because they combine editor, agent, chat, and terminal-oriented workflows in one interface. Cursor describes itself as an AI editor and coding agent, and Windsurf describes itself as a next-generation AI IDE built around its Cascade agent. Cursor also has a CLI, and Windsurf also has plugins for other editors if you do not want to switch fully.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cli-tools"><strong>CLI tools</strong><a href="#cli-tools" class="hash-link" aria-label="Direct link to cli-tools" title="Direct link to cli-tools">​</a></h3>
+<p>A CLI tool is best when you are comfortable opening a repo in a terminal and want the agent to operate directly from there. Cursor CLI, Codex CLI, and Claude Code all support terminal-first workflows. Codex CLI is designed to read, change, and run code locally in your selected directory; Cursor CLI is similarly described as a way to interact with AI agents directly from the terminal; Claude Code is strongly oriented around terminal workflows as well.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="extensions"><strong>Extensions</strong><a href="#extensions" class="hash-link" aria-label="Direct link to extensions" title="Direct link to extensions">​</a></h3>
+<p>Extensions are best when you already like your current editor and want the AI inside it. Codex’s extension works in VS Code-compatible editors including Cursor and Windsurf; Claude Code integrates with VS Code; Windsurf also has plugin support for other editors and IDEs.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a-simple-rule-of-thumb"><strong>A simple rule of thumb</strong><a href="#a-simple-rule-of-thumb" class="hash-link" aria-label="Direct link to a-simple-rule-of-thumb" title="Direct link to a-simple-rule-of-thumb">​</a></h3>
+<p>For a first-time dbt user in the Dalgo ecosystem:</p>
+<ul>
+<li>
+<p>Choose <strong>Cursor</strong> or <strong>Windsurf</strong> if you want the smoothest all-in-one beginner experience.</p>
+</li>
+<li>
+<p>Choose <strong>Codex</strong> if you already use ChatGPT and want a dedicated OpenAI coding agent.</p>
+</li>
+<li>
+<p>Choose <strong>Claude Code</strong> if you prefer Anthropic’s coding workflow or like terminal-driven work.</p>
+</li>
+<li>
+<p>Use <strong>ChatGPT</strong> as a companion tool, not as your only development environment.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-recommended-choice-for-dalgodbt-beginners"><strong>5) Recommended choice for Dalgo/dbt beginners</strong><a href="#5-recommended-choice-for-dalgodbt-beginners" class="hash-link" aria-label="Direct link to 5-recommended-choice-for-dalgodbt-beginners" title="Direct link to 5-recommended-choice-for-dalgodbt-beginners">​</a></h2>
+<p>For most first-time users working on dbt in Dalgo, the easiest path is usually:</p>
+<ol>
+<li>
+<p>Clone the dbt repository.</p>
+</li>
+<li>
+<p>Open it in <strong>Cursor</strong> or <strong>Windsurf</strong>.</p>
+</li>
+<li>
+<p>Use the built-in terminal to complete Python and dbt setup.</p>
+</li>
+<li>
+<p>Use the AI agent to understand the repository and help with changes.</p>
+</li>
+<li>
+<p>Validate everything with dbt commands and warehouse inspection tools before committing.</p>
+</li>
+</ol>
+<p>That recommendation is mostly about reducing friction. With Cursor or Windsurf, you do not need to separately decide between “chat app vs terminal tool vs editor plugin” on day one. You install one editor, sign in, open the repo, and start working.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-how-to-set-up-each-option"><strong>6) How to set up each option</strong><a href="#6-how-to-set-up-each-option" class="hash-link" aria-label="Direct link to 6-how-to-set-up-each-option" title="Direct link to 6-how-to-set-up-each-option">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-a-cursor"><strong>Option A: Cursor</strong><a href="#option-a-cursor" class="hash-link" aria-label="Direct link to option-a-cursor" title="Direct link to option-a-cursor">​</a></h3>
+<p>Cursor is an AI-first editor workflow that can be useful for dbt development. Check the official Cursor documentation for the current onboarding flow, supported sign-in options, plan limits, and pricing before standardising on it for your team.</p>
+<p><strong>Typical setup flow</strong></p>
+<ol>
+<li>
+<p>Install Cursor.</p>
+</li>
+<li>
+<p>Sign in.</p>
+</li>
+<li>
+<p>Optionally import your VS Code settings.</p>
+</li>
+<li>
+<p>Open your local dbt repo.</p>
+</li>
+<li>
+<p>Open the integrated terminal.</p>
+</li>
+<li>
+<p>Set up your Python environment and dbt dependencies.</p>
+</li>
+<li>
+<p>Start with simple prompts like “Explain this dbt project structure” or “Trace the lineage of this model.”</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-b-windsurf"><strong>Option B: Windsurf</strong><a href="#option-b-windsurf" class="hash-link" aria-label="Direct link to option-b-windsurf" title="Direct link to option-b-windsurf">​</a></h3>
+<p>Windsurf provides an AI-oriented editor workflow and also supports plugin-based use in some other IDEs. Check the official Windsurf documentation for the current onboarding flow, feature availability, usage limits, and pricing.</p>
+<p><strong>Typical setup flow</strong></p>
+<ol>
+<li>
+<p>Install Windsurf.</p>
+</li>
+<li>
+<p>Import existing settings if you use VS Code or Cursor.</p>
+</li>
+<li>
+<p>Sign in or create an account.</p>
+</li>
+<li>
+<p>Open your local dbt repo.</p>
+</li>
+<li>
+<p>Use Cascade to explain the repository and help draft changes.</p>
+</li>
+<li>
+<p>Use the integrated terminal for Python and dbt setup.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-c-claude-code"><strong>Option C: Claude Code</strong><a href="#option-c-claude-code" class="hash-link" aria-label="Direct link to option-c-claude-code" title="Direct link to option-c-claude-code">​</a></h3>
+<p>Claude Code can be used through the terminal or an IDE integration. Follow Anthropic’s official installation and permissions guidance for the current recommended setup path in your environment.</p>
+<p><strong>Typical setup flow</strong></p>
+<ol>
+<li>
+<p>Decide whether you want the CLI or the VS Code extension.</p>
+</li>
+<li>
+<p>Install Claude Code.</p>
+</li>
+<li>
+<p>Sign in with your Claude account.</p>
+</li>
+<li>
+<p>Open your dbt repo and start Claude Code from the repo root.</p>
+</li>
+<li>
+<p>Ask it to explain the project before asking it to change anything.</p>
+</li>
+<li>
+<p>Review diffs carefully before accepting edits.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-d-codex"><strong>Option D: Codex</strong><a href="#option-d-codex" class="hash-link" aria-label="Direct link to option-d-codex" title="Direct link to option-d-codex">​</a></h3>
+<p>Codex supports app, CLI, IDE extension, and cloud/web workflows. Follow the current OpenAI product documentation for the available sign-in methods, rate limits, and plan coverage.</p>
+<p><strong>Typical setup flow</strong></p>
+<ol>
+<li>
+<p>Choose app, CLI, or IDE extension.</p>
+</li>
+<li>
+<p>Sign in with ChatGPT or an OpenAI API key.</p>
+</li>
+<li>
+<p>Open your dbt repository.</p>
+</li>
+<li>
+<p>Let Codex explain the repo, then start with small changes.</p>
+</li>
+<li>
+<p>Use the same local terminal and dbt workflow you would use without AI.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-e-chatgpt-app-as-a-companion"><strong>Option E: ChatGPT app as a companion</strong><a href="#option-e-chatgpt-app-as-a-companion" class="hash-link" aria-label="Direct link to option-e-chatgpt-app-as-a-companion" title="Direct link to option-e-chatgpt-app-as-a-companion">​</a></h3>
+<p>ChatGPT can be useful for explanation, brainstorming, and one-off edits, but it is still best treated as a companion tool rather than the main repo-native coding agent for sustained dbt development.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-api-keys-limits-pricing-and-billing"><strong>7) API keys, limits, pricing, and billing</strong><a href="#7-api-keys-limits-pricing-and-billing" class="hash-link" aria-label="Direct link to 7-api-keys-limits-pricing-and-billing" title="Direct link to 7-api-keys-limits-pricing-and-billing">​</a></h2>
+<p>A common beginner mistake is to assume that a chat subscription and API access are the same thing. They are not.</p>
+<p>For OpenAI, API usage is billed and managed separately from ChatGPT subscriptions. So having a chat subscription does <strong>not</strong> automatically mean you have prepaid API usage.</p>
+<p>OpenAI’s API uses API keys for authentication, and OpenAI advises that keys should be kept secret, not shared, not exposed in browser/mobile code, and ideally managed with separate keys per team member and appropriate permissions. OpenAI also notes that API usage is subject to rate limits and usage tiers, and higher limits are handled through the limits page and tier progression.</p>
+<p>Anthropic’s API similarly requires an Anthropic Console account and API key, and API access is governed by both spend limits and rate limits.</p>
+<p>For editor products, there is a second layer to understand:</p>
+<ul>
+<li>
+<p><strong>Cursor</strong> has its own subscription model and may also support bring-your-own provider keys.</p>
+</li>
+<li>
+<p><strong>Windsurf</strong> has its own subscription or credits model and may support BYOK for some models.</p>
+</li>
+<li>
+<p><strong>Codex</strong> can be used with ChatGPT sign-in or with an OpenAI API key, depending on the workflow you choose.</p>
+</li>
+<li>
+<p><strong>Claude Code</strong> can be accessed through Claude plans or through API-based usage, depending on the path you choose.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-project-instructions-matter-a-lot"><strong>8) Project instructions matter a lot</strong><a href="#8-project-instructions-matter-a-lot" class="hash-link" aria-label="Direct link to 8-project-instructions-matter-a-lot" title="Direct link to 8-project-instructions-matter-a-lot">​</a></h2>
+<p>One of the biggest quality improvements in AI-assisted coding comes from giving the tool stable project-specific instructions instead of repeating the same context in every prompt.</p>
+<p>OpenAI recommends using AGENTS.md for durable Codex guidance. Windsurf also supports AGENTS.md files for directory-scoped instructions. Cursor supports shared Rules for agents, and Claude Code supports project settings and team-shared .claude/settings.json files.</p>
+<p>For Dalgo/dbt work, this means the team should strongly consider adding shared instructions such as:</p>
+<ul>
+<li>
+<p>SQL style and naming conventions</p>
+</li>
+<li>
+<p>expected dbt folder structure</p>
+</li>
+<li>
+<p>testing conventions</p>
+</li>
+<li>
+<p>documentation expectations</p>
+</li>
+<li>
+<p>how to handle seeds, snapshots, and sources</p>
+</li>
+<li>
+<p>which commands are safe to run</p>
+</li>
+<li>
+<p>what never to change without human review</p>
+</li>
+</ul>
+<p>That reduces hallucinations and makes the agent more consistent across users.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="9-best-practices-for-dalgodbt-use"><strong>9) Best practices for Dalgo/dbt use</strong><a href="#9-best-practices-for-dalgodbt-use" class="hash-link" aria-label="Direct link to 9-best-practices-for-dalgodbt-use" title="Direct link to 9-best-practices-for-dalgodbt-use">​</a></h2>
+<p>For dbt development specifically, AI tools are best used for:</p>
+<ul>
+<li>
+<p>understanding model lineage and dependencies</p>
+</li>
+<li>
+<p>explaining what a model is doing</p>
+</li>
+<li>
+<p>drafting YAML descriptions and tests</p>
+</li>
+<li>
+<p>suggesting dbt model refactors</p>
+</li>
+<li>
+<p>debugging compilation or runtime errors</p>
+</li>
+<li>
+<p>reviewing SQL for grain, joins, and naming consistency</p>
+</li>
+<li>
+<p>generating documentation and summaries for non-technical stakeholders</p>
+</li>
+</ul>
+<p>They should <strong>not</strong> be trusted blindly for business logic, warehouse credentials, client-specific assumptions, or production-safe SQL without review.</p>
+<p>A safe practical workflow is:</p>
+<ol>
+<li>
+<p>Open the repo.</p>
+</li>
+<li>
+<p>Ask the tool to explain the relevant models first.</p>
+</li>
+<li>
+<p>Ask it to propose a plan before editing.</p>
+</li>
+<li>
+<p>Review the proposed diff.</p>
+</li>
+<li>
+<p>Run your local dbt commands.</p>
+</li>
+<li>
+<p>Check the actual data in the warehouse.</p>
+</li>
+<li>
+<p>Commit only after validation.</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="10-security-guidance"><strong>10) Security guidance</strong><a href="#10-security-guidance" class="hash-link" aria-label="Direct link to 10-security-guidance" title="Direct link to 10-security-guidance">​</a></h2>
+<p>For Dalgo work, credentials should not be pasted casually into prompts or stored inside repositories. As a rule, secrets such as warehouse passwords, SSH keys, API keys, and client credentials should stay in the approved secret store and local environment variables, not in Git commits, screenshots, chat threads, WhatsApp, Discord, or ad hoc notes.</p>
+<p>That matters even more when using AI tools, because once a secret leaks into the wrong place, it is much harder to control.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="11-suggested-onboarding-order"><strong>11) Suggested onboarding order</strong><a href="#11-suggested-onboarding-order" class="hash-link" aria-label="Direct link to 11-suggested-onboarding-order" title="Direct link to 11-suggested-onboarding-order">​</a></h2>
+<p>A good order for the docs is:</p>
+<ol>
+<li>
+<p><strong>GitHub / repository setup</strong></p>
+</li>
+<li>
+<p><strong>AI assistant tooling page</strong> (this page)</p>
+</li>
+<li>
+<p><strong>Python + dbt environment setup</strong></p>
+</li>
+<li>
+<p><strong>Warehouse access / credentials</strong></p>
+</li>
+<li>
+<p><strong>First dbt commands</strong></p>
+</li>
+<li>
+<p><strong>Using AI to understand and change the project safely</strong></p>
+</li>
+</ol>
+<p>That order works better because your current dbt setup page assumes the reader already understands what Cursor is, what a terminal is, and why they might choose a different tool.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/DalgoT4D/dalgo_docs/tree/main/self-serve-docs/local-dev-setup/ai-coding-assistants.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/dalgo_docs/self-serve-documentation/local-dev-setup/vaultwarden"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Vaultwarden</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-basic-terms" class="table-of-contents__link toc-highlight"><strong>1) Basic terms</strong></a></li><li><a href="#2-chatgpt-vs-codex" class="table-of-contents__link toc-highlight"><strong>2) ChatGPT vs Codex</strong></a></li><li><a href="#3-claude-app-vs-claude-code" class="table-of-contents__link toc-highlight"><strong>3) Claude app vs Claude Code</strong></a></li><li><a href="#4-cursor-and-windsurf-vs-cli-tools-vs-extensions" class="table-of-contents__link toc-highlight"><strong>4) Cursor and Windsurf vs CLI tools vs extensions</strong></a><ul><li><a href="#cursor-and-windsurf" class="table-of-contents__link toc-highlight"><strong>Cursor and Windsurf</strong></a></li><li><a href="#cli-tools" class="table-of-contents__link toc-highlight"><strong>CLI tools</strong></a></li><li><a href="#extensions" class="table-of-contents__link toc-highlight"><strong>Extensions</strong></a></li><li><a href="#a-simple-rule-of-thumb" class="table-of-contents__link toc-highlight"><strong>A simple rule of thumb</strong></a></li></ul></li><li><a href="#5-recommended-choice-for-dalgodbt-beginners" class="table-of-contents__link toc-highlight"><strong>5) Recommended choice for Dalgo/dbt beginners</strong></a></li><li><a href="#6-how-to-set-up-each-option" class="table-of-contents__link toc-highlight"><strong>6) How to set up each option</strong></a><ul><li><a href="#option-a-cursor" class="table-of-contents__link toc-highlight"><strong>Option A: Cursor</strong></a></li><li><a href="#option-b-windsurf" class="table-of-contents__link toc-highlight"><strong>Option B: Windsurf</strong></a></li><li><a href="#option-c-claude-code" class="table-of-contents__link toc-highlight"><strong>Option C: Claude Code</strong></a></li><li><a href="#option-d-codex" class="table-of-contents__link toc-highlight"><strong>Option D: Codex</strong></a></li><li><a href="#option-e-chatgpt-app-as-a-companion" class="table-of-contents__link toc-highlight"><strong>Option E: ChatGPT app as a companion</strong></a></li></ul></li><li><a href="#7-api-keys-limits-pricing-and-billing" class="table-of-contents__link toc-highlight"><strong>7) API keys, limits, pricing, and billing</strong></a></li><li><a href="#8-project-instructions-matter-a-lot" class="table-of-contents__link toc-highlight"><strong>8) Project instructions matter a lot</strong></a></li><li><a href="#9-best-practices-for-dalgodbt-use" class="table-of-contents__link toc-highlight"><strong>9) Best practices for Dalgo/dbt use</strong></a></li><li><a href="#10-security-guidance" class="table-of-contents__link toc-highlight"><strong>10) Security guidance</strong></a></li><li><a href="#11-suggested-onboarding-order" class="table-of-contents__link toc-highlight"><strong>11) Suggested onboarding order</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/dalgo_docs/docs/intro">Docs</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/xfM6CVK2Nc" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://projecttech4dev.org/tag/data-platform/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li><li class="footer__item"><a href="https://github.com/DalgoT4D" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/DalgoT4D/dalgo_docs/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer__link-item">License<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Dalgo. Built with Docusaurus. Licensed under CC BY 4.0.</div></div></div></footer></div>
+</body>
+</html>

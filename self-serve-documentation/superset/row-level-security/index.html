@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-self-serve docs-version-current docs-doc-page docs-doc-id-superset/row-level-security" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.1">
+<title data-rh="true">Row-level security | Dalgo</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" name="twitter:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" property="og:url" content="https://dalgo.github.io/dalgo_docs/self-serve-documentation/superset/row-level-security"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-self-serve-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-self-serve-current"><meta data-rh="true" property="og:title" content="Row-level security | Dalgo"><meta data-rh="true" name="description" content="1 \- What is Row Level Security?"><meta data-rh="true" property="og:description" content="1 \- What is Row Level Security?"><link data-rh="true" rel="icon" href="/dalgo_docs/img/favicon_new.svg"><link data-rh="true" rel="canonical" href="https://dalgo.github.io/dalgo_docs/self-serve-documentation/superset/row-level-security"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/self-serve-documentation/superset/row-level-security" hreflang="en"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/self-serve-documentation/superset/row-level-security" hreflang="x-default"><link rel="stylesheet" href="/dalgo_docs/assets/css/styles.1502ef0a.css">
+<script src="/dalgo_docs/assets/js/runtime~main.55990289.js" defer="defer"></script>
+<script src="/dalgo_docs/assets/js/main.16de409f.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/dalgo_docs/"><div class="navbar__logo"><img src="/dalgo_docs/img/dalgo.png" alt="Dalgo Logo" class="themedComponent__dKv themedComponent--light_rzkv"><img src="/dalgo_docs/img/dalgo.png" alt="Dalgo Logo" class="themedComponent__dKv themedComponent--dark_mMAk"></div></a><a class="navbar__item navbar__link" href="/dalgo_docs/docs/intro">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/dalgo_docs/self-serve-documentation/intro">Resources</a><a href="https://projecttech4dev.org/tag/data-platform/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/DalgoT4D" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd"><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/dalgo_docs/self-serve-documentation/intro">Resources</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dalgo_docs/self-serve-documentation/data-sources/adding-a-data-source">Data Sources</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dalgo_docs/self-serve-documentation/warehouse/aws-rds-setup">Warehouse</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/dalgo_docs/self-serve-documentation/superset/row-level-security">Superset</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/dalgo_docs/self-serve-documentation/superset/row-level-security">Row-level security</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/superset/user-and-role-management">User and role management</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/dalgo_docs/self-serve-documentation/superset/embedding-dashboards">Embedding dashboards</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/dalgo_docs/self-serve-documentation/local-dev-setup/">Local Development Setup</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/dalgo_docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Superset</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Row-level security</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Row-level security</h1></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="1---what-is-row-level-security">1 - What is Row Level Security?<a href="#1---what-is-row-level-security" class="hash-link" aria-label="Direct link to 1 - What is Row Level Security?" title="Direct link to 1 - What is Row Level Security?">​</a></h2>
+<p>Row Level Security (RLS) ensures that each user only sees the rows of data they are allowed to see, even if they are viewing the same chart or dashboard as other users.<br>
+<!-- -->In Superset, RLS works by attaching a SQL filter clause (e.g., district = &#x27;Rajgarh&#x27;) to a dataset. Whenever Superset queries that dataset, it automatically appends the RLS clause so restricted rows never appear in results.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2---two-ways-we-implement-rls">2 - Two ways we implement RLS<a href="#2---two-ways-we-implement-rls" class="hash-link" aria-label="Direct link to 2 - Two ways we implement RLS" title="Direct link to 2 - Two ways we implement RLS">​</a></h2>
+<p>We use <strong>two common methods</strong>, depending on whether dashboards are <strong>logged-in</strong> or <strong>publicly shared</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="method-a--rls-using-superset-login-username-recommended-for-logged-in-dashboards">Method A — RLS using Superset login username (recommended for logged-in dashboards)<a href="#method-a--rls-using-superset-login-username-recommended-for-logged-in-dashboards" class="hash-link" aria-label="Direct link to Method A — RLS using Superset login username (recommended for logged-in dashboards)" title="Direct link to Method A — RLS using Superset login username (recommended for logged-in dashboards)">​</a></h3>
+<p>This method relies on the user being authenticated in Superset, and uses their <strong>Superset username</strong> to filter data.</p>
+<p><strong>Use case:</strong></p>
+<ul>
+<li>Dashboards where users log in with their own Superset account</li>
+<li>Stronger access control (the identity comes from the authenticated Superset user session).</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="method-b--rls-using-an-external-username-passed-via-url-for-public-dashboards">Method B — RLS using an external username passed via URL (for public dashboards)<a href="#method-b--rls-using-an-external-username-passed-via-url-for-public-dashboards" class="hash-link" aria-label="Direct link to Method B — RLS using an external username passed via URL (for public dashboards)" title="Direct link to Method B — RLS using an external username passed via URL (for public dashboards)">​</a></h3>
+<p>This method works when dashboards are shared publicly and the viewer is not logging in. In this case, we pass a username in the URL, and the dataset contains a mapping of allowed external usernames.<br>
+<!-- -->Use case:</p>
+<ul>
+<li>Public dashboard links (no Superset login)</li>
+<li>Per-user views controlled by URL parameters</li>
+</ul>
+<p>⚠️ Important note: URL-based “identity” is only as secure as link sharing. If someone shares a link with another person, that person can see the same scoped data. For sensitive use cases, we recommend authenticated access (Method A) or a more secure embedding approach (guest token / signed claims) if you use Superset Embedded.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3---core-superset-objects-and-how-they-connect">3 - Core Superset objects and how they connect<a href="#3---core-superset-objects-and-how-they-connect" class="hash-link" aria-label="Direct link to 3 - Core Superset objects and how they connect" title="Direct link to 3 - Core Superset objects and how they connect">​</a></h2>
+<p>To understand RLS, it helps to know how these pieces connect:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-users">(1) Users<a href="#1-users" class="hash-link" aria-label="Direct link to (1) Users" title="Direct link to (1) Users">​</a></h3>
+<p>A <strong>User</strong> is an account that logs into Superset.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-roles">(2) Roles<a href="#2-roles" class="hash-link" aria-label="Direct link to (2) Roles" title="Direct link to (2) Roles">​</a></h3>
+<p>A <strong>Role</strong> is a named bundle of permissions and access. Users are assigned roles.</p>
+<p>Typical pattern we use:</p>
+<ul>
+<li>
+<p>A “base” role like Gamma (basic viewing ability)</p>
+</li>
+<li>
+<p>A “client role” like <em><strong>‘Government Official - Maharashtra’</strong></em> (specific access + RLS attachment)</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-datasets">(3) Datasets<a href="#3-datasets" class="hash-link" aria-label="Direct link to (3) Datasets" title="Direct link to (3) Datasets">​</a></h3>
+<p>A <strong>Dataset</strong> is the table/query Superset reads from (physical table or virtual dataset).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-rls-rules">(4) RLS Rules<a href="#4-rls-rules" class="hash-link" aria-label="Direct link to (4) RLS Rules" title="Direct link to (4) RLS Rules">​</a></h3>
+<p>An <strong>RLS Rule</strong> attaches a filter clause to:</p>
+<ul>
+<li>
+<p>one or more <strong>datasets</strong></p>
+</li>
+<li>
+<p>one or more <strong>roles</strong></p>
+</li>
+</ul>
+<p>Meaning: <em>Anyone with that role gets those filters applied on those datasets.</em></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-dashboards">(5) Dashboards<a href="#5-dashboards" class="hash-link" aria-label="Direct link to (5) Dashboards" title="Direct link to (5) Dashboards">​</a></h3>
+<p>A <strong>Dashboard</strong> is a collection of charts. Dashboards can also be configured with which roles can access them.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4----method-a--rls-using-superset-login-username-authenticated-users">4 -  Method A — RLS using Superset login username (authenticated users)<a href="#4----method-a--rls-using-superset-login-username-authenticated-users" class="hash-link" aria-label="Direct link to 4 -  Method A — RLS using Superset login username (authenticated users)" title="Direct link to 4 -  Method A — RLS using Superset login username (authenticated users)">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-step-by-step-setup-in-superset">4.1 Step-by-step setup in Superset<a href="#41-step-by-step-setup-in-superset" class="hash-link" aria-label="Direct link to 4.1 Step-by-step setup in Superset" title="Direct link to 4.1 Step-by-step setup in Superset">​</a></h3>
+<p><strong>Step 1 — Create / update the client Role</strong></p>
+<p>Go to: <strong>Settings → List Roles → + Role</strong></p>
+<p>Add permissions like:</p>
+<ul>
+<li>can read on Dashboard</li>
+<li>can read on Chart</li>
+<li>can read on Dataset</li>
+<li>can get column values on Datasource</li>
+<li>datasource access on the relevant warehouse/datasource</li>
+</ul>
+<p><strong>Roles</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image1-426af6cde9ce46e5d3c1ae708062a080.png" width="624" height="372" class="img_ev3q"></p>
+<p><strong>Step 2 — Assign the client role to the client’s Superset user</strong></p>
+<p>Go to: <strong>Settings → List Users → select user → Edit</strong></p>
+<p>Assign:</p>
+<ul>
+<li>Gamma (optional base role)</li>
+<li>the client-specific role (e.g., GDGSGOM 2024 - Meghraj)</li>
+</ul>
+<p><strong>Users</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image2-94c2e4b96e641143a6a7c10da1918b1d.png" width="624" height="372" class="img_ev3q"></p>
+<p><strong>Step 3 - Create an RLS rule linked to that role</strong></p>
+<p>Go to: <strong>Settings → Row Level Security → + Rule</strong></p>
+<p>Fill:</p>
+<ul>
+<li><strong>Rule Name:</strong> clear label (e.g., NGO Filter - Meghraj Education Society)</li>
+<li><strong>Filter Type:</strong> Regular</li>
+<li><strong>Datasets:</strong> select <em>all datasets used by the dashboards that should be restricted</em></li>
+<li><strong>Roles:</strong> select the client role</li>
+<li><strong>Clause:</strong> the SQL predicate that restricts rows</li>
+</ul>
+<p><strong>Row Level Security rules list</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image3-e89183a99f393106faf9da2e2e1304ba.png" width="624" height="372" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="42-how-to-write-the-rls-clause">4.2 How to write the RLS Clause<a href="#42-how-to-write-the-rls-clause" class="hash-link" aria-label="Direct link to 4.2 How to write the RLS Clause" title="Direct link to 4.2 How to write the RLS Clause">​</a></h3>
+<p>There are two common data designs:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="option-a1-simplest-the-dataset-already-has-a-username-column-which-matches-the-superset-username">Option A1 (simplest): The dataset already has a username column which matches the superset username<a href="#option-a1-simplest-the-dataset-already-has-a-username-column-which-matches-the-superset-username" class="hash-link" aria-label="Direct link to Option A1 (simplest): The dataset already has a username column which matches the superset username" title="Direct link to Option A1 (simplest): The dataset already has a username column which matches the superset username">​</a></h4>
+<p>Example RLS clause:</p>
+<ul>
+<li><code>username = &#x27;{{ current_username() }}&#x27;</code></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="option-a2-more-common-dataset-does-not-have-a-username-column">Option A2 (more common): Dataset does NOT have a username column<a href="#option-a2-more-common-dataset-does-not-have-a-username-column" class="hash-link" aria-label="Direct link to Option A2 (more common): Dataset does NOT have a username column" title="Direct link to Option A2 (more common): Dataset does NOT have a username column">​</a></h4>
+<p>If the dataset doesn’t store the Superset username directly, we implement RLS by filtering using a <strong>business key</strong> (e.g., ngo_name, district, state, project_id) and mapping <strong>users → allowed business keys</strong>.</p>
+<p>There are two common ways to do this:</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="a21-user-to-key-mapping-per-user-access">A2.1 User-to-key mapping (per-user access)<a href="#a21-user-to-key-mapping-per-user-access" class="hash-link" aria-label="Direct link to A2.1 User-to-key mapping (per-user access)" title="Direct link to A2.1 User-to-key mapping (per-user access)">​</a></h5>
+<p>Maintain a mapping table (or view) such as user_access_map:</p>
+<ul>
+<li>
+<p>username (Superset login username)</p>
+</li>
+<li>
+<p>allowed_key (e.g., ngo_name or district)</p>
+</li>
+</ul>
+<p>Then the RLS clause checks whether the row’s business key is in the user’s allowed list:</p>
+<ul>
+<li>
+<p><strong>Example (NGO-based):</strong></p>
+<p><code>ngo_name IN (SELECT ngo_name FROM user_access_map WHERE username = &#x27;{{ current_username() }}&#x27;)</code></p>
+</li>
+<li>
+<p><strong>Example (District-based):</strong></p>
+<p><code>district IN (SELECT district FROM user_access_map WHERE username = &#x27;{{ current_username() }}&#x27;)</code></p>
+</li>
+</ul>
+<p>This lets you onboard a new user by simply adding rows into the mapping table—no dashboard/chart changes needed.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="a22-role-to-key-mapping-areateam-based-access">A2.2 Role-to-key mapping (area/team-based access)<a href="#a22-role-to-key-mapping-areateam-based-access" class="hash-link" aria-label="Direct link to A2.2 Role-to-key mapping (area/team-based access)" title="Direct link to A2.2 Role-to-key mapping (area/team-based access)">​</a></h5>
+<p>Instead of maintaining mappings per user, you can create <strong>area-based roles</strong> and assign them to all users from that area (e.g., “District – Rajgarh”, “State – Rajasthan”, “NGO – Meghraj”).</p>
+<p>In this setup:</p>
+<ul>
+<li>
+<p>One role represents one scope (area/NGO/team/etc.)</p>
+</li>
+<li>
+<p>An RLS rule is created <strong>per role</strong> with a fixed clause, e.g.:</p>
+<p>district = &#x27;Rajgarh&#x27;</p>
+<p>or</p>
+<p>ngo_name = &#x27;SHOFCO&#x27;</p>
+</li>
+</ul>
+<p><strong>Why this is useful:</strong></p>
+<ul>
+<li>Easier to manage when multiple people share the same access scope</li>
+<li>Adding/removing access is as simple as assigning/unassigning a role to a user</li>
+</ul>
+<p><strong>Tradeoff:</strong></p>
+<ul>
+<li>If you have hundreds of unique scopes, you may end up with many roles/RLS rules. In that case, the mapping-table approach can scale better.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="43-example-clauses-authenticated"><strong>4.3 Example clauses (authenticated)</strong><a href="#43-example-clauses-authenticated" class="hash-link" aria-label="Direct link to 43-example-clauses-authenticated" title="Direct link to 43-example-clauses-authenticated">​</a></h4>
+<p>These examples assume the dataset has a relevant column:</p>
+<ul>
+<li>
+<p><strong>District-based access:</strong></p>
+<p>district = &#x27;Rajgarh&#x27;</p>
+</li>
+<li>
+<p><strong>State-based access:</strong></p>
+<p>state = &#x27;Rajasthan&#x27;</p>
+</li>
+<li>
+<p><strong>NGO-based access:</strong></p>
+<p>ngo_name = &#x27;SHOFCO&#x27;</p>
+</li>
+<li>
+<p><strong>Username-based access (if dataset has username column):</strong></p>
+<p><code>superset_username = &#x27;{{ current_username() }}&#x27;</code></p>
+</li>
+</ul>
+<p><strong>“Edit Rule”</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image4-7302ed67302c7f705717f987a730fc57.png" width="624" height="372" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5---method-b--rls-using-external-usernames-passed-via-url-public-dashboards">5 - Method B — RLS using external usernames passed via URL (public dashboards)<a href="#5---method-b--rls-using-external-usernames-passed-via-url-public-dashboards" class="hash-link" aria-label="Direct link to 5 - Method B — RLS using external usernames passed via URL (public dashboards)" title="Direct link to 5 - Method B — RLS using external usernames passed via URL (public dashboards)">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="51-what-this-looks-like-high-level">5.1 What this looks like (high-level)<a href="#51-what-this-looks-like-high-level" class="hash-link" aria-label="Direct link to 5.1 What this looks like (high-level)" title="Direct link to 5.1 What this looks like (high-level)">​</a></h3>
+<p>When a dashboard is publicly shared,  the viewer is typically not logged in as a unique Superset user. So we cannot rely on current_username().</p>
+<p>Instead:</p>
+<ol>
+<li>The dataset contains a “who can see this row” field (commonly a JSON blob or array of allowed usernames from another platform).</li>
+<li>The dashboard link includes a query parameter like ?username=some_user.</li>
+<li>The RLS rule reads that URL parameter and filters rows accordingly.</li>
+</ol>
+<p>Example public URL:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">https://YOURDOMAIN.dalgo.org/dashboard/11/?username=name%40org&amp;native_filters_key=...</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Here:</p>
+<ul>
+<li>username=name214%40org means the username is name@org (@ is URL-encoded as %40).</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-implementing-method-b-public-dashboards">5.2 Implementing Method B (public dashboards)<a href="#52-implementing-method-b-public-dashboards" class="hash-link" aria-label="Direct link to 5.2 Implementing Method B (public dashboards)" title="Direct link to 5.2 Implementing Method B (public dashboards)">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="virtual-dataset-filtering-using-url_paramusername">Virtual Dataset filtering using url_param(&#x27;username&#x27;)<a href="#virtual-dataset-filtering-using-url_paramusername" class="hash-link" aria-label="Direct link to Virtual Dataset filtering using url_param(&#x27;username&#x27;)" title="Direct link to Virtual Dataset filtering using url_param(&#x27;username&#x27;)">​</a></h4>
+<p>Instead of using RLS rules, we can create a <strong>Virtual Dataset (SQL)</strong> that <strong>filters the dataset itself</strong> based on a username passed in the URL.</p>
+<p><strong>Best when:</strong></p>
+<ul>
+<li>Your base table already contains a username column (or any external identifier column), OR</li>
+<li>You’re okay joining to a mapping table inside the dataset SQL.</li>
+</ul>
+<p><strong>Example Virtual Dataset SQL (simple case):</strong></p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">SELECT *</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">FROM intermediate_analytics.water_quality_testing_form_responses_fact</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">WHERE username = &#x27;{{ url_param(&#x27;username&#x27;) }}&#x27;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>If the base table does NOT have username</strong> (mapping-table approach inside the dataset):</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">SELECT f.*</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">FROM some_fact_table f</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">JOIN user_access_map m</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ON f.ngo_name = m.ngo_name</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">WHERE m.username = &#x27;{{ url_param(&#x27;username&#x27;) }}&#x27;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li>This approach can be easier operationally for public dashboards because it avoids role/RLS rule complexity.</li>
+<li>Only charts built on this <strong>filtered virtual dataset</strong> will be restricted — so we must ensure dashboards don’t accidentally use the unfiltered physical dataset.</li>
+<li>Superset warns that editing a dataset affects all charts using it — so we typically create a <strong>new dataset copy</strong> like “&lt;Project&gt; – &lt;Table&gt; – filtered by user”.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="virtual-dataset-configurationscreenshot"><strong>Virtual Dataset Configuration</strong><br>
+<img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image5-388ccb92d52fc0abb1df9e758447b02c.png" width="624" height="348" class="img_ev3q"><a href="#virtual-dataset-configurationscreenshot" class="hash-link" aria-label="Direct link to virtual-dataset-configurationscreenshot" title="Direct link to virtual-dataset-configurationscreenshot">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6---access-enforcement">6 - Access Enforcement<a href="#6---access-enforcement" class="hash-link" aria-label="Direct link to 6 - Access Enforcement" title="Direct link to 6 - Access Enforcement">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="61-flow-for-method-a-logged-in-users">6.1 Flow for Method A (logged-in users)<a href="#61-flow-for-method-a-logged-in-users" class="hash-link" aria-label="Direct link to 6.1 Flow for Method A (logged-in users)" title="Direct link to 6.1 Flow for Method A (logged-in users)">​</a></h3>
+<ol>
+<li><strong>Create/assign Role</strong> to the user (e.g., Government Official - Maharashtra).</li>
+<li><strong>Grant dashboard access</strong> to that Role (Dashboard → Properties → Access → Roles).</li>
+<li><strong>Attach RLS rules</strong> to that Role for <em>all datasets used in the dashboard</em> (Settings → Row Level Security).</li>
+<li>When the user opens the dashboard:<!-- -->
+<ul>
+<li>Superset checks they have dashboard access via Role</li>
+<li>Superset queries datasets</li>
+<li>RLS filters are automatically applied → user only sees permitted rows</li>
+</ul>
+</li>
+</ol>
+<p>If a dataset used by the dashboard is not included in the RLS rule, it may leak unrestricted data.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dashboard-roles-vs-dataset-permissions-vs-rls"><strong>Dashboard Roles vs Dataset permissions vs RLS</strong><a href="#dashboard-roles-vs-dataset-permissions-vs-rls" class="hash-link" aria-label="Direct link to dashboard-roles-vs-dataset-permissions-vs-rls" title="Direct link to dashboard-roles-vs-dataset-permissions-vs-rls">​</a></h4>
+<ul>
+<li><strong>Dashboard Roles</strong> decide who can <em>open the dashboard</em>.</li>
+<li><strong>Dataset permissions</strong> decide who can <em>query datasets</em> (sometimes bypassed if dashboard role access is granted depending on Superset configuration).</li>
+<li><strong>RLS Rules</strong> decide which <em>rows</em> a role can see when datasets are queried.</li>
+</ul>
+<p>Best practice we follow:</p>
+<ol>
+<li>Restrict dashboard access to the client role</li>
+<li>Apply RLS rules to that client role</li>
+<li>Ensure all datasets used by the dashboard are included in the RLS rule(s)</li>
+</ol>
+<p><strong>Dashboard Roles</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image6-7b090da3c9aa63c539af6f24a4e6618e.png" width="624" height="372" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="62-flow-for-method-b-public-dashboard-with-username-in-url--virtual-dataset">6.2 Flow for Method B (public dashboard with username in URL + virtual dataset)<a href="#62-flow-for-method-b-public-dashboard-with-username-in-url--virtual-dataset" class="hash-link" aria-label="Direct link to 6.2 Flow for Method B (public dashboard with username in URL + virtual dataset)" title="Direct link to 6.2 Flow for Method B (public dashboard with username in URL + virtual dataset)">​</a></h3>
+<ol>
+<li>Create a <strong>Virtual Dataset</strong> that filters using <code>{{ url_param(&#x27;username&#x27;) }}</code>.</li>
+<li>Build charts using <strong>only that virtual dataset</strong> (not the unfiltered base dataset).</li>
+<li>Share public URL like: ...?username=name%40org...</li>
+<li>When anyone opens the link:<!-- -->
+<ul>
+<li>Superset reads the URL parameter</li>
+<li>The virtual dataset SQL applies the filter</li>
+<li>Viewer only sees rows matching that username</li>
+<li>If a chart accidentally uses the <em>unfiltered</em> dataset, it will show broader data.</li>
+<li>If the username parameter is missing/invalid, you should default to <strong>no rows</strong> (preferred).</li>
+</ul>
+</li>
+</ol>
+<p><strong>URL to a public dashboard</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/dalgo_docs/assets/images/row-level-security-image7-26f28ad4bfd1438d87e352896eec002a.png" width="624" height="348" class="img_ev3q"></p>
+<hr></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/DalgoT4D/dalgo_docs/tree/main/self-serve-docs/superset/row-level-security.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/dalgo_docs/self-serve-documentation/warehouse/aws-rds-setup"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">AWS RDS setup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/dalgo_docs/self-serve-documentation/superset/user-and-role-management"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">User and role management</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1---what-is-row-level-security" class="table-of-contents__link toc-highlight">1 - What is Row Level Security?</a></li><li><a href="#2---two-ways-we-implement-rls" class="table-of-contents__link toc-highlight">2 - Two ways we implement RLS</a><ul><li><a href="#method-a--rls-using-superset-login-username-recommended-for-logged-in-dashboards" class="table-of-contents__link toc-highlight">Method A — RLS using Superset login username (recommended for logged-in dashboards)</a></li><li><a href="#method-b--rls-using-an-external-username-passed-via-url-for-public-dashboards" class="table-of-contents__link toc-highlight">Method B — RLS using an external username passed via URL (for public dashboards)</a></li></ul></li><li><a href="#3---core-superset-objects-and-how-they-connect" class="table-of-contents__link toc-highlight">3 - Core Superset objects and how they connect</a><ul><li><a href="#1-users" class="table-of-contents__link toc-highlight">(1) Users</a></li><li><a href="#2-roles" class="table-of-contents__link toc-highlight">(2) Roles</a></li><li><a href="#3-datasets" class="table-of-contents__link toc-highlight">(3) Datasets</a></li><li><a href="#4-rls-rules" class="table-of-contents__link toc-highlight">(4) RLS Rules</a></li><li><a href="#5-dashboards" class="table-of-contents__link toc-highlight">(5) Dashboards</a></li></ul></li><li><a href="#4----method-a--rls-using-superset-login-username-authenticated-users" class="table-of-contents__link toc-highlight">4 -  Method A — RLS using Superset login username (authenticated users)</a><ul><li><a href="#41-step-by-step-setup-in-superset" class="table-of-contents__link toc-highlight">4.1 Step-by-step setup in Superset</a></li><li><a href="#42-how-to-write-the-rls-clause" class="table-of-contents__link toc-highlight">4.2 How to write the RLS Clause</a></li></ul></li><li><a href="#5---method-b--rls-using-external-usernames-passed-via-url-public-dashboards" class="table-of-contents__link toc-highlight">5 - Method B — RLS using external usernames passed via URL (public dashboards)</a><ul><li><a href="#51-what-this-looks-like-high-level" class="table-of-contents__link toc-highlight">5.1 What this looks like (high-level)</a></li><li><a href="#52-implementing-method-b-public-dashboards" class="table-of-contents__link toc-highlight">5.2 Implementing Method B (public dashboards)</a></li></ul></li><li><a href="#virtual-dataset-configurationscreenshot" class="table-of-contents__link toc-highlight"><strong>Virtual Dataset Configuration</strong>Screenshot</a></li><li><a href="#6---access-enforcement" class="table-of-contents__link toc-highlight">6 - Access Enforcement</a><ul><li><a href="#61-flow-for-method-a-logged-in-users" class="table-of-contents__link toc-highlight">6.1 Flow for Method A (logged-in users)</a></li><li><a href="#62-flow-for-method-b-public-dashboard-with-username-in-url--virtual-dataset" class="table-of-contents__link toc-highlight">6.2 Flow for Method B (public dashboard with username in URL + virtual dataset)</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/dalgo_docs/docs/intro">Docs</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/xfM6CVK2Nc" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://projecttech4dev.org/tag/data-platform/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li><li class="footer__item"><a href="https://github.com/DalgoT4D" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/DalgoT4D/dalgo_docs/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer__link-item">License<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Dalgo. Built with Docusaurus. Licensed under CC BY 4.0.</div></div></div></footer></div>
+</body>
+</html>
