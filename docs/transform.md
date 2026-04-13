@@ -22,6 +22,8 @@ Once the workspace is ready, you will see two tabs: **UI Transform** and **DBT T
 
 The UI Transform tab provides a visual canvas for building dbt models without writing SQL directly.
 
+![UI Transform tab](/img/transform/transform_landing_UI_tab.png)
+
 - **Workflow Canvas**: A visual editor where you can create and connect dbt models by dragging and dropping operations
 - **Edit Workflow**: Click the "Edit Workflow" button to open the full canvas editor
 - **Publish**: Once you are happy with your changes, publish them to commit and push to the Git repository
@@ -30,12 +32,16 @@ The UI Transform tab provides a visual canvas for building dbt models without wr
 
 The DBT Transform tab is for users who work directly with dbt commands.
 
+![DBT Transform tab](/img/transform/transform_landing_DBT_tab.png)
+
 ### Repository Card
 
 At the top of both tabs you will see the **DBT Repository** card, which shows:
 - The connected Git repository URL
 - The default schema (e.g., `intermediate`)
 - An info icon (for managed repos) indicating the repository is created and managed by Dalgo
+
+![Managed repository tooltip](/img/transform/transform_managed_repo_tooltip.png)
 
 ### Running Tasks
 
@@ -55,6 +61,8 @@ Click the **Run** button next to any task to execute it. Logs will be displayed 
 4. Review the command preview
 5. Click **Create** to add the task
 
+![Create custom task dialog](/img/transform/transform_custom_dbt_task_filled.png)
+
 Custom tasks will appear in your task list and can be deleted when no longer needed.
 
 ## Switching to Your Own GitHub Repository
@@ -68,6 +76,8 @@ By default, Dalgo manages the Git repository for you. If you want to use your ow
    - `workflow` (update GitHub Action workflows)
 4. Set the **default schema** for your dbt project
 5. Click **Save & Update**
+
+![Edit repository dialog](/img/transform/transform_edit_repo.png)
 
 ### What happens when you switch
 
