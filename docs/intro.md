@@ -24,7 +24,7 @@ It enables you to set up and monitor your automated data pipelines through the f
 1. **Ingest:** Set up your data warehouse, connect to your data sources, and connect those sources to your warehouse.
 2. **Transform:** Connect to your dbt repository, which contains the SQL code for your data transformations (cleaning, merging, and computation).
 3. **Orchestrate:** Schedule your data ingestion and/or transformation.
-4. **Visualizations / Dashboards:** Explore interactive dashboards through Dalgo's native dashboards or Superset for dashboarding.
+4. **Visualizations / Dashboards:** Explore interactive dashboards through [Dalgo Native Dashboards](./analysis/dalgo-dashboards) or [Superset](./analysis/superset) for dashboarding.
 5. **Reports:** Access reporting views and outputs for routine monitoring and sharing.
 6. **Pipeline Overview:** Monitor the health of your pipeline with a view of all your past runs.
 7. **User Management**: Add relevant team members to your organisation and collaborate.

@@ -39,6 +39,12 @@ const sidebarsSelfServe = {
         'local-dev-setup/ai-coding-assistants',
       ],
     },
+    {
+      type: 'category',
+      label: 'Learning Hub',
+      link: {type: 'doc', id: 'learning-hub/index'},
+      items: ['learning-hub/dbt-cheat-sheet'],
+    },
   ],
 };
 

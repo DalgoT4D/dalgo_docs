@@ -1,8 +1,15 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const { File } = require("buffer");
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+// Node 18 exposes File via `buffer`, but some search-plugin dependencies expect
+// it on the global object during config/plugin initialization.
+if (typeof globalThis.File === "undefined") {
+    globalThis.File = File;
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

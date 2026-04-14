@@ -8,10 +8,10 @@ sidebar_position: 6
 
 ## Visualization options
 
-Within your Dalgo SaaS subscription, you get access to:
+Within your Dalgo SaaS subscription, you can use:
 
-- **Dalgo native dashboards**: built-in dashboarding available out of the box
-- **Apache Superset**: a hosted Superset instance for customizable and role-based control on visualizations.
+1. [**Dalgo Native Dashboards**](./dalgo-dashboards): built-in dashboarding available directly within Dalgo.
+2. [**Superset**](./superset): a hosted Superset instance for customizable and role-based control on visualizations.
 
 ## Connect your own BI tool
 

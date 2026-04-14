@@ -2,6 +2,8 @@
 title: dbt setup
 ---
 
+If you want a quick explanation of what dbt is and the commands you will use most often, see the [dbt cheat sheet](../learning-hub/dbt-cheat-sheet).
+
 1. Go to your IDE   
 2. Open the local folder containing your DBT code (configured in Github step)  
 3. In the top menu, Go to Terminal-\>New Terminal  

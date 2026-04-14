@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Managing your Warehouse
+# Setting up your Warehouse
 
 **Your warehouse is the single location where data from various sources is stored.**
 
