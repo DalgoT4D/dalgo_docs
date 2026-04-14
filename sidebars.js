@@ -27,7 +27,15 @@ const sidebars = {
     },
     'transform',
     'orchestrate',
-    'analysis/index',
+    {
+      type: 'category',
+      label: 'Dashboards',
+      link: {type: 'doc', id: 'analysis/index'},
+      items: [
+        'analysis/dalgo-dashboards',
+        'analysis/superset',
+      ],
+    },
     {
       type: 'category',
       label: 'Managing Data',
@@ -36,10 +44,10 @@ const sidebars = {
         'managing-data/data-quality',
         'managing-data/pipeline-overview',
         'managing-data/usage-dashboard',
+        'user-management',
       ],
     },
     'reports',
-    'user-management',
   ],
 };
 
