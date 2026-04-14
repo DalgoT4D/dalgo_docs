@@ -1707,7 +1707,7 @@
     webpack "^5.95.0"
     webpackbar "^6.0.1"
 
-"@docusaurus/core@3.6.1", "@docusaurus/core@^3.6.1":
+"@docusaurus/core@3.6.1":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-3.6.1.tgz#260d78e1eb7129ccb441fa944b5f7e6f492ac6cb"
   integrity sha512-cDKxPihiM2z7G+4QtpTczS7uxNfNG6naSqM65OmAJET0CFRHbc9mDlLFtQF0lsVES91SHqfcGaaLZmi2FjdwWA==
@@ -1900,7 +1900,7 @@
     vfile "^6.0.1"
     webpack "^5.88.1"
 
-"@docusaurus/module-type-aliases@3.6.1", "@docusaurus/module-type-aliases@^3.6.1":
+"@docusaurus/module-type-aliases@3.6.1":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-3.6.1.tgz#2780e19411d0c8b16d46a032eae9e60e742ae681"
   integrity sha512-J+q1jgm7TnEfVIUZImSFeLA1rghb6nwtoB9siHdcgKpDqFJ9/S7xhQL2aEKE7iZMZYzpu+2F390E9A7GkdEJNA==
@@ -2069,7 +2069,7 @@
     sitemap "^7.1.1"
     tslib "^2.6.0"
 
-"@docusaurus/preset-classic@^3.6.1":
+"@docusaurus/preset-classic@3.6.1":
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/preset-classic/-/preset-classic-3.6.1.tgz#196540ca8495075d24eb724af3bf4c75d2412754"
   integrity sha512-b90Y1XRH9e+oa/E3NmiFEFOwgYUd+knFcZUy81nM3FJs038WbEA0T55NQsuPW0s7nOsCShQ7dVFyKxV+Wp31Nw==

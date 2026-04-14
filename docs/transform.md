@@ -4,31 +4,96 @@ sidebar_position: 4
 
 # Transform
 
-**Dalgo runs data transformations (data cleaning, joining, computation) using [dbt (data build tool)](https://docs.getdbt.com/docs/introduction) .**
+**Dalgo runs data transformations (data cleaning, joining, computation) using [dbt (data build tool)](https://docs.getdbt.com/docs/introduction).**
 
-1. Select Transform on the left menu panel.
+When you navigate to the Transform page, Dalgo automatically sets up a managed dbt workspace for your organisation. This includes creating a private Git repository managed by Dalgo and scaffolding an initial dbt project.
 
-<img width="1470" alt="3 1) Select Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/ca2afe55-e8ab-4523-b86c-51271a03663b" />
+## Getting Started
 
-2. To set up your transformations click "connect and set up repo".
-3. Paste your github repo URL (where the code for your data transformations lies)
-4. Specify the target schema. (Generally 'prod' or 'dev', this depends on your dbt developer's naming convention)
+1. Select **Transform** on the left menu panel.
+2. On your first visit, Dalgo will automatically set up a managed dbt workspace. This creates:
+   - A **private Git repository** managed by Dalgo
+   - A scaffolded dbt project with default configuration
+   - System tasks like `dbt-run`, `dbt-test`, and `dbt-deps`
 
-<img width="574" alt="3 4) Set up Transform" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c15b5823-4e0f-4537-93e1-85e41e9c83cd" />
+Once the workspace is ready, you will see two tabs: **UI Transform** and **DBT Transform**.
 
-5. Click save
-6. To check your setup, select a function and click execute.
+## UI Transform
 
-<img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/68d29623-f080-465f-b896-5caf05560612" />
+The UI Transform tab provides a visual canvas for building dbt models without writing SQL directly.
 
-7. The function will be executed and the logs displayed below.
+![UI Transform tab](/img/transform/transform_landing_UI_tab.png)
 
-<img width="1021" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/d33ea3df-5803-4085-b01d-c68d83d0e645" />
+- **Workflow Canvas**: A visual editor where you can create and connect dbt models by dragging and dropping operations
+- **Edit Workflow**: Click the "Edit Workflow" button to open the full canvas editor
+- **Publish**: Once you are happy with your changes, publish them to commit and push to the Git repository
 
-8. You can add a custom task
+## DBT Transform
 
-<img width="561" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/8affb19c-77e0-4da4-a819-fb5d63590182" />
+The DBT Transform tab is for users who work directly with dbt commands.
 
-which will appear at the bottom of your list
+![DBT Transform tab](/img/transform/transform_landing_DBT_tab.png)
 
-<img width="1041" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/efe36719-829c-460d-9644-a54e4c01dcbe" />
+### Repository Card
+
+At the top of both tabs you will see the **DBT Repository** card, which shows:
+- The connected Git repository URL
+- The default schema (e.g., `intermediate`)
+- An info icon (for managed repos) indicating the repository is created and managed by Dalgo
+
+![Managed repository tooltip](/img/transform/transform_managed_repo_tooltip.png)
+
+### Running Tasks
+
+The task list shows all available dbt tasks:
+- **dbt-run**: Executes your dbt models
+- **dbt-test**: Runs your dbt tests
+- **dbt-deps**: Installs dbt package dependencies
+- **dbt-docs-generate**: Generates dbt documentation
+
+Click the **Run** button next to any task to execute it. Logs will be displayed inline below the task.
+
+### Creating Custom Tasks
+
+1. Click the **New Task** button
+2. Select a task type from the dropdown
+3. Configure any flags or options
+4. Review the command preview
+5. Click **Create** to add the task
+
+![Create custom task dialog](/img/transform/transform_custom_dbt_task_filled.png)
+
+Custom tasks will appear in your task list and can be deleted when no longer needed.
+
+## Switching to Your Own GitHub Repository
+
+By default, Dalgo manages the Git repository for you. If you want to use your own GitHub repository instead:
+
+1. Click the **Edit** button on the DBT Repository card
+2. Enter your **GitHub repository URL** (e.g., `https://github.com/your-org/your-dbt-repo`)
+3. Enter a **Personal Access Token (PAT)** with the following permissions:
+   - `repo` (full control of private repositories)
+   - `workflow` (update GitHub Action workflows)
+4. Set the **default schema** for your dbt project
+5. Click **Save & Update**
+
+![Edit repository dialog](/img/transform/transform_edit_repo.png)
+
+### What happens when you switch
+
+- **If your external repo is empty**: Dalgo will copy your existing models from the managed repository into your external repository, so you don't lose any work.
+- **If your external repo already has a dbt project**: Dalgo will use the existing project from your external repository.
+
+  :::warning
+  Any models created in the managed workspace will **not** be carried over when switching to a non-empty external repository.
+  :::
+
+After switching, the `is_repo_managed_by_system` flag is set to `false`, and you will manage the repository yourself (commits, branches, etc.).
+
+### Switching between external (not managed by Dalgo) repositories
+
+You can also switch from one external repository to another using the same Edit flow. The new repository is always cloned fresh.
+
+:::warning
+Models from the previous repository are **not** migrated to the new one. Model migration is only supported when switching from a Dalgo-managed repository to an empty external repository.
+:::
