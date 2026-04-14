@@ -4,6 +4,8 @@ title: Local development setup
 
 Dalgo dbt projects live in their own GitHub repositories. This section brings together the full local setup guidance needed to access Dalgo, connect to the warehouse, clone the right dbt repository, configure your environment, and work safely with credentials and AI tools.
 
+If you are new to dbt or want a quick refresher before setup, read the [dbt cheat sheet](../learning-hub/dbt-cheat-sheet).
+
 ## Use this section in order
 
 1. [Dalgo login](./dalgo-login)

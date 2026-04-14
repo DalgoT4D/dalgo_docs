@@ -2,7 +2,7 @@
 title: Resources
 ---
 
-Self-serve documentation is the operational resource area for data source setup, warehouse setup, Superset administration, and local development guidance.
+Self-serve documentation is the operational resource area for data source setup, warehouse setup, Superset administration, local development guidance, and practical learning material for tools that support Dalgo work.
 
 Use this section for:
 
@@ -10,6 +10,7 @@ Use this section for:
 - warehouse provisioning and access guidance
 - Superset role, access, and embedding workflows
 - local setup steps for working on Dalgo dbt projects
+- learning guides for complementary tools such as dbt and SQL
 
 ## Start Here
 
@@ -19,5 +20,6 @@ Use this section for:
 - [User and role management](./superset/user-and-role-management)
 - [Embedding dashboards](./superset/embedding-dashboards)
 - [Local development setup](./local-dev-setup)
+- [Learning Hub](./learning-hub/)
 
 Search remains shared across the main documentation and this resources section.

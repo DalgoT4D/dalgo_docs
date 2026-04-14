@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Managing your Data Sources
+# Adding your Data Sources
 
 **A source is any system where your data already lives. Common examples include Zoho, KoboToolbox, Google Sheets, Avni, CommCare, and many others. Dalgo can connect to hundreds of sources, and new connectors can be added when needed.**
 

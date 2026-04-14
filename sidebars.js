@@ -44,7 +44,7 @@ const sidebars = {
         'managing-data/data-quality',
         'managing-data/pipeline-overview',
         'managing-data/usage-dashboard',
-        'user-management',
+        'managing-data/user-management',
       ],
     },
     'reports',
