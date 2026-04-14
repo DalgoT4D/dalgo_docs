@@ -8,3 +8,4 @@ The Learning Hub is a space for short, practical guides on tools that commonly s
 ## Start here
 
 - [dbt cheat sheet](./dbt-cheat-sheet)
+- [Data quality](./data-quality)

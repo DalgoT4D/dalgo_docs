@@ -40,7 +40,6 @@ const sidebars = {
       type: 'category',
       label: 'Managing Data',
       items: [
-        'managing-data/ai-data-analysis',
         'managing-data/data-quality',
         'managing-data/pipeline-overview',
         'managing-data/usage-dashboard',
