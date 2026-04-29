@@ -6,22 +6,34 @@ sidebar_position: 5
 
 **Through this step Dalgo enables you to automate your data pipeline by setting up scheduled ingestion and transformation.**
 
-1. Select orchestrate on the left menu panel.
-2. Select "+ New Pipeline" -This will take you to the "Create a new Pipeline" screen
+1. Select orchestrate on the left menu panel. You will see a list of your existing pipelines with their schedule, status, last run details, and results.
 
-<img width="1470" alt="N4 2 SlctOrch" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e966b8e9-8186-4c84-a316-1ecceae3a9b4" />
+<img alt="Pipeline list" src="/img/orchestrate/pipeline_list.png" />
+
+2. Select "+ Create Pipeline" - This will take you to the "Create Pipeline" screen.
+
+<img alt="Create pipeline" src="/img/orchestrate/pipeline_create.png" />
 
 3. Give your pipeline a name.
 4. Select one or more of the connections you have set up.
-5. Toggle 'Transform data?' as per your needs.
-6. Set the schedule for your pipeline and click Save.
+5. Configure your Transform Tasks. You can choose between **Simple** and **Advanced** mode:
+   - **Simple**: Check "Run all tasks" to run all default transformation tasks.
+   - **Advanced**: Select specific transformation tasks to include in your pipeline. You can also add custom tasks created from the transformation page.
 
-<img width="1470" alt="NN4 7 OrchDtls" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/46854fb0-f203-4c34-97f1-6dcc852837ae" />
+:::info
+Git tasks (such as pulling the latest code) are no longer shown in the transform task list. The latest code from the default branch of your git repository will be pulled automatically before running the transformation tasks.
+:::
 
-7. You can test your pipeline by clicking 'Run'.
+<img alt="Transform tasks without git tasks" src="/img/orchestrate/pipeline_transform_tasks_no_git.png" />
 
-<img width="1467" alt="N4 8  orch manual run" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/65adb73d-e227-4aa0-8807-95529fd1992e" />
+6. Set the schedule for your pipeline and click "Create Pipeline".
 
-8. You can view logs of your past runs by selecting 'last logs'. Click 'show more' to see the details.
+7. You can edit an existing pipeline by clicking the three-dot menu on a pipeline row and selecting "Edit".
 
-<img width="613" alt="N4 9  Orch logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/72e90987-3754-41f5-a461-9c4926a9c9ff" />
+<img alt="Edit pipeline" src="/img/orchestrate/pipeline_edit.png" />
+
+8. You can test your pipeline by clicking the run icon on the pipeline row.
+
+9. You can view the logs history of your past runs by clicking the history icon. This shows each task's duration and lets you view detailed logs.
+
+<img alt="Pipeline logs history" src="/img/orchestrate/pipeline_history.png" />
