@@ -43,6 +43,10 @@ At the top of both tabs you will see the **DBT Repository** card, which shows:
 
 ![Managed repository tooltip](/img/transform/transform_managed_repo_tooltip.png)
 
+:::note
+If you need access to the managed Git repository, please reach out to us on [Discord](https://discord.gg/BvwJNRDHk).
+:::
+
 ### Running Tasks
 
 The task list shows all available dbt tasks:
