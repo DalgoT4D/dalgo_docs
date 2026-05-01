@@ -21,10 +21,15 @@ sidebar_position: 5
    - **Advanced**: Select specific transformation tasks to include in your pipeline. You can also add custom tasks created from the transformation page.
 
 :::info
-Git tasks (such as pulling the latest code) are no longer shown in the transform task list. The latest code from the default branch of your git repository will be pulled automatically before running the transformation tasks.
+The following tasks are automatically added (in this order) before your transformation tasks and do not need to be configured manually:
+1. **Git pull/clone** — pulls the latest code from the default branch of your git repository.
+2. **dbt clean** — removes compiled dbt artifacts.
+3. **dbt deps** — installs dbt package dependencies.
+
+These tasks are not shown in the pipeline transform task dropdown.
 :::
 
-![Transform tasks without git tasks](/img/orchestrate/pipeline_transform_tasks_no_git.png)
+![Transform tasks without git tasks](/img/orchestrate/pipeline_transform_tasks_no_git_clean_deps.png)
 
 6. Set the schedule for your pipeline and click "Create Pipeline".
 
