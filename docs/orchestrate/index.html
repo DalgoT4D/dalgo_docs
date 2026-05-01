@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.6.1">
 <title data-rh="true">Orchestrate | Dalgo</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" name="twitter:image" content="https://dalgo.github.io/dalgo_docs/img/dalgo.png"><meta data-rh="true" property="og:url" content="https://dalgo.github.io/dalgo_docs/docs/orchestrate"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Orchestrate | Dalgo"><meta data-rh="true" name="description" content="Through this step Dalgo enables you to automate your data pipeline by setting up scheduled ingestion and transformation."><meta data-rh="true" property="og:description" content="Through this step Dalgo enables you to automate your data pipeline by setting up scheduled ingestion and transformation."><link data-rh="true" rel="icon" href="/dalgo_docs/img/favicon_new.svg"><link data-rh="true" rel="canonical" href="https://dalgo.github.io/dalgo_docs/docs/orchestrate"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/docs/orchestrate" hreflang="en"><link data-rh="true" rel="alternate" href="https://dalgo.github.io/dalgo_docs/docs/orchestrate" hreflang="x-default"><link rel="stylesheet" href="/dalgo_docs/assets/css/styles.1502ef0a.css">
-<script src="/dalgo_docs/assets/js/runtime~main.e7e6807b.js" defer="defer"></script>
+<script src="/dalgo_docs/assets/js/runtime~main.664f869e.js" defer="defer"></script>
 <script src="/dalgo_docs/assets/js/main.e6bec543.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -17,7 +17,7 @@
 <ol start="2">
 <li>Select &quot;+ Create Pipeline&quot; - This will take you to the &quot;Create Pipeline&quot; screen.</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Create pipeline" src="/dalgo_docs/assets/images/pipeline_create-376e390d24157e84d186585476183a38.png" width="2918" height="1716" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Create pipeline" src="/dalgo_docs/assets/images/pipeline_create-e8a9d69726734747065f1ec9cb85efb8.png" width="2918" height="1714" class="img_ev3q"></p>
 <ol start="3">
 <li>Give your pipeline a name.</li>
 <li>Select one or more of the connections you have set up.</li>
@@ -28,8 +28,12 @@
 </ul>
 </li>
 </ol>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Git tasks (such as pulling the latest code) are no longer shown in the transform task list. The latest code from the default branch of your git repository will be pulled automatically before running the transformation tasks.</p></div></div>
-<p><img decoding="async" loading="lazy" alt="Transform tasks without git tasks" src="/dalgo_docs/assets/images/pipeline_transform_tasks_no_git-4e12ae2ee9a830464f0a065947d6eab0.png" width="2906" height="1708" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>The following tasks are automatically added (in this order) before your transformation tasks and do not need to be configured manually:</p><ol>
+<li><strong>Git pull/clone</strong> — pulls the latest code from the default branch of your git repository.</li>
+<li><strong>dbt clean</strong> — removes compiled dbt artifacts.</li>
+<li><strong>dbt deps</strong> — installs dbt package dependencies.</li>
+</ol><p>These tasks are not shown in the pipeline transform task dropdown.</p></div></div>
+<p><img decoding="async" loading="lazy" alt="Transform tasks without git tasks" src="/dalgo_docs/assets/images/pipeline_transform_tasks_no_git_clean_deps-651dabbcf3088149660042d448d2d8c8.png" width="2918" height="1714" class="img_ev3q"></p>
 <ol start="6">
 <li>
 <p>Set the schedule for your pipeline and click &quot;Create Pipeline&quot;.</p>
