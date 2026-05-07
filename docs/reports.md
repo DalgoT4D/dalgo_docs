@@ -1,55 +1,115 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 # Reports
 
-Create, view, share, and comment on data reports. Reports let you snapshot your data at a point in time, add summaries, and collaborate with your team.
+**Reports let you capture a snapshot of any dashboard at a specific point in time, so you can review, share, and comment on your data.**
 
-## Reports List
+A report freezes your dashboard's layout and charts as they were when the report was created. You choose a date range, and the report shows your data for that period. Unlike dashboards, which always show the latest data, reports preserve a fixed view — useful for quarterly reviews, donor updates, or team discussions.
 
-The Reports list displays all your existing reports, helping you manage them efficiently. Each report entry shows its title, the associated dashboard, the creator's details, and the creation date.
+## Viewing your reports
 
-You can filter the list by clicking the filter icon next to the `Title`, `Dashboard Used`, or `Created by` column headers. To perform additional actions on a specific report, select the vertical ellipsis in the `Actions` column.
+1. Select **Reports** on the left menu panel. You will see a list of your existing reports.
 
-To create a new report, click the `Create Report` button.
+![Reports list](/img/reports/reports_list.png)
 
-<!-- ![Reports list page showing all reports in a table](/img/reports/reports-list.png) -->
+2. Each report shows its **Title**, the **Dashboard Used** to create it, who **Created by** it, and when it was **Created on**.
 
-## Create Report Dialog
+3. Use the filter icons on the **Title**, **Dashboard Used**, and **Created by** columns to search for specific reports.
 
-You can generate a new report by configuring its source dashboard, duration, and frequency.
+4. Click on any column header to sort the list.
 
-1. Select the dashboard you want to use for the report. You can type in the search box to filter the list of available dashboards, or select one from the dropdown menu.
-2. Specify the report's duration by picking a Start date and an End date from the calendar selectors.
-3. Choose the reporting frequency. Select `One time` to generate the report immediately, or choose `Schedule` to set up recurring report generation.
-4. After configuring your report, click `Generate Report` to create it, or click `Cancel` to close the dialog without creating a report.
+## Creating a report
 
-<!-- ![Dialog for creating a new report](/img/reports/create-report-dialog.png) -->
+1. Select **+ CREATE REPORT** in the top-right corner.
 
-## Report Viewer
+<!-- SCREENSHOT: Create report dialog showing dashboard selector, report name, date column, and date range fields -->
 
-You can view the full details of your report, including its name, the date range of the data, the creator, and any associated dashboards. The left panel allows you to filter the report data. You can adjust submission dates, select specific countries, sub-regions, or meetings to narrow down the results, and an `Issues` indicator will alert you to any problems with the report.
+2. Choose the **Dashboard** you want to create a report from.
 
-After making your filter selections, click the `APPLY` button to update the report's data. To clear your filter changes, click the refresh icon next to `APPLY`. In the main report area, you can add an executive summary or any relevant notes in the text field provided.
+3. Give your report a **Name** (e.g. "Q1 2025 Program Report").
 
-The report displays various charts and data visualizations, which will load based on your applied filters. You can save your changes to the report at any time by clicking `SAVE`. Use the download icon to export the report or the share icon to distribute it to others.
+4. Select the **Date column** that Dalgo should use to filter your data by date range.
 
-<!-- ![Report viewer showing report details and summary](/img/reports/report-viewer.png) -->
+5. Set the **Start date** and **End date** for the period you want the report to cover.
 
-## Share Report
+6. Select **Create** to generate the report.
 
-You can share reports with others directly from the report view.
+:::info
+The report captures your dashboard's layout and chart settings at the time of creation. If you later change the original dashboard, existing reports are not affected.
+:::
 
-1. To open the Share Report modal, click the `Share` icon in the report's header.
-2. The modal displays options for sharing your report. By default, users within your organization who have the necessary permissions can access this report.
-3. You can also enable public access for your report. Toggle the switch next to `Public Access` to allow anyone with the report link to view it.
-4. Click `CLOSE` to dismiss the modal.
+## Viewing a report
 
-<!-- ![Modal for sharing a report with others](/img/reports/share-report-modal.png) -->
+1. Click on any report in the list to open it.
 
-## Comment Popover
+![Report detail view](/img/reports/reports_detail.png)
 
-When you click the comment icon next to a report section, a popover appears for you to add or view comments on that specific section. If no comments have been added yet, you'll see a prompt inviting you to start a conversation. To contribute, type your message into the `Add a comment` field and click the up arrow icon to submit it.
+2. At the top, you will see the report's **title**, **date range**, **creator**, and a link to the original **dashboard**.
 
-<!-- ![Comment popover for adding comments to a report section](/img/reports/comment-popover.png) -->
+3. The **Executive Summary** section appears at the top of the report. This is a free-text area where you can add notes, observations, or key takeaways.
+
+4. Below the summary, you will see all the charts from the dashboard, showing data filtered to the report's date range.
+
+## Editing the executive summary
+
+1. Open the report you want to edit.
+
+2. Select the **pencil icon** next to the **Executive Summary** heading.
+
+3. Type your notes in the text area that appears.
+
+4. Select **Save** to keep your changes, or **Cancel** to discard them.
+
+## Commenting on charts
+
+You can leave comments on the executive summary or on individual charts to discuss findings with your team.
+
+1. Select the **comment icon** on the executive summary or on any chart card.
+
+<!-- SCREENSHOT: Comment popover showing a comment thread on a chart -->
+
+2. Type your comment in the text field.
+
+3. To mention a team member, type **@** followed by their name. They will receive a notification.
+
+4. Select **Send** to post your comment.
+
+5. You can **edit** or **delete** your own comments using the options next to each comment.
+
+:::note
+Unread comments are indicated by a highlighted comment icon on the chart or summary section.
+:::
+
+## Sharing a report
+
+You can share a report with anyone — including people outside your organization — via a public link or email.
+
+1. Select the **share icon** on the report row in the list, or the **share button** in the top-right corner of the report detail view.
+
+<!-- SCREENSHOT: Share menu showing "Share via link" and "Embed in email" options -->
+
+2. Choose one of the sharing options:
+
+   - **Share via link** — generates a public URL that anyone with the link can use to view the report. You can toggle sharing on or off and see how many times the link has been accessed.
+
+   - **Embed in email** — sends the report as a PDF attachment to one or more email addresses. Enter the recipients (separated by commas) and an optional subject line.
+
+## Exporting as PDF
+
+1. Open the report you want to export.
+
+2. Select the **download icon** in the top-right corner of the report.
+
+3. The report will be downloaded as a PDF file to your device.
+
+## Deleting a report
+
+1. On the reports list, select the **three-dot menu** (&#8942;) on the report row.
+
+2. Select **Delete**.
+
+:::warning
+Deleting a report is permanent. The report and all its comments will be removed and cannot be recovered.
+:::
