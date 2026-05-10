@@ -4,24 +4,50 @@ sidebar_position: 4
 
 # User Management
 
-**User management enables you to collaborate with relevant team members while using Dalgo. It allows you to add different users to the platform and assign them a role that grants the added user relevant 'view' or 'update' permissions**
+**User Management lets you add team members to your Dalgo organisation and control what each person can see and do.**
 
-1. Click on User Management in the left menu pane.
-2. In the 'Users' tab you will be able to see all your current users of Dalgo and their roles.
-3. To invite a user, select invite user, enter their email and the role you want to give them, and select send invitation.
+## Viewing users
 
-<img width="560" alt="image" src="https://github.com/DalgoT4D/dalgo_docs/assets/2160416/c0a228e8-7f90-4f20-ac6b-20de2976a08e" />
+1. Select **User Management** on the left menu panel (under Settings).
 
-4. Once a user is invited you will see their name in the Pending invitations tab. You can choose to delete the invite or resend it using the three dots to the right.
-5. To delete a user or transfer role ownership select the 3 dots to the right of their name and then pick the relevant option, then confirm.
+<!-- SCREENSHOT: User Management page showing the Users tab with a table of current users and their roles -->
 
-<img width="1468" alt="10)pendinginvite" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2f4aa20e-13e7-4ddf-bb9f-d9dc07c1dce1" />
+You will see two tabs:
 
-6. These are the available roles in Dalgo with their associated permissions:
+- **Users** — all current members of your organisation and their roles
+- **Pending Invitations** — invitations that have been sent but not yet accepted
 
-| Role             | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Superset Usage dashboard |
-| ---------------- | --------------- | --------- | ------- | ----------- | --------- | ----------- | ------------------------ |
-| Account Manager  | Update          | Update    | Update  | Update      | Update    | Update      | View                     |
-| Pipeline Manager | View            | View      | Update  | Update      | Update    | Update      | View                     |
-| Analyst          | View            | View      | View    | View        | Update    | View        | View                     |
-| Guest            | View            | View      | View    | View        | View      | View        | View                     |
+## Inviting a new user
+
+1. Select **Invite User** in the top-right corner.
+2. Enter the user's **Email** address.
+3. Select a **Role** from the dropdown.
+4. Select **Send Invitation**.
+
+The user will receive an invitation email. They will appear under **Pending Invitations** until they accept and set up their account.
+
+<!-- SCREENSHOT: Invite User dialog showing email field and role dropdown -->
+
+## Managing pending invitations
+
+On the **Pending Invitations** tab, select the **⋯ menu** on an invitation row to:
+- **Resend** the invitation
+- **Delete** the invitation
+
+## Changing a user's role or removing a user
+
+1. On the **Users** tab, select the **⋯ menu** on the user's row.
+2. Select **Edit Role** to assign a different role, or **Remove** to revoke their access.
+
+:::warning
+Removing a user immediately revokes their access to Dalgo. They will not be able to log in until re-invited.
+:::
+
+## Available roles
+
+| Role             | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Usage dashboard |
+| ---------------- | --------------- | --------- | ------- | ----------- | --------- | ----------- | --------------- |
+| Account Manager  | Update          | Update    | Update  | Update      | Update    | Update      | View            |
+| Pipeline Manager | View            | View      | Update  | Update      | Update    | Update      | View            |
+| Analyst          | View            | View      | View    | View        | Update    | View        | View            |
+| Guest            | View            | View      | View    | View        | View      | View        | View            |

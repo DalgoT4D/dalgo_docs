@@ -4,26 +4,39 @@ sidebar_position: 2
 
 # Adding your Data Sources
 
-**A source is any system where your data already lives. Common examples include Zoho, KoboToolbox, Google Sheets, Avni, CommCare, and many others. Dalgo can connect to hundreds of sources, and new connectors can be added when needed.**
+**A source is any system where your data already lives. Common examples include KoboToolbox, Google Sheets, CommCare, Avni, Zoho, and many others.**
 
-When you add a source in Dalgo, you are saving the access details for that system. After that, you create a connection to choose which data should sync into your warehouse.
+When you add a source in Dalgo, you are saving the access credentials for that system. After that, you create a connection to choose which data syncs into your warehouse.
 
-1. Click the `Sources` tab in the Ingest section.
-2. To add a source, click `+ New Source`.
+## Viewing your sources
 
-<img width="1469" alt="2 2 2) Add source" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/b649b580-8769-435c-b0d7-420092978bda" />
+1. Select **Ingest** on the left menu panel.
+2. Select the **Sources** tab.
 
-3. Give your source a clear and recognisable name.
-4. Select the type of source you want to add. Dalgo will show the required credentials or access details for that source.
+<!-- SCREENSHOT: Sources tab showing the source list with search bar and Add Source button -->
 
-<img width="562" alt="2 2 4) Add source credentials" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/fd10e1d8-f597-4c09-a1d8-77d8a55d259a" />
+You will see a list of all sources added to your organisation. Use the search bar to find a source by name or type.
 
-5. Fill in the required credentials.
-6. Click `Save changes and test`.
-7. If the test succeeds, the source is ready to be used in a connection.
-   > Note: The exact credentials depend on the source type. If you do not have them, ask the person who manages that system or check the provider's documentation.
-8. To edit a source, click the three-dot menu on the right of the source row and select `Edit`, then save and test again.
-   > Note: You cannot change the source type of an existing source. Create a new source instead.
-9. To delete a source, click the three-dot menu on the right of the source row and select `Delete`, then confirm.
+## Adding a source
 
-For detailed operational guidance on source-specific credential setup, see **Resources > Data Sources > Adding a data source**.
+1. Select **+ Add Source**.
+2. In the dialog that opens, search for or select the source type (e.g. **KoboToolbox**, **Google Sheets**).
+3. Enter a name for this source.
+4. Fill in the required credentials or connection details. The fields shown depend on the source type. If you are unsure what credentials are needed, check the provider's documentation or contact the person who manages that system.
+5. Select **Test Connection**. Dalgo will confirm it can reach the source.
+6. Select **Save** once the test succeeds.
+
+<!-- SCREENSHOT: Add Source dialog showing source type selector and credential fields -->
+
+## Editing or deleting a source
+
+1. On the **Sources** tab, select the **⋯ menu** on the source row.
+2. Select **Edit** to update credentials and test again, or **Delete** to remove the source.
+
+:::note
+You cannot change the source type of an existing source. If you need a different source type, create a new source instead.
+:::
+
+:::warning
+Deleting a source also removes any connections that depend on it. This cannot be undone.
+:::

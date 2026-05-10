@@ -4,15 +4,29 @@ sidebar_position: 2
 
 # Pipeline Overview
 
-**This section is intended to help you monitor the health of your data pipelines and provide you with a way to investigate further.**
+**The Pipeline Overview shows a visual history of your data pipeline runs so you can quickly see what ran, when, and whether it succeeded.**
 
-1. Once you have set up at least one pipeline in the orchestration section you will see it in the overview section. Each pipeline will be represented separately.
+This is a read-only status view. To manage or schedule pipelines, go to **Orchestrate**.
 
-<img width="1465" alt="N5 1 ovrvwsect" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/c56e2733-09a4-42dc-8c8b-d6d187ab55f0" />
+## Viewing the Pipeline Overview
 
-2. Each vertical bar represents a pipeline run. A green bar represents success. A yellow bar represents a successful run, but a failure in ancillary functions, for example in a 'DBT test'. A red line indicates that the pipeline run has failed.
-3. To investigate further, hover over the bar, note the start time, and click on check logs.
+1. Select **Pipeline Overview** under **Managing Data** on the left menu panel.
 
-<img width="1470" alt="N5 3) Overview+logs" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/e09f3d8f-7f3c-47e1-bc5b-04dc4bea3410" />
+<!-- SCREENSHOT: Pipeline Overview page showing pipeline cards each with a bar chart of recent runs -->
 
-4. This will take you to the orchestrate section, where you would need to select logs and check for logs corresponding to the start time of the relevant run. (ref. Step 8 in the orchestrate section above)
+You will see a card for each pipeline. Each card shows:
+
+- The **pipeline name**
+- A **bar chart** of recent runs — green bars are successful, red bars are failed, yellow bars indicate the pipeline ran but a dbt test failed
+- The **last run time** and who triggered it
+
+## Viewing run logs
+
+1. Select any bar in the chart to expand the run's logs directly below the pipeline card.
+2. You will see each task that ran, its duration, and whether it succeeded or failed.
+
+<!-- SCREENSHOT: Expanded logs panel below a pipeline card, showing task list with durations -->
+
+## Scale to runtime
+
+Each pipeline card has a **Scale to runtime** toggle. When turned on, bar heights are proportional to how long each run took — useful for spotting runs that were unusually slow. When turned off, all bars are the same height and only colour indicates success or failure.

@@ -25,8 +25,8 @@ The UI Transform tab provides a visual canvas for building dbt models without wr
 ![UI Transform tab](/img/transform/transform_landing_UI_tab.png)
 
 - **Workflow Canvas**: A visual editor where you can create and connect dbt models by dragging and dropping operations
-- **Edit Workflow**: Click the "Edit Workflow" button to open the full canvas editor
-- **Publish**: Once you are happy with your changes, publish them to commit and push to the Git repository
+- **Edit Workflow**: Select **Edit Workflow** to open the full canvas editor
+- **Publish**: Once you are happy with your changes, select **Publish** to commit and push to the Git repository
 
 ## DBT Transform
 
@@ -55,15 +55,15 @@ The task list shows all available dbt tasks:
 - **dbt-deps**: Installs dbt package dependencies
 - **dbt-docs-generate**: Generates dbt documentation
 
-Click the **Run** button next to any task to execute it. Logs will be displayed inline below the task.
+Select the **Run** (▶) button next to any task to execute it. Logs will be displayed inline below the task.
 
 ### Creating Custom Tasks
 
-1. Click the **New Task** button
-2. Select a task type from the dropdown
-3. Configure any flags or options
-4. Review the command preview
-5. Click **Create** to add the task
+1. Select **+ NEW TASK** in the top-right corner of the DBT Actions card.
+2. Select a task type from the dropdown.
+3. Configure any flags or options.
+4. Review the command preview.
+5. Select **Create** to add the task.
 
 ![Create custom task dialog](/img/transform/transform_custom_dbt_task_filled.png)
 
@@ -73,13 +73,13 @@ Custom tasks will appear in your task list and can be deleted when no longer nee
 
 By default, Dalgo manages the Git repository for you. If you want to use your own GitHub repository instead:
 
-1. Click the **Edit** button on the DBT Repository card
-2. Enter your **GitHub repository URL** (e.g., `https://github.com/your-org/your-dbt-repo`)
-3. Enter a **Personal Access Token (PAT)** with the following permissions:
+1. Select **EDIT** on the DBT Repository card.
+2. Enter your **GitHub repo URL** (e.g., `https://github.com/your-org/your-dbt-repo`).
+3. Enter a **Personal access token** with the following permissions:
    - `repo` (full control of private repositories)
    - `workflow` (update GitHub Action workflows)
-4. Set the **default schema** for your dbt project
-5. Click **Save & Update**
+4. Set the **Dbt default Schema** for your dbt project.
+5. Select **SAVE & UPDATE**.
 
 ![Edit repository dialog](/img/transform/transform_edit_repo.png)
 
