@@ -19,14 +19,15 @@ You will see a list of all sources added to your organisation. Use the search ba
 
 ## Adding a source
 
-1. Select **+ Add Source**.
-2. In the dialog that opens, search for or select the source type (e.g. **KoboToolbox**, **Google Sheets**).
-3. Enter a name for this source.
-4. Fill in the required credentials or connection details. The fields shown depend on the source type. If you are unsure what credentials are needed, check the provider's documentation or contact the person who manages that system.
-5. Select **Test Connection**. Dalgo will confirm it can reach the source.
-6. Select **Save** once the test succeeds.
+1. Select **+ Add Source**. A dialog will appear.
 
 ![Add Source dialog](/img/ingest/sources_add.png)
+
+2. Search for or select the **Source Type** (e.g. **KoboToolbox**, **Google Sheets**).
+3. Enter a **Source Name**.
+4. Fill in the required credentials or connection details. The fields shown depend on the source type. If you are unsure what credentials are needed, check the provider's documentation or contact the person who manages that system.
+5. Select **Save Changes and Test**. Dalgo will confirm it can reach the source.
+6. Select **Save** once the test succeeds.
 
 ## Editing or deleting a source
 
