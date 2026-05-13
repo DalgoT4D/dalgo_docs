@@ -10,6 +10,8 @@ sidebar_position: 1
 
 When you open Dalgo, you land here automatically. If a default dashboard has been configured for your account, it loads straight away and you can read charts, apply filters, and explore data without navigating elsewhere.
 
+![Impact at a Glance home screen](/img/impact/impact_home.png)
+
 If no landing page has been set yet, you'll see two options:
 
 - **Choose a dashboard** — select an existing dashboard to display here

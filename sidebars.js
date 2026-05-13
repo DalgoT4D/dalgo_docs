@@ -61,6 +61,8 @@ const sidebars = {
       label: 'Dashboards',
       link: { type: 'doc', id: 'dashboards/index' },
       items: [
+        'dashboards/viewing',
+        'dashboards/creating',
         'dashboards/superset-usage',
         'dashboards/superset',
       ],
