@@ -6,14 +6,12 @@ sidebar_position: 4
 
 **The About page shows your platform version, organisation details, and links to open-source licence information.**
 
-:::info Screenshot coming soon
-Screenshots for the About page will be added in a future update.
-:::
-
 ## Accessing About
 
 1. Select **Settings** in the left menu.
 2. Select **About**.
+
+![About page](/img/settings/settings_about.png)
 
 ## What you'll see
 

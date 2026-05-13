@@ -9,6 +9,8 @@ sidebar_position: 5
 ## Steps
 
 1. Select **Reports** in the left menu.
+
+![Reports list](/img/reports/reports_list.png)
 2. Select **+ CREATE REPORT** in the top-right corner.
 3. Choose a **Dashboard** to base the report on.
 4. Give the report a **Name** (e.g. "Q1 2025 Program Update").

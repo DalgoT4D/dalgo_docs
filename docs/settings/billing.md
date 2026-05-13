@@ -6,14 +6,12 @@ sidebar_position: 3
 
 **The Billing page shows your organisation's current subscription and lets you manage billing details.**
 
-:::info Screenshot coming soon
-Screenshots for the Billing page will be added in a future update.
-:::
-
 ## Accessing Billing
 
 1. Select **Settings** in the left menu.
 2. Select **Billing**.
+
+![Billing page](/img/settings/settings_billing.png)
 
 ## What you'll see
 

@@ -9,6 +9,8 @@ sidebar_position: 4
 ## Steps
 
 1. Select **Dashboards** in the left menu. You'll see all dashboards in your organisation.
+
+![Dashboard list](/img/analysis/dashboard_list.png)
 2. Select any dashboard name to open it.
 3. Each tile on the dashboard is a chart. Hover over a chart to see its exact values.
 4. If the dashboard has filters at the top, use them to narrow the data by date, region, or other dimensions.

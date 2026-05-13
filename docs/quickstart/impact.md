@@ -8,7 +8,9 @@ sidebar_position: 3
 
 ## What you'll see
 
-If a default dashboard has been configured, it loads here automatically. You can read charts, apply filters, and explore data just as you would inside the Dashboards section.
+If a default dashboard has been configured, it loads here automatically.
+
+![Impact at a Glance home screen](/img/impact/impact_home.png) You can read charts, apply filters, and explore data just as you would inside the Dashboards section.
 
 If no default dashboard is set yet, you'll see two options:
 - **Choose a dashboard** — pick an existing dashboard to display here

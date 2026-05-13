@@ -15,6 +15,8 @@ sidebar_position: 3
 | **Map** | Visualising data by geography | Which regions have the highest case counts? |
 | **Table** | Displaying raw data in rows and columns | Full list of beneficiaries with their status |
 
+![Chart type selector](/img/analysis/chart_type_selector.png)
+
 ## Tips
 
 - **Bar vs Line**: Use bar for category comparisons; use line when the x-axis is time.
