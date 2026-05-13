@@ -1,12 +1,8 @@
 /**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
+ * Dalgo docs sidebar — mirrors the product left-nav exactly.
+ * Sections 1–3 are docs-only orientation content.
+ * Sections 4–9 match the product navigation order.
+ * Section 10 is convention (support).
  */
 
 // @ts-check
@@ -14,39 +10,130 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
-    'intro',
+    // 1. Welcome
+    'welcome',
+
+    // 2. Quickstart — linear first-timer path
     {
       type: 'category',
-      label: 'Ingest',
-      link: {type: 'doc', id: 'ingest/index'},
+      label: 'Quickstart',
+      link: { type: 'doc', id: 'quickstart/index' },
       items: [
-        'ingest/warehouse',
-        'ingest/sources',
-        'ingest/connections',
+        'quickstart/account-setup',
+        'quickstart/impact',
+        'quickstart/first-dashboard',
+        'quickstart/first-report',
+        'quickstart/next-steps',
       ],
     },
-    'transform',
-    'orchestrate',
+
+    // 3. Concepts — shared vocabulary
+    {
+      type: 'category',
+      label: 'Concepts',
+      items: [
+        'concepts/glossary',
+      ],
+    },
+
+    // 4. Impact — home screen
+    {
+      type: 'category',
+      label: 'Impact',
+      link: { type: 'doc', id: 'impact/index' },
+      items: [],
+    },
+
+    // 5. Charts — top-level product surface
+    {
+      type: 'category',
+      label: 'Charts',
+      link: { type: 'doc', id: 'charts/index' },
+      items: [
+        'charts/creating-a-chart',
+        'charts/chart-types',
+      ],
+    },
+
+    // 6. Dashboards
     {
       type: 'category',
       label: 'Dashboards',
-      link: {type: 'doc', id: 'analysis/index'},
+      link: { type: 'doc', id: 'dashboards/index' },
       items: [
-        'analysis/dalgo-dashboards',
-        'analysis/superset',
+        'dashboards/superset-usage',
+        'dashboards/superset',
       ],
     },
+
+    // 7. Reports
     {
       type: 'category',
-      label: 'Managing Data',
+      label: 'Reports',
+      link: { type: 'doc', id: 'reports/index' },
       items: [
-        'managing-data/data-quality',
-        'managing-data/pipeline-overview',
-        'managing-data/usage-dashboard',
-        'managing-data/user-management',
+        'reports/creating',
+        'reports/comments',
+        'reports/sharing',
+        'reports/exporting',
       ],
     },
-    'reports',
+
+    // 8. Data — renamed from "Managing Data", mirrors product nav
+    {
+      type: 'category',
+      label: 'Data',
+      link: { type: 'doc', id: 'data/index' },
+      items: [
+        'data/overview',
+        {
+          type: 'category',
+          label: 'Ingest',
+          link: { type: 'doc', id: 'data/ingest/index' },
+          items: [
+            'data/ingest/connections',
+            'data/ingest/sources',
+            'data/ingest/warehouse',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Transform',
+          link: { type: 'doc', id: 'data/transform/index' },
+          items: [
+            'data/transform/ui-transform',
+            'data/transform/dbt-transform',
+            'data/transform/switching-repositories',
+          ],
+        },
+        'data/orchestrate',
+        'data/explore',
+        'data/quality',
+      ],
+    },
+
+    // 9. Settings
+    {
+      type: 'category',
+      label: 'Settings',
+      link: { type: 'doc', id: 'settings/index' },
+      items: [
+        'settings/user-management',
+        'settings/billing',
+        'settings/about',
+      ],
+    },
+
+    // 10. Support
+    {
+      type: 'category',
+      label: 'Support',
+      link: { type: 'doc', id: 'support/index' },
+      items: [
+        'support/getting-help',
+        'support/troubleshooting',
+      ],
+    },
   ],
 };
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # User Management
@@ -8,7 +8,7 @@ sidebar_position: 4
 
 ## Viewing users
 
-1. Select **User Management** on the left menu panel (under Settings).
+1. Select **Settings** in the left menu, then select **User Management**.
 
 ![User Management](/img/managedata/user_management.png)
 
@@ -24,7 +24,7 @@ You will see two tabs:
 3. Select a **Role** from the dropdown.
 4. Select **Send Invitation**.
 
-The user will receive an invitation email. They will appear under **Pending Invitations** until they accept and set up their account.
+The user will receive an invitation email. They appear under **Pending Invitations** until they accept and set up their account.
 
 ![Invite User dialog](/img/managedata/user_management_invite.png)
 
@@ -45,9 +45,13 @@ Removing a user immediately revokes their access to Dalgo. They will not be able
 
 ## Available roles
 
-| Role             | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Usage dashboard |
-| ---------------- | --------------- | --------- | ------- | ----------- | --------- | ----------- | --------------- |
-| Account Manager  | Update          | Update    | Update  | Update      | Update    | Update      | View            |
-| Pipeline Manager | View            | View      | Update  | Update      | Update    | Update      | View            |
-| Analyst          | View            | View      | View    | View        | Update    | View        | View            |
-| Guest            | View            | View      | View    | View        | View      | View        | View            |
+| Role | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Usage dashboard |
+|---|---|---|---|---|---|---|---|
+| Account Manager | Update | Update | Update | Update | Update | Update | View |
+| Pipeline Manager | View | View | Update | Update | Update | Update | View |
+| Analyst | View | View | View | View | Update | View | View |
+| Guest | View | View | View | View | View | View | View |
+
+---
+
+**Related:** [Settings](./index.md) · [Support](../support/index.md)

@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Adding your Data Sources
+# Sources
 
 **A source is any system where your data already lives. Common examples include KoboToolbox, Google Sheets, CommCare, Avni, Zoho, and many others.**
 
@@ -10,12 +10,12 @@ When you add a source in Dalgo, you are saving the access credentials for that s
 
 ## Viewing your sources
 
-1. Select **Ingest** on the left menu panel.
+1. Select **Data** in the left menu, then select **Ingest**.
 2. Select the **Sources** tab.
 
 ![Sources list](/img/ingest/sources_list.png)
 
-You will see a list of all sources added to your organisation. Use the search bar to find a source by name or type.
+You will see all sources added to your organisation. Use the search bar to find a source by name or type.
 
 ## Adding a source
 
@@ -41,3 +41,7 @@ You cannot change the source type of an existing source. If you need a different
 :::warning
 Deleting a source also removes any connections that depend on it. This cannot be undone.
 :::
+
+---
+
+**Next:** [Connections](./connections.md) · [Warehouse](./warehouse.md)

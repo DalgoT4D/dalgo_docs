@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
-# Managing your Connections
+# Connections
 
 **A connection tells Dalgo what data to sync from a saved source into your warehouse.**
 
@@ -10,7 +10,7 @@ If a source answers "where does the data live?", a connection answers "which dat
 
 ## Viewing your connections
 
-1. Select **Ingest** on the left menu panel.
+1. Select **Data** in the left menu, then select **Ingest**.
 
 The **Connections** tab is shown by default. You will see a list of all connections in your organisation.
 
@@ -53,4 +53,6 @@ If columns or fields change in your source data, Dalgo detects those changes aut
 If a critical field (such as a cursor field) is removed, Dalgo treats it as a breaking change that cannot be approved in Dalgo. The issue must be fixed at the source first.
 :::
 
-> If you are unsure how schema changes affect your downstream models or dashboards, contact support@dalgo.org.
+---
+
+**Next:** [Sources](./sources.md) · [Transform](../transform/index.md)
