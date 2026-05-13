@@ -4,19 +4,35 @@ sidebar_position: 1
 
 # Setting up your Warehouse
 
-**Your warehouse is the single location where data from various sources is stored.**
+**Your warehouse is the single location where data from all your sources is stored.**
 
-1. Click on Ingest from the left menu pane and then select the 'Your Warehouse' tab.
-2. Dalgo currently supports BigQuery and PostgreSQL as warehouses for the platform. You should see one of these already set up.
-3. If you wish to edit your Warehouse name then click on the green edit button at the bottom of the window.
+Dalgo supports BigQuery and PostgreSQL as warehouse destinations. You need to set up your warehouse before adding sources or connections.
 
-<img width="1467" alt="2 1 3  Edit Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/361a8e1f-7f6e-4a5c-bef8-fe83f2ee6d7f" />
+## Connecting your warehouse
 
-4. If you wish to use a different warehouse from what is currently set up then select 'delete warehouse' and confirm. Then select 'add a new warehouse'.
-5. To set up a new warehouse name your warehouse, select the type of warehouse, fill in the relevant credentials, and click 'save changes and test'.
+1. Select **Ingest** on the left menu panel.
+2. Select the **Your Warehouse** tab.
 
-<img width="898" alt="2 15) Select Warehouse" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/2c98f1e3-96a0-4451-a648-ab25daa7381b" />
-___
-<img width="606" alt="2 152) Add WH Details" src="https://github.com/DalgoT4D/dalgo_docs/assets/119285990/8ea11da5-05c1-4f5e-be3a-22fffa820638" />
+<!-- SCREENSHOT: Your Warehouse tab showing the warehouse form with destination type selector -->
 
-> Note : Please seek advice from your internal tech team, your tech partner, or the Dalgo team (support@dalgo.org) if you need guidance on this.
+3. Select the type of warehouse from the **Destination type** dropdown — either **BigQuery** or **Postgres**.
+4. Enter a name for your warehouse in the **Name** field.
+5. Fill in the connection details. The fields depend on the destination type:
+   - **BigQuery** — requires a project ID and service account JSON credentials
+   - **Postgres** — requires a host, port, database name, username, and password
+6. Select **Test Connection**. Dalgo will verify it can reach your warehouse.
+7. Select **Save** once the test succeeds.
+
+<!-- SCREENSHOT: Warehouse form filled in, showing a successful connection test -->
+
+## Editing your warehouse
+
+To update your warehouse credentials or switch to a different warehouse:
+
+1. Select the **Your Warehouse** tab.
+2. Select the **Edit** button.
+3. Make your changes, test the connection, and save.
+
+:::note
+If you need help obtaining warehouse credentials, contact your internal tech team, your tech partner, or the Dalgo team at support@dalgo.org.
+:::

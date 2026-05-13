@@ -16,9 +16,9 @@ A report freezes your dashboard's layout and charts as they were when the report
 
 2. Each report shows its **Title**, the **Dashboard Used** to create it, who **Created by** it, and when it was **Created on**.
 
-3. Use the filter icons on the **Title**, **Dashboard Used**, and **Created by** columns to search for specific reports.
+3. Select the **filter icon** on the **Title**, **Dashboard Used**, or **Created by** column headers to search within that column.
 
-4. Click on any column header to sort the list.
+4. Select any **column header** to sort the list. Select again to reverse the sort order.
 
 ## Creating a report
 
@@ -42,7 +42,7 @@ The report captures your dashboard's layout and chart settings at the time of cr
 
 ## Viewing a report
 
-1. Click on any report in the list to open it.
+1. Select any report row in the list to open it.
 
 ![Report detail view](/img/reports/reports_detail.png)
 
@@ -56,7 +56,7 @@ The report captures your dashboard's layout and chart settings at the time of cr
 
 1. Open the report you want to edit.
 
-2. Select the **pencil icon** next to the **Executive Summary** heading.
+2. Select the **pencil (✎) icon** next to the **Executive Summary** heading.
 
 3. Type your notes in the text area that appears.
 
@@ -84,9 +84,9 @@ Unread comments are indicated by a highlighted comment icon on the chart or summ
 
 ## Sharing a report
 
-You can share a report with anyone — including people outside your organization — via a public link or email.
+You can share a report with anyone — including people outside your organisation — via a public link or email.
 
-1. Select the **share icon** on the report row in the list, or the **share button** in the top-right corner of the report detail view.
+1. Select the **share icon** (↗) on the report row in the **Actions** column, or in the top-right corner of the report detail view.
 
 <!-- SCREENSHOT: Share menu showing "Share via link" and "Embed in email" options -->
 
@@ -106,7 +106,7 @@ You can share a report with anyone — including people outside your organizatio
 
 ## Deleting a report
 
-1. On the reports list, select the **three-dot menu** (&#8942;) on the report row.
+1. On the reports list, select the **⋯ menu** on the report row.
 
 2. Select **Delete**.
 

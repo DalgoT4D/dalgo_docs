@@ -4,15 +4,18 @@ sidebar_position: 3
 
 # Ingest
 
-**Ingest is where you connect the tools your team already uses and bring that data into one warehouse.**
+**Ingest is where you connect your data sources and warehouse so Dalgo can automatically pull in your data.**
 
-If you are new to Dalgo, think of ingest in two simple parts:
+The Ingest page has three tabs:
 
-1. **Sources:** The systems where your data already lives, such as Zoho, KoboToolbox, Google Sheets, CommCare, Avni, or other operational tools.
-2. **Connections:** The sync setup that tells Dalgo which tables or streams from a source should be copied into your warehouse, and how that sync should run.
+- **Connections** — link a source to your warehouse to start syncing data (shown by default)
+- **Sources** — add the external systems your data comes from (e.g. Kobo Toolbox, Google Sheets)
+- **Your Warehouse** — connect the database where your data will be stored (e.g. BigQuery or Postgres)
 
-Once your sources and connections are set up, you can run or schedule them from **Orchestrate**. If fields or columns change later in a source, those schema changes are managed from the relevant connection.
+If you are setting up for the first time, work through them in this order: **Your Warehouse** → **Sources** → **Connections**.
 
-_You may need to whitelist these IP addresses in your firewall:_
+:::note
+You may need to whitelist these IP addresses in your organisation's firewall before Dalgo can connect to your data sources:
 - `13.202.128.47`
 - `65.2.173.97`
+:::
