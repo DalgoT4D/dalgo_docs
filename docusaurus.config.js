@@ -97,7 +97,7 @@ const config = {
             navbar: {
                 logo: {
                     alt: "Dalgo Logo",
-                    src: "/img/dalgo.png",
+                    src: "img/dalgo_logo.svg",
                 },
                 items: [
                     {

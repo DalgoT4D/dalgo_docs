@@ -4,32 +4,42 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Dalgo teal brand palette — generated from #00897B */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #00897b;
+  --ifm-color-primary-dark: #007a6e;
+  --ifm-color-primary-darker: #007268;
+  --ifm-color-primary-darkest: #005e56;
+  --ifm-color-primary-light: #009888;
+  --ifm-color-primary-lighter: #00a08f;
+  --ifm-color-primary-lightest: #00b5a2;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 137, 123, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode — slightly lighter teal for readability */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #26c6b9;
+  --ifm-color-primary-dark: #1fb3a6;
+  --ifm-color-primary-darker: #1caa9d;
+  --ifm-color-primary-darkest: #178d82;
+  --ifm-color-primary-light: #2dd9cc;
+  --ifm-color-primary-lighter: #34dbd0;
+  --ifm-color-primary-lightest: #50e0d6;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* ── Screenshot images ── */
 .theme-doc-markdown img {
   display: block;
   margin: 1.5rem auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  max-width: 100%;
+}
+
+/* ── Navbar logo sizing ── */
+.navbar__logo img {
+  height: 32px;
 }
