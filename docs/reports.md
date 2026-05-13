@@ -68,7 +68,7 @@ You can leave comments on the executive summary or on individual charts to discu
 
 1. Select the **comment icon** on the executive summary or on any chart card.
 
-<!-- SCREENSHOT: Comment popover showing a comment thread on a chart -->
+![Comment popover](/img/reports/reports_comment.png)
 
 2. Type your comment in the text field.
 
@@ -88,7 +88,7 @@ You can share a report with anyone — including people outside your organisatio
 
 1. Select the **share icon** (↗) on the report row in the **Actions** column, or in the top-right corner of the report detail view.
 
-<!-- SCREENSHOT: Share menu showing "Share via link" and "Embed in email" options -->
+![Share menu](/img/reports/reports_share.png)
 
 2. Choose one of the sharing options:
 

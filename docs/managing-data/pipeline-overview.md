@@ -25,7 +25,7 @@ You will see a card for each pipeline. Each card shows:
 1. Select any bar in the chart to expand the run's logs directly below the pipeline card.
 2. You will see each task that ran, its duration, and whether it succeeded or failed.
 
-<!-- SCREENSHOT: Expanded logs panel below a pipeline card, showing task list with durations -->
+![Pipeline logs](/img/managedata/pipeline_overview_logs.png)
 
 ## Scale to runtime
 

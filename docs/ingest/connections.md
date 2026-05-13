@@ -26,7 +26,7 @@ The **Connections** tab is shown by default. You will see a list of all connecti
 
 To test your connection, select the **Sync** button on the connection row. Sync logs will appear below.
 
-<!-- SCREENSHOT: Connection row showing sync button, history icon, and status indicator -->
+![Connection row](/img/ingest/connections_row.png)
 
 ## Managing a connection
 
