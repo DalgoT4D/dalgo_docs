@@ -14,7 +14,7 @@ If a source answers "where does the data live?", a connection answers "which dat
 
 The **Connections** tab is shown by default. You will see a list of all connections in your organisation.
 
-<!-- SCREENSHOT: Connections tab showing the connection list with sync status and action buttons per row -->
+![Connections list](/img/ingest/connections_list.png)
 
 ## Creating a connection
 

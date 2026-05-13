@@ -12,7 +12,7 @@ This is a read-only status view. To manage or schedule pipelines, go to **Orches
 
 1. Select **Pipeline Overview** under **Managing Data** on the left menu panel.
 
-<!-- SCREENSHOT: Pipeline Overview page showing pipeline cards each with a bar chart of recent runs -->
+![Pipeline Overview](/img/managedata/pipeline_overview.png)
 
 You will see a card for each pipeline. Each card shows:
 

@@ -16,7 +16,7 @@ The Usage Dashboard requires a Superset subscription. If you see an error messag
 
 The dashboard loads automatically as an embedded Superset view.
 
-<!-- SCREENSHOT: Usage Dashboard page showing the embedded Superset dashboard with charts -->
+![Usage Dashboard](/img/managedata/usage_dashboard.png)
 
 ## Metrics tab
 

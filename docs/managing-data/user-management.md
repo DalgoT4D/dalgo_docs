@@ -10,7 +10,7 @@ sidebar_position: 4
 
 1. Select **User Management** on the left menu panel (under Settings).
 
-<!-- SCREENSHOT: User Management page showing the Users tab with a table of current users and their roles -->
+![User Management](/img/managedata/user_management.png)
 
 You will see two tabs:
 
@@ -26,7 +26,7 @@ You will see two tabs:
 
 The user will receive an invitation email. They will appear under **Pending Invitations** until they accept and set up their account.
 
-<!-- SCREENSHOT: Invite User dialog showing email field and role dropdown -->
+![Invite User dialog](/img/managedata/user_management_invite.png)
 
 ## Managing pending invitations
 

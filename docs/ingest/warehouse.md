@@ -13,7 +13,7 @@ Dalgo supports BigQuery and PostgreSQL as warehouse destinations. You need to se
 1. Select **Ingest** on the left menu panel.
 2. Select the **Your Warehouse** tab.
 
-<!-- SCREENSHOT: Your Warehouse tab showing the warehouse form with destination type selector -->
+![Warehouse form](/img/ingest/warehouse_form.png)
 
 3. Select the type of warehouse from the **Destination type** dropdown — either **BigQuery** or **Postgres**.
 4. Enter a name for your warehouse in the **Name** field.

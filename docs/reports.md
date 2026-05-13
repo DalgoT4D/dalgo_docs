@@ -24,7 +24,7 @@ A report freezes your dashboard's layout and charts as they were when the report
 
 1. Select **+ CREATE REPORT** in the top-right corner.
 
-<!-- SCREENSHOT: Create report dialog showing dashboard selector, report name, date column, and date range fields -->
+![Create report dialog](/img/reports/reports_create.png)
 
 2. Choose the **Dashboard** you want to create a report from.
 

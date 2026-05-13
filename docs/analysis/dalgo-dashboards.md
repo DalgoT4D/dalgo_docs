@@ -12,7 +12,7 @@ You can create multiple dashboards for different audiences, such as a field team
 
 1. Select **Dashboards** on the left menu panel.
 
-<!-- SCREENSHOT: Dashboard list showing dashboard cards with names, last modified date, and action buttons -->
+![Dashboard list](/img/analysis/dashboard_list.png)
 
 You will see all dashboards in your organisation. Use the search bar to find a dashboard by name.
 
@@ -23,7 +23,7 @@ You will see all dashboards in your organisation. Use the search bar to find a d
 3. Drag charts to reposition them. Drag the edges or corners to resize.
 4. Select **Save** when you are done.
 
-<!-- SCREENSHOT: Dashboard builder with charts on the canvas and the Add Chart panel open -->
+![Dashboard builder](/img/analysis/dashboard_builder.png)
 
 :::info
 Dalgo creates a draft dashboard the moment you select **+ Create Dashboard**. If you leave without saving, the draft is kept — you can continue editing it from the dashboard list.
@@ -57,7 +57,7 @@ Charts are created separately and then added to dashboards.
    - **Table** — display raw data in rows and columns
 4. Select the **dataset** (database table) your chart will draw from, then select **Configure**.
 
-<!-- SCREENSHOT: Chart type selection screen showing Bar, Pie, Line, Number, Map, and Table options -->
+![Chart type selector](/img/analysis/chart_type_selector.png)
 
 5. In the configuration screen, choose which columns to use for axes, values, filters, and labels.
 6. Give your chart a name and select **Save**.

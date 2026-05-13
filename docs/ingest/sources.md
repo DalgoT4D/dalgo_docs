@@ -13,7 +13,7 @@ When you add a source in Dalgo, you are saving the access credentials for that s
 1. Select **Ingest** on the left menu panel.
 2. Select the **Sources** tab.
 
-<!-- SCREENSHOT: Sources tab showing the source list with search bar and Add Source button -->
+![Sources list](/img/ingest/sources_list.png)
 
 You will see a list of all sources added to your organisation. Use the search bar to find a source by name or type.
 
@@ -26,7 +26,7 @@ You will see a list of all sources added to your organisation. Use the search ba
 5. Select **Test Connection**. Dalgo will confirm it can reach the source.
 6. Select **Save** once the test succeeds.
 
-<!-- SCREENSHOT: Add Source dialog showing source type selector and credential fields -->
+![Add Source dialog](/img/ingest/sources_add.png)
 
 ## Editing or deleting a source
 
