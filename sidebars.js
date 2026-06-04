@@ -1,8 +1,8 @@
 /**
  * Dalgo docs sidebar — mirrors the product left-nav exactly.
  * Sections 1–3 are docs-only orientation content.
- * Sections 4–9 match the product navigation order.
- * Section 10 is convention (support).
+ * Sections 4–11 match the product navigation order.
+ * Section 12 is convention (support).
  */
 
 // @ts-check
@@ -44,7 +44,30 @@ const sidebars = {
       items: [],
     },
 
-    // 5. Charts — top-level product surface
+    // 5. Metrics — foundational building blocks
+    {
+      type: 'category',
+      label: 'Metrics',
+      link: { type: 'doc', id: 'metrics/index' },
+      items: [
+        'metrics/creating-metrics',
+        'metrics/managing-metrics',
+      ],
+    },
+
+    // 6. KPIs — goal-oriented tracking
+    {
+      type: 'category',
+      label: 'KPIs',
+      link: { type: 'doc', id: 'kpis/index' },
+      items: [
+        'kpis/creating-kpis',
+        'kpis/managing-kpis',
+        'kpis/best-practices',
+      ],
+    },
+
+    // 7. Charts — visualization and analysis
     {
       type: 'category',
       label: 'Charts',
@@ -55,7 +78,7 @@ const sidebars = {
       ],
     },
 
-    // 6. Dashboards
+    // 8. Dashboards
     {
       type: 'category',
       label: 'Dashboards',
@@ -68,7 +91,7 @@ const sidebars = {
       ],
     },
 
-    // 7. Reports
+    // 9. Reports
     {
       type: 'category',
       label: 'Reports',
@@ -81,7 +104,7 @@ const sidebars = {
       ],
     },
 
-    // 8. Data — renamed from "Managing Data", mirrors product nav
+    // 10. Data — renamed from "Managing Data", mirrors product nav
     {
       type: 'category',
       label: 'Data',
@@ -114,7 +137,7 @@ const sidebars = {
       ],
     },
 
-    // 9. Settings
+    // 11. Settings
     {
       type: 'category',
       label: 'Settings',
@@ -126,7 +149,7 @@ const sidebars = {
       ],
     },
 
-    // 10. Support
+    // 12. Support
     {
       type: 'category',
       label: 'Support',
