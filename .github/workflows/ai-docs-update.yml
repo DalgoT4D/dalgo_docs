@@ -66,6 +66,7 @@ jobs:
           STAGING_PASSWORD: ${{ secrets.STAGING_PASSWORD }}
           RUN_SLUG: ${{ steps.slug.outputs.slug }}
         with:
+          mode: agent
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           mcp_config: .claude/mcp-config.json
