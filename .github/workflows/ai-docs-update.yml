@@ -70,8 +70,8 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           mcp_config: .claude/mcp-config.json
-          claude_args: "--max-turns 60"
-          prompt: |
+          max_turns: "60"
+          direct_prompt: |
             Use the `docs-generation` skill as your playbook.
 
             Request:
@@ -91,6 +91,10 @@ jobs:
           base: main
           commit-message: "docs(ai): ${{ inputs.prompt }}"
           title: "docs(ai): ${{ inputs.prompt }}"
+          add-paths: |
+            docs/**
+            static/img/**
+            sidebars.js
           body: |
             **Triggered by:** @${{ github.actor }}
             **Prompt:** ${{ inputs.prompt }}
