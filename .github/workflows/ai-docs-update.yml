@@ -67,6 +67,7 @@ jobs:
           RUN_SLUG: ${{ steps.slug.outputs.slug }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           mcp_config: .claude/mcp-config.json
           claude_args: "--max-turns 60"
           prompt: |
