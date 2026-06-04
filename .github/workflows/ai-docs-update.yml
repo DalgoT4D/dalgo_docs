@@ -84,7 +84,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.IK_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: ai-docs/${{ steps.slug.outputs.slug }}
           base: main
           commit-message: "docs(ai): ${{ inputs.prompt }}"
@@ -101,4 +101,4 @@ jobs:
             - [ ] MDX prose is accurate and consistent with the rest of the section
             - [ ] No edits outside `docs/` and the agreed screenshot folder
           labels: ai-docs
-          draft: false
+          draft: false  
