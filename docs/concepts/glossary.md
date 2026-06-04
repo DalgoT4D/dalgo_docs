@@ -29,6 +29,12 @@ After raw data lands in your warehouse, it usually needs cleaning, joining, and 
 **Model**
 A single transformation step in dbt — typically one SQL file that produces one table. Dalgo's UI Transform canvas lets you create models visually.
 
+**Metric**
+A reusable calculation that defines how to compute a specific value from your warehouse data. Metrics can be simple aggregations (like SUM or COUNT) or complex SQL expressions. Once defined, a metric can be used across multiple KPIs and charts for consistency.
+
+**KPI (Key Performance Indicator)**
+A metric promoted with targets, direction, and status tracking. KPIs include target values, track whether increases or decreases are positive, and automatically calculate Red/Amber/Green status based on performance against goals.
+
 **Chart**
 A single visualisation — a bar chart, pie chart, line chart, number, map, or table — built from one dataset (warehouse table). Charts are the building blocks of dashboards.
 

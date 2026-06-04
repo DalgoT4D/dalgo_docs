@@ -4,7 +4,16 @@ sidebar_position: 1
 
 # Impact
 
-**Impact at a Glance is the first screen you see when you log in — your personal home screen showing the dashboard your team has set as the default view.**
+**Impact at a Glance is your performance hub — monitor key performance indicators and access your personalized dashboard landing page in one place.**
+
+## KPI Dashboard
+
+The Impact section prominently features your organization's key performance indicators with:
+
+- **RAG Status Overview**: Quick visual status of all KPIs (Red/Amber/Green)
+- **Trend Indicators**: See which metrics are improving or declining
+- **Target Progress**: Monitor progress toward organizational goals
+- **Priority Metrics**: Focus on the most important performance indicators
 
 ## The home screen
 
@@ -31,4 +40,4 @@ Each user sets their own landing page independently. Changing yours has no effec
 
 ---
 
-**Next:** [Charts](../charts/index.md) · [Dashboards](../dashboards/index.md) · [Reports](../reports/index.md)
+**Next:** [KPIs & Metrics](../data/kpis-metrics.md) · [Charts](../charts/index.md) · [Dashboards](../dashboards/index.md) · [Reports](../reports/index.md)

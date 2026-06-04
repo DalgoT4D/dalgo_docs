@@ -17,6 +17,7 @@ This section maps to the **Data** item in the Dalgo left navigation and covers e
 | [Transform](./transform/index.md) | Clean, join, and compute your data using dbt |
 | [Orchestrate](./orchestrate.md) | Schedule pipelines to run automatically |
 | [Explore](./explore.md) | Browse the tables in your warehouse |
+| [KPIs & Metrics](./kpis-metrics.md) | Track organizational performance with key metrics and indicators |
 | [Data Quality](./quality.md) | Monitor dbt test results and data anomalies |
 
 ---
