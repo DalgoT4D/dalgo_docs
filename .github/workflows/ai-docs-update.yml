@@ -74,8 +74,15 @@ jobs:
         working-directory: dalgo_docs
         run: npm install
 
-      - name: Install Playwright Chromium
-        run: npx -y playwright@latest install chromium --with-deps
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python Playwright + Chromium
+        run: |
+          pip install playwright
+          python -m playwright install chromium --with-deps
 
       - name: Generate run slug
         id: slug
@@ -92,26 +99,9 @@ jobs:
           mode: agent
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          mcp_config: |
-            {
-              "mcpServers": {
-                "playwright": {
-                  "command": "npx",
-                  "args": [
-                    "-y",
-                    "@playwright/mcp@latest",
-                    "--headless",
-                    "--browser=chromium",
-                    "--viewport-size=1440,900",
-                    "--output-dir",
-                    "${{ github.workspace }}/dalgo_docs/static/img"
-                  ]
-                }
-              }
-            }
           max_turns: "60"
           claude_env: |
-            STAGING_URL: ${{ secrets.STAGING_URL }}
+            STAGING_URL: ${{ inputs.target_url != '' && inputs.target_url || secrets.STAGING_URL }}
             STAGING_USERNAME: ${{ secrets.STAGING_USERNAME }}
             STAGING_PASSWORD: ${{ secrets.STAGING_PASSWORD }}
           direct_prompt: |
@@ -129,34 +119,31 @@ jobs:
             Request:
             ${{ inputs.prompt }}
 
-            Hard requirements:
-            - Read `./webapp_v2/` to understand the feature's UI structure and
-              identify whether it is one page or multiple distinct menu items /
-              routes. Mirror that structure in the docs.
-            - All doc edits go under `./dalgo_docs/docs/`. Screenshots go under
-              `./dalgo_docs/static/img/<feature>/`. Sidebar updates go in
-              `./dalgo_docs/sidebars.js`.
-            - Screenshots: the Playwright MCP server is configured with
-              `--output-dir ${{ github.workspace }}/dalgo_docs/static/img`
-              (absolute path). When you call `mcp__playwright__browser_take_screenshot`,
-              ALWAYS pass `filename` in the form `<feature>/<descriptive-name>.png`
-              (e.g. `kpis/list.png`, `kpis/create_form.png`). After the call
-              returns successfully, the PNG IS on disk at
-              `dalgo_docs/static/img/<feature>/<descriptive-name>.png` — treat it
-              as a real captured image and reference it in MDX as
-              `/img/<feature>/<descriptive-name>.png`. Do NOT add a
-              `:::info Screenshot coming soon` admonition for a screenshot you
-              successfully captured.
-            - Only use `:::info Screenshot coming soon` when login or navigation
-              actually failed and you could not capture the screenshot at all.
-              Never invent screenshot filenames you didn't capture.
-            - MDX gotcha: avoid bare angle brackets (`<7 days>`, `<error>`) and
-              bare curly braces (`{value}`) in prose — MDX parses them as JSX
-              and the build will fail. Wrap them in backticks: `` `<7 days>` ``,
-              `` `{value}` ``. Or use HTML entities `&lt;`/`&gt;`/`&#123;`.
+            How to capture screenshots:
+            Write a Python Playwright script and run it via Bash. Python and
+            Playwright (with chromium) are pre-installed. The script MUST read
+            the staging app URL and credentials from env vars — do NOT hardcode
+            URLs or use anything you saw in `webapp_v2` source:
 
-            Stop once files in `./dalgo_docs/` are edited — the workflow
-            validates with `npm run build` and opens a PR.
+                import os
+                base_url = os.environ["STAGING_URL"]
+                email    = os.environ["STAGING_USERNAME"]
+                password = os.environ["STAGING_PASSWORD"]
+
+            Reference `scripts/screenshot.py` in this repo for the canonical
+            login flow (Business Email / Password labels, Sign In button,
+            redirect to /impact). Adapt it for the routes you need.
+
+            Save screenshots into `./dalgo_docs/static/img/<feature>/<name>.png`
+            and reference them in MDX as `/img/<feature>/<name>.png`. All doc
+            edits go under `./dalgo_docs/docs/`; sidebar updates in
+            `./dalgo_docs/sidebars.js`.
+
+            MDX gotcha: in prose, escape bare `<word>` or `{word}` with
+            backticks (`` `<7 days>` ``) — they parse as JSX and break the
+            build otherwise.
+
+            Stop once files in `./dalgo_docs/` are edited.
 
       - name: Show agent output (debug)
         if: always()
