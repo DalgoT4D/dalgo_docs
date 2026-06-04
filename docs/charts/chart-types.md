@@ -21,7 +21,7 @@ sidebar_position: 3
 
 - **Bar vs Line**: Use bar for category comparisons; use line when the x-axis is time.
 - **Pie charts**: Work best with 5 or fewer slices. More than that becomes hard to read.
-- **Number**: Use for KPIs on a monitoring dashboard. Combine with a Line chart below it to show the trend behind the number.
+- **Number**: Essential for displaying KPIs and key metrics on monitoring dashboards. Best practices: combine with a Line chart below to show trends, use clear labeling, and consider color coding for threshold alerts (green for good, red for concerning values).
 - **Map**: Requires a geographic column (country, state, or coordinates) in your dataset.
 
 ---
