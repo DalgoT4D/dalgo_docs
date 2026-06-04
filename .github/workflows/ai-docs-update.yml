@@ -150,17 +150,33 @@ jobs:
             - Only use `:::info Screenshot coming soon` when login or navigation
               actually failed and you could not capture the screenshot at all.
               Never invent screenshot filenames you didn't capture.
+            - MDX gotcha: avoid bare angle brackets (`<7 days>`, `<error>`) and
+              bare curly braces (`{value}`) in prose — MDX parses them as JSX
+              and the build will fail. Wrap them in backticks: `` `<7 days>` ``,
+              `` `{value}` ``. Or use HTML entities `&lt;`/`&gt;`/`&#123;`.
 
             Stop once files in `./dalgo_docs/` are edited — the workflow
             validates with `npm run build` and opens a PR.
 
+      - name: Show agent output (debug)
+        if: always()
+        run: |
+          echo "--- dalgo_docs/static/img/ tree ---"
+          find dalgo_docs/static/img -type f -printf '%p (%s bytes)\n' 2>/dev/null || ls -laR dalgo_docs/static/img 2>/dev/null || echo "(empty or missing)"
+          echo "--- dalgo_docs/docs/ changes ---"
+          cd dalgo_docs && git status --short
+
       - name: Validate Docusaurus build
+        id: build
         working-directory: dalgo_docs
+        continue-on-error: true
         run: npm run build
 
       - name: Create pull request
+        if: always()
         uses: peter-evans/create-pull-request@v6
         with:
+          draft: ${{ steps.build.outcome != 'success' }}
           path: dalgo_docs
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ai-docs/${{ steps.slug.outputs.slug }}
@@ -183,4 +199,3 @@ jobs:
             - [ ] MDX prose is accurate and consistent with the rest of the section
             - [ ] No edits outside `docs/` and the agreed screenshot folder
           labels: ai-docs
-          draft: false
