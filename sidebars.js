@@ -44,7 +44,20 @@ const sidebars = {
       items: [],
     },
 
-    // 5. Charts — top-level product surface
+    // 5. KPIs & Metrics — goal tracking and reusable calculations
+    {
+      type: 'category',
+      label: 'KPIs & Metrics',
+      link: { type: 'doc', id: 'kpis-metrics/index' },
+      items: [
+        'kpis-metrics/creating-metrics',
+        'kpis-metrics/creating-kpis',
+        'kpis-metrics/kpi-dashboard-widgets',
+        'kpis-metrics/annotations',
+      ],
+    },
+
+    // 6. Charts — top-level product surface
     {
       type: 'category',
       label: 'Charts',
@@ -55,7 +68,7 @@ const sidebars = {
       ],
     },
 
-    // 6. Dashboards
+    // 7. Dashboards
     {
       type: 'category',
       label: 'Dashboards',
@@ -68,7 +81,7 @@ const sidebars = {
       ],
     },
 
-    // 7. Reports
+    // 8. Reports
     {
       type: 'category',
       label: 'Reports',
@@ -81,7 +94,7 @@ const sidebars = {
       ],
     },
 
-    // 8. Data — renamed from "Managing Data", mirrors product nav
+    // 9. Data — renamed from "Managing Data", mirrors product nav
     {
       type: 'category',
       label: 'Data',
@@ -114,7 +127,7 @@ const sidebars = {
       ],
     },
 
-    // 9. Settings
+    // 10. Settings
     {
       type: 'category',
       label: 'Settings',
@@ -126,7 +139,7 @@ const sidebars = {
       ],
     },
 
-    // 10. Support
+    // 11. Support
     {
       type: 'category',
       label: 'Support',
