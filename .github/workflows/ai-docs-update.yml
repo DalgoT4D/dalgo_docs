@@ -102,7 +102,9 @@ jobs:
                     "@playwright/mcp@latest",
                     "--headless",
                     "--browser=chromium",
-                    "--viewport-size=1440,900"
+                    "--viewport-size=1440,900",
+                    "--output-dir",
+                    "./dalgo_docs/static/img"
                   ]
                 }
               }
@@ -137,10 +139,16 @@ jobs:
             - Every screenshot referenced in MDX MUST be captured via
               `mcp__playwright__browser_take_screenshot` against the live staging
               app (URL/user/password in `STAGING_URL`/`STAGING_USERNAME`/
-              `STAGING_PASSWORD` env vars). No inferred or fabricated screenshot
-              paths. If you can't capture a screenshot, use a
-              `:::info Screenshot coming soon` admonition — do not reference a
-              missing file.
+              `STAGING_PASSWORD` env vars). The Playwright MCP server is
+              configured with `--output-dir ./dalgo_docs/static/img`, so when you
+              call `browser_take_screenshot`, pass `filename` in the form
+              `<feature>/<descriptive-name>.png` (e.g. `kpis/list.png`,
+              `kpis/create_form.png`). The file will land at
+              `./dalgo_docs/static/img/<feature>/<descriptive-name>.png`.
+              Reference it in MDX as `/img/<feature>/<descriptive-name>.png`.
+              No inferred or fabricated screenshot paths. If you can't capture
+              a screenshot, use a `:::info Screenshot coming soon` admonition —
+              do not reference a missing file.
 
             Stop once files in `./dalgo_docs/` are edited — the workflow
             validates with `npm run build` and opens a PR.
