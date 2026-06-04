@@ -40,21 +40,29 @@ jobs:
               );
             }
 
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Clone webapp for context
+      - name: Clone dalgo-core (harness + skills, becomes workspace root)
         uses: actions/checkout@v4
         with:
-          repository: DalgoT4D/webapp
-          path: _context/webapp
+          repository: DalgoT4D/dalgo-core
           fetch-depth: 1
 
-      - name: Clone backend for context
+      - name: Checkout dalgo_docs
+        uses: actions/checkout@v4
+        with:
+          path: dalgo_docs
+
+      - name: Clone webapp_v2
+        uses: actions/checkout@v4
+        with:
+          repository: DalgoT4D/webapp_v2
+          path: webapp_v2
+          fetch-depth: 1
+
+      - name: Clone DDP_backend
         uses: actions/checkout@v4
         with:
           repository: DalgoT4D/DDP_backend
-          path: _context/backend
+          path: DDP_backend
           fetch-depth: 1
 
       - name: Setup Node
@@ -62,7 +70,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
+      - name: Install docs dependencies
+        working-directory: dalgo_docs
         run: npm install
 
       - name: Install Playwright Chromium
@@ -99,21 +108,51 @@ jobs:
               }
             }
           max_turns: "60"
+          claude_env: |
+            STAGING_URL: ${{ secrets.STAGING_URL }}
+            STAGING_USERNAME: ${{ secrets.STAGING_USERNAME }}
+            STAGING_PASSWORD: ${{ secrets.STAGING_PASSWORD }}
           direct_prompt: |
-            Use the `docs-generation` skill as your playbook.
+            You are running inside the `dalgo-core` harness. The workspace
+            layout is:
+
+            - `./` (cwd) — dalgo-core (skills, agents, scripts)
+            - `./dalgo_docs/` — the Docusaurus docs repo to edit
+            - `./webapp_v2/` — frontend source (Next.js)
+            - `./DDP_backend/` — backend source (Django)
+
+            Use the `docs-generation` skill (in `.claude/skills/docs-generation/`)
+            as your playbook.
 
             Request:
             ${{ inputs.prompt }}
 
-            Stop once files are edited — the workflow validates with
-            `npm run build` and opens a PR.
+            Hard requirements:
+            - Read `./webapp_v2/` to understand the feature's UI structure and
+              identify whether it is one page or multiple distinct menu items /
+              routes. Mirror that structure in the docs.
+            - All doc edits go under `./dalgo_docs/docs/`. Screenshots go under
+              `./dalgo_docs/static/img/<feature>/`. Sidebar updates go in
+              `./dalgo_docs/sidebars.js`.
+            - Every screenshot referenced in MDX MUST be captured via
+              `mcp__playwright__browser_take_screenshot` against the live staging
+              app (URL/user/password in `STAGING_URL`/`STAGING_USERNAME`/
+              `STAGING_PASSWORD` env vars). No inferred or fabricated screenshot
+              paths. If you can't capture a screenshot, use a
+              `:::info Screenshot coming soon` admonition — do not reference a
+              missing file.
+
+            Stop once files in `./dalgo_docs/` are edited — the workflow
+            validates with `npm run build` and opens a PR.
 
       - name: Validate Docusaurus build
+        working-directory: dalgo_docs
         run: npm run build
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
+          path: dalgo_docs
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ai-docs/${{ steps.slug.outputs.slug }}
           base: main
@@ -135,4 +174,4 @@ jobs:
             - [ ] MDX prose is accurate and consistent with the rest of the section
             - [ ] No edits outside `docs/` and the agreed screenshot folder
           labels: ai-docs
-          draft: false  
+          draft: false
