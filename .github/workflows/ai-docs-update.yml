@@ -43,6 +43,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Clone webapp for context
+        uses: actions/checkout@v4
+        with:
+          repository: DalgoT4D/webapp
+          path: _context/webapp
+          fetch-depth: 1
+
+      - name: Clone backend for context
+        uses: actions/checkout@v4
+        with:
+          repository: DalgoT4D/DDP_backend
+          path: _context/backend
+          fetch-depth: 1
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

@@ -24,6 +24,29 @@ The sidebar mirrors the product left-nav exactly. Sections 1–3 are docs-only o
 2. **First-time independent user** (secondary) — needs the Quickstart linear path.
 3. **Implementation partner** (tertiary) — uses the same producer-track reference but benefits from `:::note For implementation partners` callouts on pages like Warehouse setup, Transform repo switching, and User Management.
 
+## When documenting a feature
+
+For any request about a product feature (new page, updated flow, "document X"):
+
+1. **The live staging app is the source of truth.** You MUST navigate to it via the Playwright MCP browser tools (`mcp__playwright__browser_navigate`, `browser_click`, `browser_take_screenshot`, etc.) before writing prose. Do NOT write feature docs from text inference or guesswork alone — that produces inaccurate, fabricated content.
+
+2. **Cloned source repos are a navigation aid only**, available in CI at:
+   - `_context/webapp/` — Dalgo frontend (Next.js). Use to find which route exposes a feature, identify component/page names, and read button/tab labels so you know what to click in the app.
+   - `_context/backend/` — Dalgo Django backend. Use to identify API endpoints behind a feature when relevant.
+
+   Do NOT describe features in user-facing docs based on implementation details. Use the source only to *locate* a feature, then go *see* it in the app.
+
+3. **Required workflow for feature requests:**
+   1. Read the prompt; identify the feature.
+   2. (Optional) Grep `_context/webapp/` for keywords from the prompt to find the relevant route(s).
+   3. Open Playwright. Navigate to `STAGING_URL`. Log in using `STAGING_USERNAME` / `STAGING_PASSWORD`.
+   4. Navigate to the feature in the app.
+   5. Take screenshots per the Screenshot Policy below.
+   6. Write docs based on what you observed in the app, using the screenshots.
+   7. Update `sidebars.js` if you created new pages.
+
+4. **If you can't find the feature in the app**, stop and say so explicitly in your final output. Do not invent content to fill the gap.
+
 ## Edit Scope
 
 Only edit documentation content. Never modify configuration, build, or dependency files.
