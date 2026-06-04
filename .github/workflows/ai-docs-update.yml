@@ -69,7 +69,21 @@ jobs:
           mode: agent
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          mcp_config: .claude/mcp-config.json
+          mcp_config: |
+            {
+              "mcpServers": {
+                "playwright": {
+                  "command": "npx",
+                  "args": [
+                    "-y",
+                    "@playwright/mcp@latest",
+                    "--headless",
+                    "--browser=chromium",
+                    "--viewport-size=1440,900"
+                  ]
+                }
+              }
+            }
           max_turns: "60"
           direct_prompt: |
             Use the `docs-generation` skill as your playbook.
