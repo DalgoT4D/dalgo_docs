@@ -11,7 +11,7 @@ sidebar_position: 3
 | **Bar Chart** | Comparing values across categories | How many beneficiaries did each district serve this quarter? |
 | **Line Chart** | Showing trends over time | How has enrolment changed month by month? |
 | **Pie Chart** | Showing proportions of a whole | What percentage of respondents chose each answer? |
-| **Number** | Highlighting a single key metric | Total households reached this year |
+| **Number** | Highlighting a single KPI or key metric | Total households reached this year |
 | **Map** | Visualising data by geography | Which regions have the highest case counts? |
 | **Table** | Displaying raw data in rows and columns | Full list of beneficiaries with their status |
 
@@ -21,7 +21,7 @@ sidebar_position: 3
 
 - **Bar vs Line**: Use bar for category comparisons; use line when the x-axis is time.
 - **Pie charts**: Work best with 5 or fewer slices. More than that becomes hard to read.
-- **Number**: Use for KPIs on a monitoring dashboard. Combine with a Line chart below it to show the trend behind the number.
+- **Number**: Perfect for displaying KPIs on monitoring dashboards. Combine with a Line chart below it to show the trend behind the number. Ideal for metrics like total users, revenue targets, or performance indicators.
 - **Map**: Requires a geographic column (country, state, or coordinates) in your dataset.
 
 ---
