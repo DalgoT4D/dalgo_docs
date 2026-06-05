@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdalgo_docs=self.webpackChunkdalgo_docs||[]).push([[4583],{6866:(s,d,e)=>{e.r(d),e.d(d,{default:()=>t});e(6540);var o=e(6347),r=e(4848);function t(){return(0,r.jsx)(o.rd,{to:"/intro"})}}}]);
