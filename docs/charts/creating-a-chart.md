@@ -22,6 +22,24 @@ sidebar_position: 2
 
 The chart is now saved and available to add to any dashboard.
 
+## Using a saved metric
+
+The right-hand **Data** panel has a **Metrics** section where you define what the chart measures. Select **+ Add another metric** to open the metric form. The form has three tabs:
+
+- **Simple** — pick an aggregation (sum, avg, count, etc.) and a column from the dataset.
+- **Calculated** — write a SQL expression that returns a single number.
+- **Saved** — pick from your [Metrics library](../data/metrics.md).
+
+To use an existing metric, switch to the **Saved** tab and select one from the dropdown labelled **Select a metric from pre-defined list**. The chart now shows the saved metric's definition, and any future edit to the metric flows through to this chart automatically.
+
+You can mix saved and ad-hoc metrics in the same chart — bar, line, and table charts accept multiple metrics, while pie, number, and map charts use one.
+
+:::info
+A small library icon next to a metric's label means it is a saved metric. Hover over it to see the metric name.
+:::
+
+If you build a metric in **Simple** or **Calculated** mode and want to reuse it elsewhere, expand the **Add metric to library** section in the metric form and select **Add metric to library** — the metric is saved and added to the chart in one step.
+
 ## Editing a chart
 
 1. Select **Charts** in the left menu.
