@@ -44,7 +44,18 @@ const sidebars = {
       items: [],
     },
 
-    // 5. Charts — top-level product surface
+    // 5. KPIs — top-level product surface
+    {
+      type: 'category',
+      label: 'KPIs',
+      link: { type: 'doc', id: 'kpis/index' },
+      items: [
+        'kpis/creating-a-kpi',
+        'kpis/notes',
+      ],
+    },
+
+    // 6. Charts — top-level product surface
     {
       type: 'category',
       label: 'Charts',
@@ -110,6 +121,7 @@ const sidebars = {
         },
         'data/orchestrate',
         'data/explore',
+        'data/metrics',
         'data/quality',
       ],
     },
