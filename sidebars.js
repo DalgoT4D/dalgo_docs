@@ -126,7 +126,17 @@ const sidebars = {
       ],
     },
 
-    // 9. Settings
+    // 9. Alerts — top-level product surface
+    {
+      type: 'category',
+      label: 'Alerts',
+      link: { type: 'doc', id: 'alerts/index' },
+      items: [
+        'alerts/creating-an-alert',
+      ],
+    },
+
+    // 11. Settings
     {
       type: 'category',
       label: 'Settings',
@@ -138,7 +148,7 @@ const sidebars = {
       ],
     },
 
-    // 10. Support
+    // 12. Support
     {
       type: 'category',
       label: 'Support',
