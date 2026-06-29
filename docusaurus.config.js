@@ -74,6 +74,16 @@ const config = {
                 editUrl: "https://github.com/DalgoT4D/dalgo_docs/tree/main/",
             },
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "release-notes",
+                path: "release-notes-docs",
+                routeBasePath: "release-notes",
+                sidebarPath: require.resolve("./sidebarsReleaseNotes.js"),
+                editUrl: "https://github.com/DalgoT4D/dalgo_docs/tree/main/",
+            },
+        ],
     ],
 
     themes: [
@@ -82,8 +92,8 @@ const config = {
             {
                 hashed: true,
                 indexBlog: false,
-                docsDir: ["docs", "self-serve-docs"],
-                docsRouteBasePath: ["/docs", "/self-serve-documentation"],
+                docsDir: ["docs", "self-serve-docs", "release-notes-docs"],
+                docsRouteBasePath: ["/docs", "/self-serve-documentation", "/release-notes"],
                 docsPluginIdForPreferredVersion: "default",
             },
         ],
@@ -112,6 +122,13 @@ const config = {
                         docsPluginId: "self-serve",
                         position: "left",
                         label: "Resources",
+                    },
+                    {
+                        type: "docSidebar",
+                        sidebarId: "releaseNotesSidebar",
+                        docsPluginId: "release-notes",
+                        position: "left",
+                        label: "Release Notes",
                     },
                     {
                         to: "https://projecttech4dev.org/tag/data-platform/",
