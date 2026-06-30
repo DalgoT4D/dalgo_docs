@@ -142,6 +142,7 @@ const sidebars = {
       label: 'Settings',
       link: { type: 'doc', id: 'settings/index' },
       items: [
+        'settings/branding',
         'settings/user-management',
         'settings/billing',
         'settings/about',
