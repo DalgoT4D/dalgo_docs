@@ -34,7 +34,7 @@ If the pipeline is running successfully but charts still look stale, the dashboa
 ## I didn't receive my invitation email
 
 1. Check your spam folder for an email from **notifications@dalgo.org**.
-2. If it's not there, ask an Account Manager in your organisation to resend the invitation from **Settings → User Management → Pending Invitations**.
+2. If it's not there, ask an Admin in your organisation to resend the invitation from **Settings → User Management → Pending Invitations**.
 
 ## I see "No pipelines available" on the Overview
 

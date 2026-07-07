@@ -21,7 +21,7 @@ You will see two tabs:
 
 1. Select **Invite User** in the top-right corner.
 2. Enter the user's **Email** address.
-3. Select a **Role** from the dropdown.
+3. Select a **Role** from the dropdown — **Admin**, **Analyst**, or **Member**.
 4. Select **Send Invitation**.
 
 The user will receive an invitation email. They appear under **Pending Invitations** until they accept and set up their account.
@@ -45,12 +45,22 @@ Removing a user immediately revokes their access to Dalgo. They will not be able
 
 ## Available roles
 
-| Role | User management | Warehouse | Sources | Connections | Transform | Orchestrate | Usage dashboard |
-|---|---|---|---|---|---|---|---|
-| Account Manager | Update | Update | Update | Update | Update | Update | View |
-| Pipeline Manager | View | View | Update | Update | Update | Update | View |
-| Analyst | View | View | View | View | Update | View | View |
-| Guest | View | View | View | View | View | View | View |
+Every user gets one of three roles:
+
+| | Admin | Analyst | Member |
+|---|---|---|---|
+| Dashboards, Charts, Reports, Metrics, KPIs, Alerts | Create, edit, delete anyone's | Create and edit; delete their own (an Admin can delete any) | View only |
+| Ingest, Transform, Orchestrate, Explore, Data Quality, Pipeline Overview | Full access | View only | Not shown |
+| Impact and KPIs summary pages | Full access | Full access | View only |
+| User Management and Billing | Full access | No access | No access |
+
+- **Analysts build, but don't connect or run.** They can create dashboards, charts, reports, metrics, KPIs, and alerts freely, and can see (but not change) your warehouse, sources, and transform setup.
+- **Deleting is owner-or-admin.** Anyone can delete the dashboards, charts, reports, metrics, KPIs, and alerts they created themselves. Deleting something a teammate made requires the Admin role.
+- **Members have a read-only view** of the dashboards, charts, reports, and alerts shared with the organisation, plus the Impact and KPIs pages.
+
+:::note
+Dalgo recently simplified its roles. If your organisation was already using Dalgo, existing users were moved over automatically: **Account Manager** and **Pipeline Manager** became **Admin**, and **Guest** became **Member** — **Analyst** keeps its name but no longer edits sources, connections, dbt models, or pipelines directly. Each user sees a one-time screen explaining what changed for their role the first time they log in after the update.
+:::
 
 ---
 
