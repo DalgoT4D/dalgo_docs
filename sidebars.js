@@ -52,6 +52,7 @@ const sidebars = {
       items: [
         'kpis/creating-a-kpi',
         'kpis/notes',
+        'kpis/sharing',
       ],
     },
 
@@ -63,10 +64,11 @@ const sidebars = {
       items: [
         'charts/creating-a-chart',
         'charts/chart-types',
+        'charts/sharing',
       ],
     },
 
-    // 6. Dashboards
+    // 7. Dashboards
     {
       type: 'category',
       label: 'Dashboards',
@@ -74,12 +76,13 @@ const sidebars = {
       items: [
         'dashboards/viewing',
         'dashboards/creating',
+        'dashboards/sharing',
         'dashboards/superset-usage',
         'dashboards/superset',
       ],
     },
 
-    // 7. Reports
+    // 8. Reports
     {
       type: 'category',
       label: 'Reports',
@@ -143,7 +146,7 @@ const sidebars = {
       link: { type: 'doc', id: 'settings/index' },
       items: [
         'settings/branding',
-        'settings/user-management',
+        'settings/access',
         'settings/billing',
         'settings/about',
       ],

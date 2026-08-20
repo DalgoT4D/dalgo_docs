@@ -12,7 +12,7 @@ A report freezes your dashboard's layout and charts as they appeared when the re
 
 - [Creating a report](./creating.md) — build a new report from a dashboard
 - [Executive summaries and comments](./comments.md) — add context and discuss findings with your team
-- [Sharing reports](./sharing.md) — share via public link or email
+- [Sharing a report](./sharing.md) — share with specific people or groups, or generate a public link
 - [Exporting and deleting](./exporting.md) — download as PDF or remove a report
 
 ## Viewing your reports

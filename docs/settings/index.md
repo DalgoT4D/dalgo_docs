@@ -11,7 +11,7 @@ sidebar_position: 1
 | Page | What it covers |
 |---|---|
 | [Branding](./branding.md) | Add your organisation's logo across dashboards and exports |
-| [User Management](./user-management.md) | Invite team members and control their access |
+| [Access](./access.md) | Manage users, groups, permission floors, and public sharing settings |
 | [Billing](./billing.md) | View your subscription and manage billing details |
 | [About](./about.md) | Platform version and organisation details |
 
