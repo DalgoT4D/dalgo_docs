@@ -82,7 +82,6 @@ If someone opens a dashboard link they don't have access to, they see a **Reques
 - The owner sees pending requests in the **Requests** section inside the share modal.
 - Approving creates a direct share at the chosen level. The requester is notified.
 - Declining sends a notification to the requester. Access is not granted.
-- Requests expire after 30 days.
 
 ---
 

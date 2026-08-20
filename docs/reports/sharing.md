@@ -50,7 +50,6 @@ If someone opens a report link they don't have access to, they see a **Request A
 
 - The owner sees pending requests in the **Requests** section inside the share modal.
 - Approving creates a direct share at the chosen level. The requester is notified.
-- Requests expire after 30 days.
 
 ---
 

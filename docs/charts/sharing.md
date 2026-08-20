@@ -46,7 +46,6 @@ If you can view a chart but need to edit it, a **Request Edit access** pill appe
 
 - The owner approves or declines from the **Requests** section in the share modal.
 - Approving upgrades your access to Edit. You are notified when a decision is made.
-- Requests expire after 30 days.
 
 ---
 
