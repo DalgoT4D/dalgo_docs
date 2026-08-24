@@ -13,7 +13,7 @@ This section maps to the **Data** item in the Dalgo left navigation and covers e
 | Page | What it covers |
 |---|---|
 | [Overview](./overview.md) | Monitor pipeline run history and health |
-| [Ingest](./ingest/index.md) | Connect your warehouse, sources, and set up sync connections |
+| [Ingest](./ingest/index.md) | Add your data sources and sync them into your warehouse |
 | [Transform](./transform/index.md) | Clean, join, and compute your data using dbt |
 | [Orchestrate](./orchestrate.md) | Schedule pipelines to run automatically |
 | [Explore](./explore.md) | Browse the tables in your warehouse |

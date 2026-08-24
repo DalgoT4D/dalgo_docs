@@ -82,4 +82,4 @@ Deleting a pipeline is permanent. Its schedule, configuration, and run history w
 
 ---
 
-**Related:** [Ingest → Connections](./ingest/connections.md) · [Transform](./transform/index.md) · [Overview](./overview.md)
+**Related:** [Ingest](./ingest/index.md) · [Transform](./transform/index.md) · [Overview](./overview.md)
