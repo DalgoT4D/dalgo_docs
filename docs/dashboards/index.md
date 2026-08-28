@@ -14,6 +14,7 @@ You can create multiple dashboards for different audiences — a field team view
 |---|---|
 | [Viewing dashboards](./viewing.md) | Browse and open existing dashboards |
 | [Creating a dashboard](./creating.md) | Build a new dashboard, add charts, and set your landing page |
+| [Sharing a dashboard](./sharing.md) | Share with specific people or groups; generate a public link |
 | [Superset Usage](./superset-usage.md) | Platform usage analytics (Superset subscription required) |
 | [Superset](./superset.md) | Advanced dashboarding via hosted Superset (Superset subscription required) |
 

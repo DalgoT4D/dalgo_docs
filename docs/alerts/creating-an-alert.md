@@ -71,7 +71,13 @@ Tick **Email**, **Slack**, or both.
 
 **Email**
 
-Add one or more recipient email addresses. Type the address and press Enter (or comma) to add it as a chip. To remove a recipient, select the **×** on its chip.
+Add recipients by searching for **org members**, **groups**, or typing a **raw email address**. Each recipient appears as a chip. To remove a recipient, select the **×** on its chip.
+
+- **Org members** — search by name or email and select from the dropdown.
+- **Groups** — search by group name; the group expands to all active members at the time the alert fires. Members added to the group later automatically receive future firings — no need to edit the alert. Pending invitees (not yet accepted) are skipped at delivery time.
+- **External email** — type a valid email address not in Dalgo and press Enter (or comma) to add it.
+
+A user who appears via multiple paths (direct + group) receives only one notification per firing.
 
 **Slack**
 

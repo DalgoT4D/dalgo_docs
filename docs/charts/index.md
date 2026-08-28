@@ -12,6 +12,7 @@ A chart draws from a single dataset (a table in your warehouse) and displays tha
 
 - [Creating a chart](./creating-a-chart.md) — how to build a new chart from a dataset
 - [Chart types](./chart-types.md) — when to use each chart type
+- [Sharing a chart](./sharing.md) — share with specific people or groups, or manage cascade-inherited access
 
 ## Viewing your charts
 

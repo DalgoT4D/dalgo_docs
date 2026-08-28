@@ -58,4 +58,4 @@ Deleting a KPI is permanent. The KPI definition, its target, and any notes you a
 
 ---
 
-**Next:** [Creating a KPI](./creating-a-kpi.md) · [Notes and drilldown](./notes.md) · [Metrics](../data/metrics.md)
+**Next:** [Creating a KPI](./creating-a-kpi.md) · [Notes and drilldown](./notes.md) · [Sharing a KPI](./sharing.md) · [Metrics](../data/metrics.md)
