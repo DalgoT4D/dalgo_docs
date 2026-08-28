@@ -50,7 +50,7 @@ Every user gets one of three roles:
 | Metrics | Create, edit, delete any | Create, edit, delete any | View only |
 | Alerts | Create, edit, delete any; transfer ownership | Create on accessible sources; read any; edit and delete own only | View config on accessible sources; can be a recipient |
 | Ingest, Transform, Warehouse, Orchestrate | Full access | View only | Not shown |
-| Settings | Full access | Groups tab only (groups they created or belong to) | Groups tab only (groups they belong to) |
+| Settings | Full access | Groups tab (all groups visible; edit/delete own only) | No access |
 
 - **Admins govern everything.** They can view, edit, delete, and share any resource regardless of who created it, and manage all org settings.
 - **Analysts build content.** They can create dashboards, charts, reports, KPIs, and metrics freely, and can share resources where they have Edit access. They cannot edit data infrastructure (sources, pipelines, warehouse).
@@ -66,7 +66,7 @@ Dalgo simplified its roles in mid-2026. Existing users were migrated automatical
 
 The **Groups** tab lets you create named sets of people so you can share a dashboard, chart, KPI, or report with a whole team in one step — instead of adding each person individually.
 
-Groups are org-wide. Once created, any Analyst or Admin can share resources with them.
+Groups are org-wide and visible to all Analysts and Admins. Members do not have access to the Groups tab.
 
 ![Access — Groups tab](/img/settings/access_groups.png)
 
@@ -93,8 +93,8 @@ Select the **⋯ menu** on a group row to **Edit Group** or **Delete Group**.
 | Role | Groups visible |
 |---|---|
 | Admin | All groups in the org |
-| Analyst | Groups they created or belong to |
-| Member | Groups they belong to |
+| Analyst | All groups in the org (edit and delete only on groups they created) |
+| Member | None |
 
 ---
 
