@@ -21,7 +21,7 @@ Unrecognised emails receive an invitation to join Dalgo as a Member. Their acces
 
 ## Cascade-inherited access
 
-When a dashboard is shared, all KPIs on that dashboard automatically inherit the same permission. If a user's access on a KPI comes entirely from a parent dashboard, the KPI's share modal shows: *"Access on this KPI is inherited from [Dashboard name] — go there to change it."*
+When a dashboard is shared, all KPIs on that dashboard automatically inherit the same permission. If a user's access on a KPI comes entirely from a parent dashboard, the KPI's share modal shows: *"Access on this resource is inherited from: [Dashboard name] — change permissions from there."*
 
 To change that access, open the parent dashboard's share modal and adjust the share there.
 

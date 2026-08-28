@@ -12,7 +12,7 @@ Select **Settings** in the left menu, then select **Access**. You will see three
 
 ## People
 
-The **People** tab lists every member of your organisation, their role, and their status.
+The **People** tab lists every member of your organisation, their role, status, and join date.
 
 ![Access — People tab](/img/settings/access_people.png)
 
@@ -46,7 +46,7 @@ Every user gets one of three roles:
 
 | | Admin | Analyst | Member |
 |---|---|---|---|
-| Dashboards, Charts, Reports, KPIs | Create, edit, delete anyone's. Share any resource. | Create, edit, and share resources they have access to. Delete only their own. | View only — no create, edit, delete, or share. |
+| Dashboards, Charts, KPIs, Reports | Create, edit, delete, and share anyone's. | Create their own. Edit, delete, and share resources they have Edit access on. Delete only their own. | Create their own. Edit, delete, and share resources they own or have been granted Edit access on. Access to others' content is controlled by the org floor and direct shares. |
 | Metrics | Create, edit, delete any | Create, edit, delete any | View only |
 | Alerts | Create, edit, delete any; transfer ownership | Create on accessible sources; read any; edit and delete own only | View config on accessible sources; can be a recipient |
 | Ingest, Transform, Warehouse, Orchestrate | Full access | View only | Not shown |
@@ -54,7 +54,7 @@ Every user gets one of three roles:
 
 - **Admins govern everything.** They can view, edit, delete, and share any resource regardless of who created it, and manage all org settings.
 - **Analysts build content.** They can create dashboards, charts, reports, KPIs, and metrics freely, and can share resources where they have Edit access. They cannot edit data infrastructure (sources, pipelines, warehouse).
-- **Members are view-only.** They see content the org floor allows or that is explicitly shared with them. They cannot create, edit, delete, or share anything.
+- **Members create and consume.** They can create their own dashboards, charts, and KPIs and manage the resources they own. They see others' content only as the org floor setting allows or via direct shares.
 
 :::note
 Dalgo simplified its roles in mid-2026. Existing users were migrated automatically: **Account Manager** and **Pipeline Manager** became **Admin**, **Analyst** kept its name but no longer edits sources, dbt models, or pipelines directly, and **Guest** became **Member**.
@@ -108,9 +108,13 @@ The **Roles** tab controls the **org-wide permission floor** — the default acc
 
 | Option | What it means |
 |---|---|
-| **Create only** | The role can create their own resources but cannot see or open anyone else's resources unless explicitly shared. Members with this floor see empty list pages until something is shared directly with them. |
+| **Create only** | The role can create their own resources but cannot see or open other users' resources unless explicitly shared. Members with this floor see empty list pages until something is shared directly with them. |
 | **Create & View** | The role can view all resources in the org by default, plus create their own. |
 | **Create & Edit** | The role can view and edit all resources in the org by default, plus create their own. |
+
+:::note
+The floor controls access to *other people's* resources. Creating your own resources (dashboards, charts, KPIs, reports) is always allowed regardless of the floor setting — it is a role permission, not a floor permission.
+:::
 
 **Factory defaults:**
 
@@ -122,7 +126,7 @@ The **Roles** tab controls the **org-wide permission floor** — the default acc
 
 The floor cannot be set so that Member has more access than Analyst. If you try, the Roles tab blocks the change.
 
-Changing the floor takes effect immediately across all resources. Direct shares set via the share modal on individual resources are unaffected — users with an explicit share keep their access even after a floor tightening.
+Changing the floor takes effect immediately across all resources in your org. Direct shares set via the share modal on individual resources are unaffected — users with an explicit share keep their access even after a floor tightening.
 
 ### Allow public sharing
 

@@ -23,7 +23,7 @@ When you share a dashboard, access automatically cascades to all inner charts an
 
 You can paste a comma-separated list of emails to add multiple people at once.
 
-**Unrecognised emails** are flagged as external. That person receives an invitation to join Dalgo as a Member. Their access is applied when they accept — they appear as **pending** until then. Pending invites expire after 30 days.
+**Unrecognised emails** are flagged as external. That person receives an invitation to join Dalgo. Their access is applied when they accept — they appear as **pending** until then. Pending invites expire after 30 days.
 
 :::note
 A notice in the modal reminds you: *"All inner charts and KPIs will inherit this permission."* You do not need to share charts or KPIs individually — cascade handles it.
@@ -51,12 +51,22 @@ Removing or downgrading a share on a dashboard also removes or reduces access on
 
 ## Transferring ownership
 
-The permission dropdown next to any user in the **People with access** list includes **Make Owner**.
+The permission dropdown next to any user in the **People with access** list includes **Transfer ownership**.
 
-- Only the current owner or an Admin can transfer ownership.
+- Only the current owner or an Admin can initiate a transfer.
 - The recipient must currently hold effective Edit access on the dashboard.
 - A confirmation dialog appears before the transfer takes effect.
-- After the transfer, the previous owner's access reverts to whatever the org floor grants their role, or any direct share they hold.
+- After the transfer, the previous owner is automatically granted Edit access on the dashboard.
+
+### Admin takeover
+
+An Admin who is not the current owner sees a small **✕** button on the owner's row in the **People with access** list. Selecting it opens a confirmation dialog that transfers ownership to the Admin directly, without requiring the current owner to act. After the takeover, the previous owner retains Edit access.
+
+## Inviting new users
+
+When you type an email address that is not yet in Dalgo, a role selector appears. Non-admins can only invite users as **Member**. Admins can select any role.
+
+The new user receives an invitation email and their share activates when they accept — they appear as **pending** until then.
 
 ## Public link
 
@@ -82,6 +92,8 @@ If someone opens a dashboard link they don't have access to, they see a **Reques
 - The owner sees pending requests in the **Requests** section inside the share modal.
 - Approving creates a direct share at the chosen level. The requester is notified.
 - Declining sends a notification to the requester. Access is not granted.
+
+If you can already view a dashboard but need to edit it, a **Request Edit access** pill appears at the top of the dashboard view. Select it to send an upgrade request to the owner, with the level pre-set to Edit.
 
 ---
 

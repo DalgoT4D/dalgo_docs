@@ -25,9 +25,15 @@ The same invite rules apply as for dashboards — unrecognised emails receive an
 
 ## Cascade-inherited access
 
-If a user's access on a chart comes from a parent dashboard, the chart's share modal shows their effective level but prevents you from changing it there directly. A message reads: *"Access on this chart is inherited from [Dashboard name] — go there to change it."*
+If a user's access on a chart comes from a parent dashboard, the chart's share modal shows their effective level but prevents you from changing it there directly. A message reads: *"Access on this resource is inherited from: [Dashboard name] — change permissions from there."*
 
 To change cascade-derived access, open the parent dashboard's share modal and adjust the share at that level.
+
+:::note
+If the chart belongs to more than one dashboard, all source dashboard names are listed. Change the share on whichever dashboard grants the level you want to adjust.
+:::
+
+A user who holds Edit on a chart only through cascade has full re-share rights — they can open the chart's share modal and add others up to Edit level.
 
 ## Permission levels
 
