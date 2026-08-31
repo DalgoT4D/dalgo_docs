@@ -102,16 +102,10 @@ const sidebars = {
       link: { type: 'doc', id: 'data/index' },
       items: [
         'data/overview',
-        {
-          type: 'category',
-          label: 'Ingest',
-          link: { type: 'doc', id: 'data/ingest/index' },
-          items: [
-            'data/ingest/connections',
-            'data/ingest/sources',
-            'data/ingest/warehouse',
-          ],
-        },
+        // Ingest is a single page in the product (sources + connections on one
+        // screen), so it's a single doc here — no sub-items. The warehouse moved
+        // to Settings > Warehouse.
+        'data/ingest/index',
         {
           type: 'category',
           label: 'Transform',
@@ -147,8 +141,7 @@ const sidebars = {
       items: [
         'settings/branding',
         'settings/access',
-        'settings/billing',
-        'settings/about',
+        'settings/warehouse',
       ],
     },
 

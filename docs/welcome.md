@@ -23,7 +23,7 @@ The left navigation mirrors your workflow:
 | **Dashboards** | Arrange charts into shareable views |
 | **Reports** | Capture point-in-time snapshots of dashboards to share or review |
 | **Data** | Ingest, transform, orchestrate, explore, and monitor your data |
-| **Settings** | Manage users, billing, and organisation settings |
+| **Settings** | Manage users, branding, and your data warehouse |
 
 ## First time here?
 

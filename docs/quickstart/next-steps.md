@@ -19,12 +19,12 @@ sidebar_position: 6
 
 | I want to… | Go to |
 |---|---|
-| Connect a data warehouse | [Data → Ingest → Warehouse](../data/ingest/warehouse.md) |
-| Add a data source (KoboToolbox, Sheets, etc.) | [Data → Ingest → Sources](../data/ingest/sources.md) |
-| Connect a source to the warehouse | [Data → Ingest → Connections](../data/ingest/connections.md) |
+| Connect a data warehouse | [Settings → Warehouse](../settings/warehouse.md) |
+| Add a data source (KoboToolbox, Sheets, etc.) | [Data → Ingest](../data/ingest/index.md) |
+| Sync a source into the warehouse | [Data → Ingest](../data/ingest/index.md) |
 | Set up dbt transformations | [Data → Transform](../data/transform/index.md) |
 | Schedule automated pipelines | [Data → Orchestrate](../data/orchestrate.md) |
-| Invite team members | [Settings → User Management](../settings/user-management.md) |
+| Invite team members | [Settings → Access](../settings/access.md) |
 
 ## Still stuck?
 

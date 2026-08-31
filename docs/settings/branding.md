@@ -23,15 +23,10 @@ You can set your logo two ways — by uploading a file, or by linking to an imag
 2. Supported formats are **PNG**, **JPG**, **WEBP**, and **GIF**, up to **5MB**.
 3. Select **Save** to confirm.
 
-![Branding Upload tab with a saved logo](/img/settings/branding_upload_saved.png)
-
 ### Linking an image
 
 1. Select the **Link** tab.
 2. Enter the URL of an image hosted online.
-
-![Branding Link tab](/img/settings/branding_link_tab.png)
-
 3. Select **Save** to confirm.
 
 ## Updating or removing your logo

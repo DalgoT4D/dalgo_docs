@@ -75,7 +75,7 @@ Three permissions control who can do what with alerts:
 - **Edit Alerts** — needed to toggle the **Enabled** switch and to use the **Edit** action.
 - **Delete Alerts** — needed to use the **Delete** action.
 
-Permissions are assigned per-role in [User Management](../settings/user-management.md).
+Permissions are assigned per-role in [Access](../settings/access.md).
 
 ---
 
