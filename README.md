@@ -1,3 +1,8 @@
+> **This repository is now a read-only archive.**
+> Dalgo has moved to a monorepo at **[DalgoT4D/dalgo](https://github.com/DalgoT4D/dalgo)**. All active development, issues, and contributions should go there.
+
+---
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
